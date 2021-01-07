@@ -1,5 +1,5 @@
-#LANGUAGE_NAME_INTERNATIONAL = German
-#LANGUAGE_NAME_LOCALE        = Deutsch
+LANGUAGE_NAME_INTERNATIONAL = Polish
+LANGUAGE_NAME_LOCALE        = Polski
 
 #MENU      = Menü
 #OPEN_MENU = Menü öffnen
