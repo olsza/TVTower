@@ -8,7 +8,7 @@ BETTY_REALLY_LOVES_YOU             = Betty really loves you
 
 DIALOGUE_BETTY_WELCOME_TEXT         = Hello,\n\nhow can I help you?
 DIALOGUE_BETTY_WELCOME_LEVEL0_TEXT1 = Good Day!\n\nWhat drives you to the topmost floor?
-DIALOGUE_BETTY_WELCOME_LEVEL0_TEXT2 = Yes?\n\\nFor sure you are here to fetch latest Information about the Sammy.
+DIALOGUE_BETTY_WELCOME_LEVEL0_TEXT2 = Yes?\n\nFor sure you are here to fetch latest Information about the Sammy.
 DIALOGUE_BETTY_WELCOME_LEVEL1_TEXT1 = Hello %PLAYERNAME%,\n\nwhat brings you to me this day?
 DIALOGUE_BETTY_WELCOME_LEVEL1_TEXT2 = Hmm?\n\nYou surely want to hear some news about the Sammy.
 DIALOGUE_BETTY_WELCOME_LEVEL1_TEXT3 = Hi %PLAYERNAME%,\n\nnice to see you again. Sit down please - so why are you here?
