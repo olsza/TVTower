@@ -74,7 +74,7 @@ ROOMAGENCY_SIZE_TEXT1                              = Dobrze zwymiarowane pomiesz
 ROOMAGENCY_SIZE_TEXT2                              = Pokój o praktycznej wielkości %SIZE%.
 ROOMAGENCY_ROOM_X_IN_RANGE_TEXT1                   = Dobrze zlokalizowany w pobliżu %X%.
 ROOMAGENCY_ROOM_SUPERMARKET_IN_RANGE_TEXT1         = Praktyczne, tuż za rogiem znajduje się %X%.
-ROOMAGENCY_ROOM_SCRIPTAGENCY_IN_RANGE_TEXT1        = NZaledwie rzut kamieniem od Agencji Scenariuszowej.
+ROOMAGENCY_ROOM_SCRIPTAGENCY_IN_RANGE_TEXT1        = Zaledwie rzut kamieniem od Agencji Scenariuszowej.
 ROOMAGENCY_ROOM_OFFICE_IN_RANGE_TEXT1              = Niedaleko od Twojego biura.
 ROOMAGENCY_AVAILABLE_FOR_RENT_OF_X_PER_DAY         = Dostępne tylko na |b|%X%/dni gry|/b|.
 ROOMAGENCY_SIGNING_WILL_COST_A_SINGLE_PAYMENT_OF_X = Jednorazowa płatność w wysokości |b|%X%|/b|.
@@ -116,53 +116,53 @@ AND_STATISTICS      = i statystyki
 FOR_PRIVATE_AFFAIRS = dla Twoich prywatnych spraw
 
 
-#INGAME_HELP_TEXT_SCREEN_EMPTYROOM  = 'Tschuldigung\n\nDieser Raum ist noch ohne weitere Funktionen. Wir arbeiten aber daran!
-#INGAME_HELP_TITLE_SCREEN_EMPTYROOM = AUSSER BETRIEB
+INGAME_HELP_TEXT_SCREEN_EMPTYROOM  = Przepraszamy\n\nTen pokój jest nadal bez funkcji. Pracujemy nad tym!
+INGAME_HELP_TITLE_SCREEN_EMPTYROOM = POZA DZIAŁANIEM
 
-#INGAME_HELP_TEXT_SCREEN_OFFICE_SAFE  = Das Speichern und Laden von Spielständen erfolgt im Menu. Es wird mit "Escape" geöffnet.
-#INGAME_HELP_TITLE_SCREEN_OFFICE_SAFE = Der Safe
+INGAME_HELP_TEXT_SCREEN_OFFICE_SAFE  = Zapisywanie i ładowanie gier odbywa się za pośrednictwem menu. Naciśnij klawisz Esc, aby go otworzyć.
+INGAME_HELP_TITLE_SCREEN_OFFICE_SAFE = Bezpieczny sejf
 
-#INGAME_HELP_TEXT_SCREEN_OFFICE_ARCHIVEDMESSAGES  = Hier kannst Du empfangene Nachrichten noch einmal nachlesen. Es werden nur Nachrichten der ausgewählten Kategorie angezeigt.\nWenn Du Dir nur gelesene oder nur ungelesene Nachrichten anzeigen lässt, kannst Du den "gelesen"-Status mit einem Rechtsklick auf die Nachricht umschalten.
-#INGAME_HELP_TITLE_SCREEN_OFFICE_ARCHIVEDMESSAGES = Archivierte Nachrichten
+INGAME_HELP_TEXT_SCREEN_OFFICE_ARCHIVEDMESSAGES  = Tutaj możesz ponownie przeczytać wysłane do Ciebie wiadomości. Wyświetlane są tylko wiadomości z wybranej kategorii.\nJeśli wybrałeś wyświetlanie tylko przeczytanych lub tylko nieprzeczytanych wiadomości, możesz kliknąć wiadomość prawym przyciskiem myszy, aby przełączyć stan.
+INGAME_HELP_TITLE_SCREEN_OFFICE_ARCHIVEDMESSAGES = Zarchiwizowane wiadomości
 
-#INGAME_HELP_TEXT_SCREEN_OFFICE_PROGRAMMEPLANNER  = In diesem Bildschirm kannst Du neue Programme in den Sendeplan setzen und bisherige Ausstrahlungen nachvollziehen. Zum Hinzufügen eines Programmes, dieses einfach auf der rechten Seite per Button "Programm" auswählen und dann mit der linken Maustaste auf dem gewünschten Programmplatz fallen lassen. Mittels Rechtsklick kann ein aufgehobener Programmblock gelöscht werden.\n\nLässt Du Werbung auf einem Programmplatz fallen, so erfolgt eine Ausstrahlung als "Dauerwerbesendung". Ein Programm auf einem Werbeplatz wird hingegen zu einem Programmtrailer umgeformt.\n\nHandelt es sich bei einem Programm um ein Live-Format, so weisen farbige Markierungen darauf hin, an welcher Stelle eine Platzierung erfolgen kann.\n\n|b|Tipp für Freunde der Tastenkürzel:|/b| Durch Drücken einer Strg-Taste könnt ihr ein Programm mehrfach im Planer platzieren. Eine Shift-Taste hingegen versucht nach der Platzierung die darauffolgende Episode bereitzustellen.
-#INGAME_HELP_TITLE_SCREEN_OFFICE_PROGRAMMEPLANNER = Der Programmplaner
+INGAME_HELP_TEXT_SCREEN_OFFICE_PROGRAMMEPLANNER  = Na tym ekranie możesz dodawać nowe programy do harmonogramu i śledzić poprzednie programy. Aby dodać program, po prostu wybierz go po prawej stronie za pomocą przycisku "Program", a następnie upuść go w wybranym miejscu programu lewym przyciskiem myszy. Blok programu, który został anulowany, można usunąć, klikając prawym przyciskiem myszy.\n\nJeśli upuścisz reklamę w oknie programu, będzie ona emitowana jako "reklama długoterminowa". Z drugiej strony program na powierzchni reklamowej jest przekształcany w zwiastun programu.\n\nJeśli program jest w formacie na żywo, kolorowe oznaczenia wskazują, gdzie można go umieścić.\n\n|b|Wskazówka dla przyjaciół skrótów klawiszowych:|/b| Naciskając klawisz Ctrl, możesz kilkakrotnie umieścić program w terminarzu. Z drugiej strony klawisz Shift próbuje zapewnić kolejny odcinek po umieszczeniu.
+INGAME_HELP_TITLE_SCREEN_OFFICE_PROGRAMMEPLANNER = Planowanie programu
 
-#INGAME_HELP_TEXT_SCREEN_OFFICE_STATIONMAP  = Hier verwaltest Du Dein Sendegebiet. Du kannst Sendemasten kaufen und verkaufen, Verträge für Kabelnetz- und Satellitenanbindungen abschließen und kündigen. Die erreichte Zuschauerzahl hat Einfluss auf Film- und Nachrichtenpreise sowie auf die Bedingungen der Werbeverträge.\nInformationen zu einem existierenden Sendemasten oder Vertrag erhält man, indem man den entsprechenden Eintrag in der Liste rechts selektiert. Mögliche Aktionen erscheinen dann unter der Liste. Mit einem Rechtsklick wird die Selektion aufgehoben oder eine Aktion abgebrochen.\nFür den Kauf eines neuen Sendemasten muss die entsprechende Aktion gewählt und der Mast dann mit der Maus oder den Pfeiltasten auf der Karte platziert werden. Für die jeweilige Position werden dann Informationen wie Preis und Anzahl neu erreichter Zuschauer angezeigt. Mit der linken Maustaste oder der Leertaste wird die Position festgelegt und der Kauf kann rechts abgeschlossen werden.\nKabelnetz- und Satellitenverträge laufen ein Jahr. Eine automatische Vertragsverlängerung kann aktiviert werden.
-#INGAME_HELP_TITLE_SCREEN_OFFICE_STATIONMAP = Die Karte des Sendegebiets
+INGAME_HELP_TEXT_SCREEN_OFFICE_STATIONMAP  = Tutaj zarządzasz swoim obszarem nadawania. Możesz kupować i sprzedawać maszty transmisyjne, zawierać i anulować umowy na połączenia kablowe i satelitarne. Liczba osiągniętych widzów ma wpływ na ceny filmów i wiadomości, a także warunki umów reklamowych.\nInformacje o istniejącej wieży transmisyjnej lub umowie można uzyskać, zaznaczając odpowiednią pozycję na liście po prawej stronie. Możliwe działania pojawią się pod listą. Kliknij prawym przyciskiem myszy, aby anulować wybór lub anulować akcję.\nAby kupić nowy maszt nadajnika, należy wybrać odpowiednią akcję, a następnie umieścić maszt na mapie za pomocą myszy lub klawiszy strzałek. Informacje, takie jak cena i liczba nowo osiągniętych przeglądających, są następnie wyświetlane dla odpowiedniej pozycji. Pozycję ustawia się lewym przyciskiem myszy lub spacją, a zakup można sfinalizować po prawej stronie.\nUmowy na sieć kablową i satelitę trwają rok. Można aktywować automatyczne przedłużenie umowy.
+INGAME_HELP_TITLE_SCREEN_OFFICE_STATIONMAP = Mapa obszaru transmisji
 
-#INGAME_HELP_TEXT_SCREEN_NEWSSTUDIO  = Ausgangspunkt für die Planung der Nachrichtensendung sind die abonnierten Nachrichtenkategorien. Mit den farbigen Knöpfen auf der linken Seite wählst Du das Abo-Level verschiedener Kategorien. Je höher es ist, desto schneller stehen die Nachrichten der jeweiligen Kategorie zur Ausstrahlung zur Verfügung.\n\nEin Klick auf die Pinnwand bringt Dich auf die Seite zum Planen der Nachrichtensendung.
-#INGAME_HELP_TITLE_SCREEN_NEWSSTUDIO = Das Nachrichtenstudio
+INGAME_HELP_TEXT_SCREEN_NEWSSTUDIO  = Punktem wyjścia do planowania emisji wiadomości są subskrybowane przez Ciebie kategorie wiadomości. Za pomocą kolorowych przycisków po lewej stronie możesz wybrać poziom subskrypcji dla różnych kategorii. Im wyższa, tym szybciej wiadomości z odpowiedniej kategorii będą dostępne do emisji.\n\nKliknięcie tablicy korkowej przeniesie Cię na stronę, na której można zaplanować program informacyjny.
+INGAME_HELP_TITLE_SCREEN_NEWSSTUDIO = Studio informacyjne
 
-#INGAME_HELP_TEXT_SCREEN_NEWSSTUDIO_NEWSPLANNER  = Zur Planung einer Nachrichtensendung stehen rechtseitig drei Nachrichtenplätze zur Verfügung. Die Wichtigkeit dieser Plätze nimmt nach unten hin ab. Auf der linken Seite sind verfügbare, aber nicht in der Sendung verwendete Nachrichten gelistet. Mit der linken Maustaste kann die gewünschte Nachricht aufgenommen werden und mit rechten Maustaste entgültig gelöscht. Falls Du eine Nachricht später nochmal ausstrahlen möchtest, so lasse sie einfach mit der linken Maustaste im linken Nachrichtenbereich fallen.\n\nAusgestrahlte Nachrichten verlieren an Aktualität bzw. Brisanz (als roter Balken auf dem Tickerabriss angedeutet). Weniger Aktualität sorgt für geringere Zuschauerzahlen. Ersetze also abgenutzte Nachrichten rechtzeitig mit frischen Neuzugängen.
-#INGAME_HELP_TITLE_SCREEN_NEWSSTUDIO_NEWSPLANNER = Die Nachrichtensendung
+INGAME_HELP_TEXT_SCREEN_NEWSSTUDIO_NEWSPLANNER  = Po prawej stronie znajdują się trzy okienka wiadomości do planowania programu informacyjnego. Znaczenie tych miejsc spada w dół. Wiadomości dostępne, ale nieużywane w transmisji, są wymienione po lewej stronie. Żądaną wiadomość można nagrać lewym przyciskiem myszy i trwale usunąć prawym przyciskiem myszy. Jeśli chcesz ponownie wyemitować wiadomość później, po prostu upuść ją lewym przyciskiem myszy w lewym obszarze wiadomości.\n\nNadawane wiadomości tracą aktualność (wskazywaną przez czerwony pasek), co powoduje, że przyciągają mniej widzów. Więc wymień stare wiadomości na czas.
+INGAME_HELP_TITLE_SCREEN_NEWSSTUDIO_NEWSPLANNER = Planer wiadomości
 
-#INGAME_HELP_TEXT_SCREEN_ARCHIVE  = Hier kannst Du Filme abholen und in den Koffer packen, um sie in der Film-Agentur wieder zu verkaufen. Sei vorsichtig, dass Du keine für eine Ausstrahlung geplanten Sendungen wegschleppst.
-#INGAME_HELP_TITLE_SCREEN_ARCHIVE = Das Archiv
+INGAME_HELP_TEXT_SCREEN_ARCHIVE  = Tutaj możesz odebrać filmy i włożyć je do walizki, aby ponownie sprzedać je w agencji filmowej. Uważaj, aby nie przeciągnąć żadnych programów zaplanowanych do emisji.
+INGAME_HELP_TITLE_SCREEN_ARCHIVE = Archiwum
 
-#INGAME_HELP_TEXT_SCREEN_ROOMAGENCY  = Wenn ein Studio für Deine Produktionen nicht mehr ausreicht, kannst Du hier weitere Räume mieten oder bestehende Mietvertäge wieder kündigen.\nWenn keine freien Räume zur Verfügung stehen, musst Du wohl erst dafür sorgen...
-#INGAME_HELP_TITLE_SCREEN_ROOMAGENCY = Der Makler
+INGAME_HELP_TEXT_SCREEN_ROOMAGENCY  = Jeśli jedno studio nie jest wystarczające do twoich produkcji, możesz tutaj wynająć kolejne pokoje lub anulować istniejące umowy.\nJeśli nie ma wolnych pokoi, będziesz musiał coś z tym zrobić...
+INGAME_HELP_TITLE_SCREEN_ROOMAGENCY = Broker / Agencja ds. Pokoi
 
-#INGAME_HELP_TEXT_SCREEN_ROOMBOARD  = Besucher verlassen sich auf die Angaben im Raumplan bevor sie den Fahrstuhl besteigen. Mutwillig herbeigeführte Unordnung wird einmal täglich korrigiert.
-#INGAME_HELP_TITLE_SCREEN_ROOMBOARD = Die Hinweistafel
+INGAME_HELP_TEXT_SCREEN_ROOMBOARD  = Goście polegają na informacjach zawartych w planie pomieszczenia, zanim wejdą do windy. Celowo stworzone zaburzenie jest korygowane raz dziennie.
+INGAME_HELP_TITLE_SCREEN_ROOMBOARD = Tablica pokoi
 
-#INGAME_HELP_TEXT_SCREEN_SCRIPTAGENCY  = Produziere Deine eigenen Filme, Serien oder Shows. Hier kaufst Du dafür die Drehbücher. Ungenutzte Drehücher wirst Du hier auch wieder los. Drehbücher angefangener Serienproduktionen können nur noch im Papierkorb eines Studios entsorgt werden.
-#INGAME_HELP_TITLE_SCREEN_SCRIPTAGENCY = Die Drehbuchagentur
+INGAME_HELP_TEXT_SCREEN_SCRIPTAGENCY  = Twórz własne filmy, seriale lub programy. Tutaj możesz kupić niezbędne skrypty. Możesz ponownie sprzedać nieużywane skrypty. Scenariusz serialu, który już zacząłeś produkować, można wyrzucić tylko do kosza w studiu.
+INGAME_HELP_TITLE_SCREEN_SCRIPTAGENCY = Biuro skryptów scenariuszy
 
-#INGAME_HELP_TEXT_SCREEN_STUDIO  = Der Studioleiter gibt Dir für ein Drehbuch Einkaufslisten. Wenn Du sie im Supermarkt abgearbeitet hast, kannst Du Dir auch seine Meinung zur Besetzung geben lassen. Hebe die Einkaufsliste dafür mit einem Linksklick auf und lasse sie ebenso auf den Studioleiter fallen.\nWenn alles passt, kannst Du den Studioleiter die Produktion starten lassen. Ab dann ist das Studio bis zur Fertigstellung blockiert.\n\nZum Verwerfen einer Zusammenstellung hebe die Einkaufsliste auf, lösche sie mit einem Rechtsklick oder lasse sie in den Mülleimer fallen.
-#INGAME_HELP_TITLE_SCREEN_STUDIO = Das Studio
+INGAME_HELP_TEXT_SCREEN_STUDIO  = Kierownik produkcji podaje listy zakupów dla skryptu. Przekaże również swoją opinię na temat obsady po skompletowaniu listy w supermarkecie. Musisz wybrać listę zakupów lewym przyciskiem myszy i upuścić ją na menadżerze produkcji innym, aby poprosić o opinię.\nJeśli wszystko jest w porządku, możesz poprosić kierownika produkcji o rozpoczęcie zdjęć. Odtąd studio jest zablokowane do zakończenia zdjęć.\n\nAby odrzucić listę zakupów, podnieś ją, usuń prawym przyciskiem myszy lub upuść do kosza.
+INGAME_HELP_TITLE_SCREEN_STUDIO = Studio
 
-#INGAME_HELP_TEXT_SCREEN_MOVIEAGENCY  = Hier kannst Du Dich mit Sendungen für die Ausstrahlung versorgen. Im Regal sind drei Fächer: normale Filme, Ramsch und Serien. Du kannst Filme auch wieder verkaufen, indem Du sie im Archiv in den Koffer packst und hier auf dem Verkäufer fallen lässt.
-#INGAME_HELP_TITLE_SCREEN_MOVIEAGENCY = Die Film-Agentur
+INGAME_HELP_TEXT_SCREEN_MOVIEAGENCY  = Tutaj możesz pobrać programy do transmisji. Na półce są trzy przegródki: zwykłe filmy, śmieci i seriale. Możesz również ponownie sprzedawać filmy, pakując je do walizki w archiwum i wrzucając je tutaj u sprzedawcy.
+INGAME_HELP_TITLE_SCREEN_MOVIEAGENCY = Agencja filmowa
 
-#INGAME_HELP_TEXT_SCREEN_MOVIEAUCTION  = Hier kannst Du auf Sendungen bieten, die es noch nicht im regulären Verkauf gibt. Die Zahlung ist sofort fällig. Die Auktionen enden um Mitternacht - bis dahin kannst Du noch überboten werden und erhältst in diesem Fall Dein Geld sofort zurück.
-#INGAME_HELP_TITLE_SCREEN_MOVIEAUCTION = Die Auktion
+INGAME_HELP_TEXT_SCREEN_MOVIEAUCTION  = Tutaj możesz licytować programy, które nie są jeszcze dostępne w regularnej sprzedaży. Płatność jest wymagalna natychmiast. Aukcje kończą się o północy - do tego czasu nadal możesz zostać przelicytowany, w takim przypadku otrzymasz zwrot pieniędzy.
+INGAME_HELP_TITLE_SCREEN_MOVIEAUCTION = Aukcja
 
-#INGAME_HELP_TEXT_SCREEN_SUPERMARKET_PRESENTS  = Wenn es Dir in dem Spiel wirklich um Betty geht, kannst Du hier Geschenke für sie kaufen.
-#INGAME_HELP_TITLE_SCREEN_SUPERMARKET_PRESENTS = Geschenke
+INGAME_HELP_TEXT_SCREEN_SUPERMARKET_PRESENTS  = Tutaj możesz kupić prezenty, jeśli naprawdę grasz w grę, aby uzyskać aprobatę Betty.
+INGAME_HELP_TITLE_SCREEN_SUPERMARKET_PRESENTS = Prezenty
 
-#INGAME_HELP_TEXT_SCREEN_SUPERMARKET_PRODUCTION  = Wähle die Einkaufsliste für die Produktion aus, die Du planen möchtest. Durch das Setzen der Option "Einstellungen übernehmen" wird diese Planung - z.B. für weitere Folgen einer Serie - für die nächste gewählte Einkaufsliste übernommen.\nJe nach Drehbuch sind nun mehrere Rollen zu besetzen, deren Anforderungen sich nach Beruf und Genre unterscheiden. Die Filter- und Sortiermöglichkeiten helfen Dir vielleicht, eine passende Auswahl zu treffen.\nWähle nun noch eine Produktionsfirma und verteile Punkte für die Produktionsschwerpunkte. Vielleicht solltest Du vor dem Abschluss der Produktion nochmal im Studio vorbeischauen und den Studioleiter um seine Meinung bitten. Nach dem Abschluss der Produktion und erfolgter Anzahlung können nämlich keine Änderungen mehr vorgenommen werden.
-#INGAME_HELP_TITLE_SCREEN_SUPERMARKET_PRODUCTION = Produktionsplanung
+INGAME_HELP_TEXT_SCREEN_SUPERMARKET_PRODUCTION  = Wybierz listę zakupów dla produkcji, którą chcesz zaplanować. Włączając opcję „Kopiuj ustawienie”, wybrane przez Ciebie opcje zostaną użyte również dla następnej wybranej listy zakupów. Może to być przydatne przy planowaniu kilku odcinków serialu.\nW zależności od scenariusza musisz skompletować obsadę. Wymagania dotyczące roli zależą od stanowiska i gatunku. Może filtry i opcje sortowania pomogą ci dokonać odpowiedniego wyboru.\nNa koniec wybierz firmę produkcyjną i rozdziel punkty priorytetowe. Przed zakończeniem planowania możesz wrócić do studia i zapytać kierownika studia o opinię. Ponieważ po zakończeniu planowania i wpłaceniu zadatku nie można już dokonywać żadnych zmian.
+INGAME_HELP_TITLE_SCREEN_SUPERMARKET_PRODUCTION = Planowanie produkcji
 
-#INGAME_HELP_TEXT_SCREEN_ADAGENCY  = Hier kannst Du Werbeverträge abschließen. Zu jedem Vertrag werden die relevanten Bedingungen wie Anzahl der zu sendenden Werbeblöcke, nötige Zuschauerzahl, Zielgruppe angezeigt. Packe die gewünschten Verträge in den Koffer.\nDer Abschluss erfolgt durch Verlassen des Raums. Vorher können die Verträge noch zurückgegeben werden.
-#INGAME_HELP_TITLE_SCREEN_ADAGENCY = Agentur für Werbung
+INGAME_HELP_TEXT_SCREEN_ADAGENCY  = Tutaj możesz podpisywać umowy reklamowe. Po najechaniu kursorem lub odebraniu umowy wyświetlane są odpowiednie warunki, takie jak liczba bloków do emisji, wymagana liczba widzów, grupa docelowa itp. Umieść wybrane kontrakty w walizce. \ NWychodząc z pokoju, umowa staje się wiążąca. Do tego czasu nadal możesz go zwrócić.
+INGAME_HELP_TITLE_SCREEN_ADAGENCY = Agencja reklamowa
