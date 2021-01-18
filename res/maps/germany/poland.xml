@@ -1,0 +1,93 @@
+<?xml version="1.0"?>
+<tvt>
+	<resources>
+		<!-- images used to recognize when mouse is over a specific state -->
+		<resource name="map_collisionPack">
+			<type>SpritePack</type>
+ 			<url>res/maps/germany/germany_collision.png</url>
+			<children>
+				<child name="map_berlin"				x="799"	y="450"	w="33"	h="20" />
+				<child name="map_hamburg"				x="566"	y="337"	w="38"	h="19" />
+				<child name="map_bremen"				x="521"	y="416"	w="26"	h="17" />
+				<child name="map_sachsen"				x="139"	y="351"	w="179"	h="74" />
+				<child name="map_niedersachsen"			x="423"	y="0"	w="264"	h="128" />
+				<child name="map_schleswigholstein"		x="423"	y="337"	w="143"	h="79" />
+				<child name="map_meckpom"				x="139"	y="267"	w="202"	h="84" />
+				<child name="map_nrw"					x="139"	y="161"	w="200"	h="106" />
+				<child name="map_brandenburg"			x="687"	y="0"	w="191"	h="107" />
+				<child name="map_sachsenanhalt"			x="604"	y="128"	w="146"	h="102"/>
+				<child name="map_hessen"				x="878"	y="0"	w="142"	h="109" />
+				<child name="map_thueringen"			x="139"	y="425"	w="155"	h="72" />
+				<child name="map_rheinlandpfalz"		x="423"	y="239"	w="137"	h="98" />
+				<child name="map_saarland"				x="318"	y="464"	w="62"	h="29" />
+				<child name="map_bayern"				x="139"	y="0"	w="284"	h="161" />
+				<child name="map_bawue"					x="423"	y="128"	w="181"	h="111" />
+			</children>
+		</resource>
+
+		<stationmapdata>
+			<config>
+				<name>Poland</name>
+				<nameShort>Pol</nameShort>
+				<iso3166code>PL</iso3166code>
+			</config>
+
+			<citynames>
+				<!-- parts, comma separated (optional ", ")
+					 part1 - prefix (optional)
+					 part2 - main
+					 part3 - ending (optional)
+				-->
+				<part1>nowa, stara, nowe, stary, mały</part1>
+				<part2>Warszawa, Kraków, Łódź, Wrocław, Poznań, Gdańsk, Szczecin, Bydgoszcz, Lublin, Białystok, Katowice, Gdynia, Częstochowa, Radom, Toruń, Sosnowiec, Rzeszów, Kielce, Gliwice, Zabrze, Olsztyn, Bielsko-Biała, Bytom, Zielona Góra, Rybnik, Ruda Śląska, Opole, Tychy, Gorzów Wielkopolski, Płock</part2>
+				<part3>, wielki, duży, wola</part3>
+			</citynames>
+			<sports>
+				<soccer leagueCount="4">
+					<league1 name="1. Bunte Liga" nameShort="1. BL">
+						<team1 prefix="Fussballclub|FC|s" name="Ronnsen" city="Chemnitz" nameInitials="R" /> 
+						<team2 prefix="Bolzfreunde|BF|p" name="Själen" city="Själingen" nameInitials="S" /> 
+					</league1>
+					<league2 name="2. Bunte Liga" nameShort="2. BL">
+						<team1 prefix="Fussballfreunde|FF|p" name="Dingelsheim" nameInitials="D" /> 
+					</league2>
+					<league3 name="3. Liga" nameShort="3. L" />
+					<league4 name="Regionalliga" nameShort="RL" />
+				</soccer>
+				<icehockey leagueCount="3">
+					<league1 name="1. Bunte Eishockeyliga" nameShort="1. BEHL">
+						<team1 prefix="Crazy Hoggars|CH|s" name="Ronnsen" city="Chemnitz" nameInitials="R" /> 
+						<team2 prefix="Goal Snappers|GS|p" name="Själen" city="Själingen" nameInitials="S" /> 
+					</league1>
+					<league2 name="2. Eishockeyliga" nameShort="2. EHL" />
+					<league3 name="Eishockeyoberliga" nameShort="EHOL" />
+					<league4 name="Eishockeyregionalliga" nameShort="ERL" />
+				</icehockey>
+			</sports>
+
+			<!-- map with graytone values of population density,
+				 colordepth must be RGBA, not Grayscale !!
+			-->
+			<densitymap type="pixmap" url="res/maps/germany/germany_densitymap.png" />
+			<surface type="sprite" url="res/maps/germany/germany_surface.png" />
+			<states>
+				<state name="bremen"			x="187" y="81"	sprite="map_bremen" />
+				<state name="berlin"			x="432" y="108"	sprite="map_berlin" />
+				<state name="hamburg"			x="250" y="59"	sprite="map_hamburg" />
+				<state name="bawue"				x="109" y="248"	sprite="map_bawue" />
+				<state name="bayern"			x="203" y="211"	sprite="map_bayern" />
+				<state name="saarland"			x="49"  y="253"	sprite="map_saarland" />
+				<state name="rheinlandpfalz"	x="39"  y="193" sprite="map_rheinlandpfalz" />
+				<state name="hessen"			x="135" y="159"	sprite="map_hessen" />
+				<state name="thueringen"		x="256" y="159"	sprite="map_thueringen" />
+				<state name="sachsen"			x="368" y="157"	sprite="map_sachsen" />
+				<state name="sachsenanhalt"		x="294" y="93"  sprite="map_sachsenanhalt" />
+				<state name="niedersachsen"		x="84" y="51"	sprite="map_niedersachsen" />
+				<state name="schleswigholstein"	x="193" y="2"	sprite="map_schleswigholstein" />
+				<state name="brandenburg"		x="339" y="68"	sprite="map_brandenburg" />
+				<state name="nrw"				x="35"  y="117"	sprite="map_nrw" />
+				<state name="meckpom"			x="298" y="11"	sprite="map_meckpom" />
+			</states>
+		</stationmapdata>
+	</resources>
+</tvt>
