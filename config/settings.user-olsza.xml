@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?><config saved="08.01.2021 14:30">
+
+	<channelname value="Olo TV" />
+	<gamename value="Gra OlszaK" />
+	<inroomslowdown value="100" />
+	<language value="pl" />
+	<longClickMode value="TRUE" />
+	<longClicktime value="400" />
+	<playername value="Olsza" />
+	<showIngameHelp value="TRUE" />
+	<sound_music_volume value="19" />
+	<sound_sfx_volume value="72" />
+	<startyear value="1982" />
+	<databaseDir value="res/database/Olszak" />
+	<stationmap value="poland.xml" />
+	<touchInput value="FALSE" />
+</config>
