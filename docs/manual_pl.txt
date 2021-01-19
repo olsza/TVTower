@@ -1,22 +1,23 @@
 Instrukcja gry (dla wersji deweloperska)
-====================================
+========================================
 
 Autor: Själe (tłumaczenie: Olsza [TT: @czlowiek_it])
 
 Uwaga wstępna
 
-Należy zawsze pamiętać, że jest to wersja rozwojowa.
-Więc nie wszystko jest jeszcze idealne, brakuje niektórych rzeczy.
-Niemniej jednak staramy się zapewnić, aby była zawsze wgrywalna po pobieraniu oprogramowania.
+Należy zawsze pamiętać, że jest to wersja rozwojowa. Więc nie
+wszystko jest jeszcze idealne, brakuje niektórych rzeczy. Niemniej
+jednak staramy się zapewnić, aby była zawsze wgrywalna po pobieraniu
+oprogramowania.
 
-W tym celu polegamy na Twojej pomocy. Zgłoś nam błędy
-Pomysły, tłumaczenia, omówione z nami na temat sensu i bezsensu gry lub
-pomóż, jeśli masz talent do grania. Zapraszam
-na forum, gdzie są tam motywujące do rozmowy:
+W tym celu polegamy na Twojej pomocy. Zgłoś nam błędy Pomysły,
+tłumaczenia, omówione z nami na temat sensu i bezsensu gry lub
+pomóż, jeśli masz talent do grania. Zapraszam na forum, gdzie są
+tam motywujące do rozmowy:
 
 http://www.gamezworld.de/phpforum/
 
-W tej chwili gra może być rozgrywana jako gra bez końca. AI działa
+W tej chwili gra może być rozgrywana jako gra bez końca. AI działa,
 ale nie jest jeszcze w ostatecznej wersji.
 
 Na końcu przewodnika znajduje się lista ich skrótów klawiaturowych
