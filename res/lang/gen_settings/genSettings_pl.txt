@@ -1,0 +1,197 @@
+LANGUAGE_NAME_INTERNATIONAL = Polish
+LANGUAGE_NAME_LOCALE        = Polski
+
+MENU      = Menu
+OPEN_MENU = Otwarcie menu
+
+CHAT           = Chat
+SAVE_AND_APPLY = Zapisz i zastosuj
+CANCEL         = Anuluj
+
+CONTINUE_GAME                              = Kontynuuj grę
+LOAD_GAME                                  = Wczytaj grę
+INCOMPATIBLE_SAVEGAME                      = Niezgodny zapis gry
+INVALID_SAVEGAME                           = Nieprawidłowa zapis gra
+FILE_NOT_FOUND                             = Nie znaleziono pliku
+SAVEGAME_GETS_LOADED                       = Zapisana gra zostanie załadowana
+SAVE_GAME                                  = Zapisz grę
+NAME_OF_SAVEGAME                           = Nazwa stanu gry
+OVERWRITE_SAVEGAME                         = Czy nadpisać zapis gry?
+DO_YOU_REALLY_WANT_TO_OVERWRITE_SAVEGAME_X = Czy na pewno chcesz nadpisać stan gry %SAVEGAME% ?
+SAVEGAME_GETS_CREATED                      = Zapis gry zostanie utworzona
+PLEASE_BE_PATIENT                          = Prosimy o cierpliwość
+EXIT_GAME                                  = Wyjdź z gry
+EXIT_TO_MAINMENU                           = Wyjdź do menu głównego
+
+24_HOURS_GAMEDAY                                              = 24-godzinny dzień gry
+ALLOW_TRAILERS_AND_INFOMERCIALS                               = Włącz zwiastuny/reklamy
+ALLOW_MOVIES_WITH_YEAR_OF_PRODUCTION_GT_GAMEYEAR              = Zezwól na Filmy: Rok Produkcji > od Rok Gry
+OPTION_ON                                                     = Opcja włączona
+OPTION_OFF                                                    = Opcja wyłączona
+AVAILABLE_GAMES                                               = Dostępne gry
+ALREADY_OVER                                                  = Już po...?
+DO_YOU_REALLY_WANT_TO_QUIT                                    = Czy na pewno chcesz zakończyć?
+DO_YOU_REALLY_WANT_TO_QUIT_THE_GAME_AND_RETURN_TO_STARTSCREEN = Czy na pewno chcesz zakończyć grę i wrócić do menu głównego?
+
+PREPARING_START_DATA           = Przygotowywanie danych startowych
+SYNCHRONIZING_START_CONDITIONS = Synchronizuj warunki początkowe
+STARTING_MULTIPLAYERGAME       = Uruchamianie gry wieloosobowej
+STARTING_SINGLEPLAYERGAME      = Rozpoczynanie gry jednoosobowej
+
+PLAYERNAME                  = Nazwa gracza
+CHANNELNAME                 = Nazwa kanału telewizyjnego
+STATIONMAP                  = Mapa stacji
+DATABASE                    = Baza danych
+SOUND_OUTPUT                = Wyjście dźwięku
+GRAPHICS                    = Grafika
+MUSIC                       = Muzyka
+SFX                         = Efekty dźwiękowe
+FULLSCREEN                  = Pełny ekran
+VSYNC                       = Synchronizacja pionowa obrazu
+LONGCLICK_MODE              = Długie kliknięcie
+LONGCLICK_MODE_EXPLANATION  = Symuluj prawe kliknięcie przez długie naciśnięcie lewego przycisku myszy lub dotknięciem
+LONGCLICK_TIME              = Czas "Długie kliknięcie"
+WINDOW_MODE_RESOLUTION      = Rozdzielczość okna
+INPUT                       = Wejście
+USE_TOUCH_INPUT             = Użyj wprowadzania dotykowego
+USE_TOUCH_INPUT_EXPLANATION = Pierwsze kliknięcie ustawia kursor myszy, kolejne są jako kliknięcia. Zmiana położenia kursora, jeśli przekracza "promień" od kliknięcia.
+MOVE_INSTEAD_CLICK_RADIUS   = promień "przesuń, a nie klikaj"
+MULTIPLAYER                 = Tryb wieloosobowa
+SINGLEPLAYER                = Tryb jednoosobowa
+DEFAULTS_FOR_NEW_GAME       = Wartości domyślne "nowej gry"
+RENDERER                    = Renderowanie
+SOUND_ENGINE                = Silnik dźwięku
+SOUND_MUSIC_VOLUME          = Głośność muzyki
+SOUND_SFX_VOLUME            = Głośność efektów dźwiękowych
+SOUND_MUTED                 = Wycisz
+PORT_ONLINEGAME             = Port dla gier online
+GAME_SPEED_IN_ROOMS         = Prędkość gry w pokojach
+
+GAME_TITLE  = Tytuł gry
+START_YEAR  = Start roku
+DAY_OF_YEAR = Miesiąc
+
+YES        = Tak
+NO         = Nie
+OK         = OK
+MONEY      = Pieniądze
+DEBT       = Dług
+REACH      = Zasięg
+PRICE      = Cena
+VALUE      = Wartość
+POPULATION = Ludność
+NAME       = Nazwa
+
+GENDER_MEN         = Mężczyźni
+GENDER_WOMEN       = Kobiety
+GENDER_ALL         = Wszyscy
+GENDER_MEN_SHORT   = M
+GENDER_WOMEN_SHORT = K
+
+CURRENCY     = zł
+OCLOCK       = Czas
+DAY_SHORT    = d
+HOUR_SHORT   = g
+MINUTE_SHORT = m
+DAY          = Dzień
+DAYS         = Dni
+DATE         = Data
+HOUR         = Godzina
+HOURS        = Godziny
+MINUTE       = Minuta
+MINUTES      = Minuty
+OLD          = Stary
+TOMORROW     = Jutro
+TODAY        = Dzisiaj
+YESTERDAY    = Wczoraj
+TWO_DAYS_AGO = Przedwczoraj
+IN_X_DAYS    = Za %DAYS% dni
+X_DAYS_AGO   = %DAYS% dni temu
+
+WEEK_SHORT_MONDAY    = Pon
+WEEK_SHORT_TUESDAY   = Wt
+WEEK_SHORT_WEDNESDAY = Śr
+WEEK_SHORT_THURSDAY  = Czw
+WEEK_SHORT_FRIDAY    = Pt
+WEEK_SHORT_SATURDAY  = Sob.
+WEEK_SHORT_SUNDAY    = Niedz.
+WEEK_LONG_MONDAY     = Poniedziałek
+WEEK_LONG_TUESDAY    = Wtorek
+WEEK_LONG_WEDNESDAY  = Środa
+WEEK_LONG_THURSDAY   = Czwartek
+WEEK_LONG_FRIDAY     = Piątek
+WEEK_LONG_SATURDAY   = Sobota
+WEEK_LONG_SUNDAY     = Niedziela
+SEASON_SPRING        = Wiosna
+SEASON_SUMMER        = Lato
+SEASON_AUTUMN        = Jesień
+SEASON_WINTER        = Zima
+
+
+MENU_SOLO_GAME       = Gra w solo
+MENU_START_GAME      = Rozpocznij grę
+MENU_NETWORKGAME     = Gra sieciowa
+MENU_ONLINEGAME      = Gra On-line
+MENU_JOIN            = Dołącz
+MENU_CREATE_GAME     = Utwórz grę
+MENU_BACK            = Wróć
+MENU_SETTINGS        = Ustawienia
+MENU_QUIT            = Wyjdź z gry
+MENU_AVAILABLE_GAMES = Dostępne gry
+
+ABBREVIATION_THOUSAND = Tysiąc
+ABBREVIATION_MILLION  = Milion
+ABBREVIATION_BILLION  = Miliard
+
+DIFFICULTY_EASY   = Łatwy
+DIFFICULTY_NORMAL = Normalny
+DIFFICULTY_HARD   = Trudny
+DIFFICULTY_CUSTOM = Dostosowane
+
+GAMETIME  = Czas
+PLAYER    = Gracz
+GAME      = Gra ID
+GAME_TIME = Czas gry
+GAMEDAY   = Dzień gry
+
+
+GAMESPEED      = Prędkość gry
+SET_SPEED_TO_X = Ustaw prędkość gry na %SPEED% poziom
+
+MANUAL    = Instrukcja
+HELP      = Pomoc
+SHOW_HELP = Pokaż pomoc
+
+DO_NOT_SHOW_AGAIN        = Nie pokazuj ponownie
+DO_NOT_SHOW_ANY_TIPS     = Nie pokazuj więcej wskazówek
+SHOW_INTRODUCTORY_GUIDES = Pokaż przewodniki wprowadzające
+
+ERROR_NOT_POSSIBLE                  = Niemożliwe!
+ERROR_NOT_ABLE_TO_SELL_LAST_STATION = Nie jest możliwa sprzedaż ostatniego pozostałego masztu transmisyjnego / stacji.
+ERROR_NOT_ENOUGH_MONEY              = Za mało pieniędzy!
+ERROR_NOT_ENOUGH_MONEY_TEXT         = Nie masz wystarczających środków finansowych, aby wykonać tę akcję.
+
+NEWGAMESETTINGS_CHANNELNAME_DETAIL = Nazwa kanału telewizyjnego tego gracza
+NEWGAMESETTINGS_PLAYERNAME_DETAIL  = Nazwa tego gracza
+NEWGAMESETTINGS_DIFFICULTY         = Poziom trudności
+NEWGAMESETTINGS_DIFFICULTY_DETAIL  = Poziom trudności |b|dla tego|/b| gracza
+NEWGAMESETTINGS_START_YEAR_DETAIL  = Rok, w którym rozpoczyna się gra. Wpływa na dostępne programy!
+NEWGAMESETTINGS_GAME_SEED          = Numer gry
+NEWGAMESETTINGS_GAME_SEED_DETAIL   = Te same numery gier skutkują tymi samymi warunkami rozpoczęcia gry (wybór programu).
+
+MESSAGE_CLOSES_AT_TIME = Wiadomość kończy się o %TIME%
+MESSAGE_CLOSES_AT_DAY  = Wiadomość kończy się %TIME%
+
+
+HINT_PRESSING_ALT_WILL_SHOW_DETAILS    = Naciśnij klawisz "ALT", aby uzyskać więcej informacji.
+HINT_PRESSING_ALT_WILL_FIX_TOOLTIP     = Wciśnięcie klawisza "ALT" spowoduje naprawienie podpowiedzi.
+HINT_PRESSING_ALT_WILL_RELEASE_TOOLTIP = Wciśnięcie klawisza "ALT" spowoduje zwolnienie podpowiedzi.
+HINT_PROGRAMMEPLANER_SHORTCUTS         = ALT: przełącz arkusz danych | CTRL+kliknięcie: skopiuj program | SHIFT+kliknięcie: następny odcinek
+HINT                                   = Podpowiedź
+
+STARTHINT_TITLE1 = Plan programu
+STARTHINT_TEXT1  = Klawisz CTRL umożliwia wielokrotne umieszczanie programu na planie. Podczas gdy klawisz SHIFT próbuje umieścić następny odcinek serii.
+STARTHINT_TITLE2 = Planowanie programu
+STARTHINT_TEXT2  = Powodzenie emisji zależy w dużej mierze od jakości / oceny programu. Równie ważny jest czas antenowy i popularność gatunku, oglądalność kolejnych programów (które są jak najbardziej zbliżone), a także liczba nadawanych zwiastunów, jakość przekazu wiadomości i inne czynniki.\n\nProgramy niektórych gatunków, takich jak komedia, mogą być nadawane częściej niż inne gatunki, zachowując przy tym większość aktualności.
+STARTHINT_TITLE3 = Umowy reklamowe
+STARTHINT_TEXT3  = Umowy reklamowe określają wymagania dotyczące minimalnej liczby widzów, jaką należy osiągnąć. Te i oczywiście premie / kary są powiązane z zasięgiem, który można obecnie osiągnąć za pomocą własnej stacji.\n\nW związku z tym czasami lepiej jest zawrzeć nowe umowy reklamowe przed zakupem stacji.

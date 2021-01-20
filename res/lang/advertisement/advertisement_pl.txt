@@ -1,0 +1,42 @@
+TARGETGROUP_ALL        = Wszystkie
+TARGETGROUP_CHILDREN   = Dzieci
+TARGETGROUP_TEENAGERS  = Młodzież
+TARGETGROUP_HOUSEWIVES = Gospodynie domowe
+TARGETGROUP_EMPLOYEES  = Pracownicy
+TARGETGROUP_UNEMPLOYED = Bezrobotny
+TARGETGROUP_MANAGER    = Menedżer
+TARGETGROUP_PENSIONERS = Emeryci
+TARGETGROUP_WOMEN      = Kobiety
+TARGETGROUP_MEN        = Mężczyźni
+
+CLASSIFICATION = klasyfikacja
+REMAINING_TERM = pozostały okres
+SPOTS_TO_SEND  = spoty do wysłania
+
+MIN_AUDIENCE          = Min. publiczność
+AD_QUALITY            = Jakość
+AD_PROFIT             = Zysk
+AD_PLANNED            = planowane
+AD_TOSEND             = wysłać
+AD_PENALTY            = Kara
+AD_MIN_AUDIENCE       = min. widzów
+AD_TARGETGROUP        = grupa docelowa
+AD_SEND_TILL_TOLATE   = za późno!!!
+AD_SEND_TILL_MIDNIGHT = wyślij do północy!!
+AD_SEND_TILL_TOMORROW = wyślij do jutra!
+AD_STILL_X_DAYS       = jeszcze %1 dni
+
+AD_CHANNEL_IMAGE_TOO_LOW = Obraz nadawcy jest za niski. %CHANNELIMAGE%% < %IMAGE%%.
+AD_PLEASE_GENRE_X        = Proszę gatunek %GENRE%
+AD_PLEASE_FLAG           = Proszę %FLAG%
+
+INFOMERCIAL                  = Stałe reklamy
+AD_INFOMERCIAL               = Otrzymasz zapłatę za nadawanie stałych reklam. Dochód zależy od liczby widzów.
+AD_INFOMERCIAL_NOT_AVAILABLE = Dla tego ogłoszenia nie są dostępne żadne długoterminowe reklamy.
+AD_INFOMERCIAL_PROFIT        = Dochód: %PROFIT% na 1000 widzów
+
+ADCONTRACT_FINISHED                = Umowa reklamowa wygasła
+ADCONTRACT_FAILED                  = Umowa reklamowa nie powiodła się
+ADCONTRACT_X_SUCCESSFULLY_FINISHED = Umowa reklamowa "%TITLE%" została pomyślnie zakończona.
+PROFIT_OF_X_GOT_CREDITED           = Bonus %MONEY% został przyznany.
+ADCONTRACT_X_FAILED                = Umowa reklamowa "%TITLE%" nie powiodła się.
