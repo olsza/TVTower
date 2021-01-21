@@ -13,17 +13,17 @@ CLASSIFICATION = klasyfikacja
 REMAINING_TERM = pozostały okres
 SPOTS_TO_SEND  = spoty do wysłania
 
-MIN_AUDIENCE          = Min. publiczność
+MIN_AUDIENCE          = Min. widzów
 AD_QUALITY            = Jakość
 AD_PROFIT             = Zysk
 AD_PLANNED            = planowane
-AD_TOSEND             = wysłać
+AD_TOSEND             = wyświetl
 AD_PENALTY            = Kara
 AD_MIN_AUDIENCE       = min. widzów
 AD_TARGETGROUP        = grupa docelowa
 AD_SEND_TILL_TOLATE   = za późno!!!
-AD_SEND_TILL_MIDNIGHT = wyślij do północy!!
-AD_SEND_TILL_TOMORROW = wyślij do jutra!
+AD_SEND_TILL_MIDNIGHT = wyświetl do północy!!
+AD_SEND_TILL_TOMORROW = wyświetl do jutra!
 AD_STILL_X_DAYS       = jeszcze %1 dni
 
 AD_CHANNEL_IMAGE_TOO_LOW = Obraz nadawcy jest za niski. %CHANNELIMAGE%% < %IMAGE%%.
