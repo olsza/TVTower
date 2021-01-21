@@ -2993,6 +2993,8 @@
         <person id="TheRob-TowerTV-MikeMcPiamoir" first_name="Mike" last_name="Mc Piamoir" nick_name="" imdb_id="nm0533943" creator="8751" created_by="TheRob" />
         <!-- Richard Basehart -->
         <person id="TheRob-TowerTV-RichieBaseyard" first_name="Richie" last_name="Baseyard" nick_name="" imdb_id="nm0000865" creator="8751" created_by="TheRob" />
+		<!-- Olsza -->
+        <person id="TheRob-TowerTV-olsza" first_name="Olsza" last_name="Olszewski" nick_name="Olsza" fictional="1" gender="1" bookable="0" country="PL" job="64" />
 
 		<!-- von RumpelFreddy -->
 		<!-- Wilfried Elste -->
