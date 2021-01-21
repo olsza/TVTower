@@ -2480,10 +2480,12 @@ Available in any well-stocked drugstore.</en>
 		<ad id="ronny-ad-startad-bmxng" creator="5578" created_by="Ronny" comment="TKP 1000, Quote 25000">
 			<title>
 				<de>BMX NG</de>
+				<pl>BMX NG + Olsza</pl>
 			</title>
 			<description>
 				<de>Einen Guten Senderstart wünscht Bruceys BlitzMax NG-Compiler. Nur echt mit 64 Bit!</de>
 				<en>Brucey's BlitzMax NG-compiler wishes all the best for the channel opening. BlitzMax' first true 64 bit compiler!</en>
+				<pl>Kompilator BlitzMax NG firmy Brucey oraz Olsza życzą wszystkiego najlepszego z okazji otwarcia kanału w TVTower!</pl>
 			</description>
 			<conditions min_audience="1.3015" min_image="0" target_group="0" pro_pressure_groups="0" contra_pressure_groups="0"/>
 			<data quality="45" repetitions="1" duration="0" profit="1000" penalty="490" infomercial_profit="134" fix_infomercial_profit="1" available="0" type="1" />
@@ -2495,6 +2497,8 @@ Available in any well-stocked drugstore.</en>
 			<description>
 				<de>Zum Sendestart stellen wir 1000 Einheiten unseres beliebten Open-Source und Freeware-Spieles "TVTower" kostenlos zum Download bereit. Viel Spaß!</de>
 				<en>We will be offering free downloads for 1000 units of our popular open-source and freeware game "TVTower". Have fun!</en>
+				<pl>Będziemy oferować bezpłatne pliki za 1000 pobranń naszej popularnej gry typu Open Source i freeware "TVTower".
+Baw się dobrze!</pl>
 			</description>
 			<conditions min_audience="0.6242" min_image="0" target_group="0" pro_pressure_groups="0" contra_pressure_groups="0"/>
 			<data quality="45" repetitions="2" duration="0" profit="1800" penalty="690" infomercial_profit="220" fix_infomercial_profit="1" available="0" type="1" />
@@ -2506,6 +2510,7 @@ Available in any well-stocked drugstore.</en>
 			<description>
 				<de>Ihre Idee in Code gegossen! Digidea.de hofft auf wenig Bugs und gute Einschaltquoten.</de>
 				<en>Your Idea poured into code! Digidea.de hopes for less bugs and good audience ratings.</en>
+				<pl></pl>
 			</description>
 			<conditions min_audience="0.3898" min_image="0" target_group="0" pro_pressure_groups="0" contra_pressure_groups="0"/>
 			<data quality="45" repetitions="3" duration="0" profit="2500" penalty="790" infomercial_profit="300" fix_infomercial_profit="1" available="0" type="1" />
