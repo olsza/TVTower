@@ -18,7 +18,7 @@ GetPersonGenerator().AddProvider( new TPersonGeneratorCountry_Greek )
 GetPersonGenerator().AddProvider( new TPersonGeneratorCountry_Uganda )
 GetPersonGenerator().AddProvider( new TPersonGeneratorCountry_Spain )
 GetPersonGenerator().AddProvider( new TPersonGeneratorCountry_France )
-
+GetPersonGenerator().AddProvider( new TPersonGeneratorCountry_Poland )
 
 
 Type TPersonGenerator
@@ -1232,4 +1232,86 @@ Type TPersonGeneratorCountry_France extends TPersonGeneratorCountry
 	End Method
 End Type
 
+'=== PLoland ===
+Type TPersonGeneratorCountry_Poland extends TPersonGeneratorCountry
+	Method New()
+		self.countryCode = "pl"
+		
+		self.firstNamesMale = [..
+			"Adam", "Adrian", "Alan", "Aleksander", "Andrii", "Andrzej", "Antoni", "Arkadiusz", "Artur", ..
+			"Bartłomiej", "Bartosz", "Bernard", "Błażej", "Bogdan", "Bogusław", "Bolesław", "Bronisław", ..
+			"Cezary", "Czesław", ..
+			"Damian", "Daniel", "Dariusz", "Dawid", "Dominik", ..
+			"Edmund", "Edward", "Emil", "Eryk", "Eugeniusz", ..
+			"Fabian", "Filip", "Franciszek", ..
+			"Gabriel", "Grzegorz", ..
+			"Henryk", "Hubert", ..
+			"Ignacy", "Igor", "Ireneusz", ..
+			"Jacek", "Jakub", "Jan", "Janusz", "Jarosław", "Jerzy", "Józef", "Julian", ..
+			"Kacper", "Kamil", "Karol", "Kazimierz", "Konrad", "Krystian", "Krzysztof", ..
+			"Lech", "Leon", "Leszek", ..
+			"Łukasz", ..
+			"Maciej", "Maksymilian", "Marcel", "Marcin", "Marek", "Marian", "Mariusz", "Mateusz", "Michał", "Mieczysław", "Mikołaj", "Miłosz", "Mirosław", ..
+			"Nikodem", "Norbert", ..
+			"Oleksandr", "Oliwier", "Oskar", ..
+			"Patryk", "Paweł", "Piotr", "Przemysław", ..
+			"Radosław", "Rafał", "Remigiusz", "Robert", "Roman", "Ryszard", ..
+			"Sebastian", "Serhii", "Sławomir", "Stanisław", "Stefan", "Sylwester", "Szymon", ..
+			"Tadeusz", "Tomasz", "Tymon", "Tymoteusz", ..
+			"Wacław", "Waldemar", "Wiesław", "Wiktor", "Witold", "Władysław", "Włodzimierz", "Wojciech", ..
+			"Zbigniew", "Zdzisław", "Zenon", "Zygmunt" ..
+        	]
+
+		self.firstNamesFemale = [..
+			"Adrianna", "Agata", "Agnieszka", "Aldona", "Aleksandra", "Alicja", "Alina", "Amelia", "Anastazja", "Aneta", "Angelika", "Aniela", "Anita", "Anna", "Antonina", "Apolonia", ..
+			"Barbara", "Beata", "Bernadeta", "Bogumiła", "Bogusława", "Bożena", "Bronisława", "Brygida", ..
+			"Cecylia", "Celina", "Czesława", ..
+			"Dagmara", "Daniela", "Danuta", "Daria", "Dominika", "Dorota", ..
+			"Edyta", "Eliza", "Elżbieta", "Emilia", "Eugenia", "Ewa", "Ewelina", ..
+			"Faustyna", "Franciszka", ..
+			"Gabriela", "Genowefa", "Gertruda", "Grażyna", ..
+			"Halina", "Hanna", "Helena", "Henryka", "Honorata", ..
+			"Ilona", "Irena", "Iwona", "Izabela", "Izabella", ..
+			"Jadwiga", "Jagoda", "Janina", "Joanna", "Jolanta", "Józefa", "Julia", "Julianna", "Justyna", ..
+			"Kamila", "Karina", "Karolina", "Katarzyna", "Kazimiera", "Kinga", "Klara", "Klaudia", "Kornelia", "Krystyna", ..
+			"Laura", "Lena", "Leokadia", "Lidia", "Lucyna", "Ludwika", "Luiza", ..
+			"Łucja", ..
+			"Magda", "Magdalena", "Maja", "Malwina", "Małgorzata", "Marcelina", "Maria", "Marianna", "Mariola", "Marlena", "Marta", "Martyna", "Marzena", "Michalina", "Mieczysława", "Milena", "Mirosława", "Monika", ..
+			"Natalia", "Nikola", ..
+			"Olga", "Oliwia", ..
+			"Patrycja", "Paulina", ..
+			"Regina", "Renata", "Roksana", "Rozalia", "Róża", ..
+			"Sabina", "Sandra", "Sara", "Stanisława", "Stefania", "Sylwia", ..
+			"Teresa", ..
+			"Urszula", ..
+			"Wacława", "Wanda", "Weronika", "Wiesława", "Wiktoria", "Wioleta", "Wioletta", "Władysława", ..
+			"Zdzisława", "Zofia", "Zuzanna", ..
+			"Żaneta" ..
+					]
+
+		self.lastNames = [ ..
+			"Adamczyk", ..
+			"Baran", "Bąk", "Bednarczyk", "Bednarek", "Błaszczyk", ..
+			"Cieślak", ..
+			"Daniłowicz", "Duda", "Dudek", "Dziedzic", "Dzik", ..
+			"Glink", "Granat", "Grzelak", ..
+			"Janik", "Jarosz", "Jeżak", "Jóźwiak", ..
+			"Kaczka", "Kaczmarczyk", "Kaczmarek", "Kasprzak", "Kaźmierczak", "Klimek", "Kołodziej", "Kołodziejczyk", "Konieczny", "Kopeć", "Kot", "Kowal", "Kowalczyk", "Kowalik", "Kozak", "Kozieł", "Kozioł", "Krawczyk", "Kropka", "Król", "Kruk", "Kubiak", "Kurek", ..
+			"Lato", "Leśniak", "Lis", ..
+			"Łuczak", "Łukasik", ..
+			"Madej", "Maj", "Majchrzak", "Marciniak", "Markiewicz", "Marszałek", "Matusiak", "Mazur", "Mazurek", "Mazurkiewicz", "Mąka", "Michalak", "Michalik", "Mikołajczyk", "Mróz", "Musiał", ..
+			"Nitka", "Nowak", ..
+			"Olczak", "Olejniczak", "Olejnik", "Owczarek", ..
+			"Pająk", "Pawlak", "Pawlik", "Piątek", "Pietrzak", "Polak", ..
+			"Ratajczak", "Rybak", ..
+			"Sienkiewicz", "Sobczak", "Sobczyk", "Stankiewicz", "Stasiak", "Stępień", "Szary", "Szczepaniak", "Szmalc", "Szulc", "Szymczak", ..
+			"Świątek", ..
+			"Tomczak", "Tomczyk", ..
+			"Urban", "Urbaniak", ..
+			"Walczak", "Wawrzyniak", "Wieczorek", "Wilk", "Włodarczyk", "Woźniak", "Wójcik", "Wójtowicz", "Wróbel", ..
+			"Zając", "Złodziej", "Zych", ..
+			"Żak", ..
+		]
+	End Method
+End Type
 
