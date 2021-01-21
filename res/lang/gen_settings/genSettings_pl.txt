@@ -139,9 +139,9 @@ MENU_SETTINGS        = Ustawienia
 MENU_QUIT            = Wyjdź z gry
 MENU_AVAILABLE_GAMES = Dostępne gry
 
-ABBREVIATION_THOUSAND = Tysiąc
-ABBREVIATION_MILLION  = Milion
-ABBREVIATION_BILLION  = Miliard
+ABBREVIATION_THOUSAND = tyś.
+ABBREVIATION_MILLION  = mln
+ABBREVIATION_BILLION  = mld
 
 DIFFICULTY_EASY   = Łatwy
 DIFFICULTY_NORMAL = Normalny
@@ -150,7 +150,7 @@ DIFFICULTY_CUSTOM = Dostosowane
 
 GAMETIME  = Czas
 PLAYER    = Gracz
-GAME      = Gra ID
+GAME      = ID gry
 GAME_TIME = Czas gry
 GAMEDAY   = Dzień gry
 
@@ -183,9 +183,9 @@ MESSAGE_CLOSES_AT_TIME = Wiadomość kończy się o %TIME%
 MESSAGE_CLOSES_AT_DAY  = Wiadomość kończy się %TIME%
 
 
-HINT_PRESSING_ALT_WILL_SHOW_DETAILS    = Naciśnij klawisz "ALT", aby uzyskać więcej informacji.
-HINT_PRESSING_ALT_WILL_FIX_TOOLTIP     = Wciśnięcie klawisza "ALT" spowoduje naprawienie podpowiedzi.
-HINT_PRESSING_ALT_WILL_RELEASE_TOOLTIP = Wciśnięcie klawisza "ALT" spowoduje zwolnienie podpowiedzi.
+HINT_PRESSING_ALT_WILL_SHOW_DETAILS    = Klawisz "ALT" - więcej informacji.
+HINT_PRESSING_ALT_WILL_FIX_TOOLTIP     = Klawisz "ALT" - pokazanie podpowiedzi.
+HINT_PRESSING_ALT_WILL_RELEASE_TOOLTIP = Klawisz "ALT" - zwolnienie podpowiedzi.
 HINT_PROGRAMMEPLANER_SHORTCUTS         = ALT: przełącz arkusz danych | CTRL+kliknięcie: skopiuj program | SHIFT+kliknięcie: następny odcinek
 HINT                                   = Podpowiedź
 
