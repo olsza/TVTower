@@ -76,7 +76,7 @@ NEWS_ANNOUNCE_MOVIE_DESCRIPTION3 = Najnowsze prace nad filmem «%MOVIETITLE%». 
 NEWS_ANNOUNCE_MOVIE_DESCRIPTION4 = Opublikowano pierwszy zwiastun filmu «%MOVIETITLE%». %DIRECTORNAME1%: "Najlepszy film roku".
 
 
-WEATHER_FORECAST_FOR_X_TILL_Y    = Prognoza pogody na %BEGINHOUR% do godziny %ENDHOUR%.
+WEATHER_FORECAST_FOR_X_TILL_Y    = Prognoza pogody od godziny %BEGINHOUR%:00 do %ENDHOUR%:00.
 SKY_IS_PARTIALLY_CLOUDY          = Niebo jest częściowo zachmurzone.
 SKY_IS_OVERCAST1                 = Niebo jest zachmurzone.
 SKY_IS_OVERCAST2                 = Niebo jest pełne chmur.
@@ -95,13 +95,13 @@ TEMPERATURE_IS_CONSTANT_AT_X     = Stała temperatura w wysokości %TEMPERATURE%
 IN_THE_LATER_HOURS1                       = W późniejszych godzinach
 IN_THE_LATER_HOURS2                       = Jeszcze dzisiaj
 IN_THE_LATER_HOURS3                       = Później
-STORMY_WINDS_OF_UP_TO_X1                  = Podmuchy do %MAXWINDVELOCITY% km/h w całym kraju.
-STORMY_WINDS_OF_UP_TO_X2                  = Silne podmuchy aż do %MAXWINDVELOCITY% km/h.
+STORMY_WINDS_OF_UP_TO_X1                  = Podmuchy do %MAXWINDVELOCITY% m/s w całym kraju.
+STORMY_WINDS_OF_UP_TO_X2                  = Silne podmuchy aż do %MAXWINDVELOCITY% m/s.
 NEARLY_NO_WIND1                           = Prawie nie ma wiatru.
 NEARLY_NO_WIND2                           = Wiatru prawie nie ma.
-SLOW_WIND_WITH_X_AND_GUST_OF_WIND_WITH_Y1 = Lekki powiew o sile %MINWINDVELOCITY% km/h z sporadycznym porywie do %MAXWINDVELOCITY% km/h.
-WIND_VELOCITIES_ARE_BETWEEN_X_AND_Y1      = Prędkości wiatru mieszczą się między %MINWINDVELOCITY% a %MAXWINDVELOCITY% km/h.
-WIND_VELOCITY_IS_CONSTANT_AT_X1           = Prędkość wiatru jest stała o sile %WINDVELOCITY% km/h.
+SLOW_WIND_WITH_X_AND_GUST_OF_WIND_WITH_Y1 = Lekki powiew o sile %MINWINDVELOCITY% m/s z sporadycznym porywie do %MAXWINDVELOCITY% m/s.
+WIND_VELOCITIES_ARE_BETWEEN_X_AND_Y1      = Prędkości wiatru mieszczą się między %MINWINDVELOCITY% a %MAXWINDVELOCITY% m/s.
+WIND_VELOCITY_IS_CONSTANT_AT_X1           = Prędkość wiatru jest o stałej sile %WINDVELOCITY% m/s.
 
 
 SCORE_POINT  = Punkt
