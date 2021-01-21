@@ -15,7 +15,7 @@ HIGH_AUDIENCE = duża liczba widzów
 MOVIE_SPEED      = Tempo
 MOVIE_CRITIC     = Krytycy
 MOVIE_BOXOFFICE  = Kasa biletowa
-MOVIE_TVAUDIENCE = Widownia telewizyjna
+MOVIE_TVAUDIENCE = Przed ekranem
 MOVIE_TOPICALITY = Aktualność
 MOVIE_BLOCKS     = Bloki
 MOVIE_XRATED     = Dla dorosłych XXX
@@ -23,7 +23,7 @@ MOVIE_EPISODES   = Odcinki
 MOVIE_CAST       = Obsada
 
 MOVIE_LIVESHOW   = Transmisja na żywo
-MOVIE_CALLINSHOW = Zdobądź %PROFIT% na 1.000 widzów.
+MOVIE_CALLINSHOW = Zdobądź %PROFIT% za 1.000 widzów.
 MOVIE_TRAILER    = Nadawanie zwiastuna może zwiększyć zainteresowanie kolejnymi emisjami reklamowanego programu.
 
 MOVIES          = Filmy
@@ -115,8 +115,8 @@ ONLY_X_BROADCASTS_POSSIBLE              = Możliwe tylko transmisje %X%!
 NO_MORE_BROADCASTS_ALLOWED              = Dalsze transmisje nie są możliwe!
 BROADCAST_ONLY_ALLOWED_FROM_X_TO_Y      = Nadawanie dozwolone tylko między godziną %X%:00 a %Y%:00!
 
-OPENINGSHOW_TITLE       = Wielkie uruchomienie „%CHANNELNAME%“
-OPENINGSHOW_DESCRIPTION = Otwarcie programu %CHANNELNAME% rozpoczyna się dzisiaj.
+OPENINGSHOW_TITLE       = Wielkie otwarcie „%CHANNELNAME%“
+OPENINGSHOW_DESCRIPTION = Uruchomienie kanału %CHANNELNAME% rozpoczyna transmiję dzisiaj.
 
 SPORT_PROGRAMME_TITLE                                = %SPORTNAME%: %LEAGUENAME% %SEASONYEARSTART%
 SPORT_PROGRAMME_ALL_X_MATCHES_OF_LEAGUEX_IN_SEASON_X = Wszystkie %MATCHCOUNT% meczy z ligi %LEAGUENAME% w sezonie %SEASONYEARSTART%.
