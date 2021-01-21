@@ -1,6 +1,6 @@
 INCREASE          = Wzrost
 RUNNING_COSTS     = Koszty utrzymania
-BROADCASTING_AREA = Obszar nadawania
+BROADCASTING_AREA = Zasięg
 OF_THE_MAP        = mapy
 
 COUNTRYNAME_ISO3166_DE        = Niemcy
@@ -48,7 +48,7 @@ PRICE_INCLUDES_X_FOR_BROADCAST_PERMISSION = Cena zawiera %X% za pozwolenie na na
 BROADCAST_PERMISSION_EXISTING             = Istniejące uprawnienia do transmisji
 BROADCAST_PERMISSION_MISSING              = Brak uprawnień do transmisji
 BROADCAST_PERMISSION                      = Uprawnienie do transmisji
-BROADCAST_PERMISSION_SHORT                = Zezwolenie na nadawanie.
+BROADCAST_PERMISSION_SHORT                = Uprawnienie
 PERMISSION                                = Pozwolenie
 IMAGE                                     = Obraz
 RENEW_AUTOMATICALLY                       = Odnów automatycznie
