@@ -32,7 +32,7 @@ AD_PLEASE_FLAG           = Proszę %FLAG%
 
 INFOMERCIAL                  = Stałe reklamy
 AD_INFOMERCIAL               = Otrzymasz zapłatę za nadawanie stałych reklam. Dochód zależy od liczby widzów.
-AD_INFOMERCIAL_NOT_AVAILABLE = Dla tego ogłoszenia nie są dostępne żadne długoterminowe reklamy.
+AD_INFOMERCIAL_NOT_AVAILABLE = Dla tego ogłoszenia nie są dostępne żadne reklamy a`la telezakupy.
 AD_INFOMERCIAL_PROFIT        = Dochód: %PROFIT% na 1000 widzów
 
 ADCONTRACT_FINISHED                = Umowa reklamowa wygasła
