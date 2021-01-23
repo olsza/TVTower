@@ -4,8 +4,8 @@ ACCOUNT_BALANCE = Saldo konta
 
 ACHIEVEMENTS                        = Osiągnięcia
 ACHIEVEMENTCATEGORY_CATEGORIES      = Kategorie
-ACHIEVEMENTCATEGORY_ALL             = Wszystkie kategorie
-ACHIEVEMENTCATEGORY_NEWS            = Wiadomości / NEWS-y
+ACHIEVEMENTCATEGORY_ALL             = Wszystkie
+ACHIEVEMENTCATEGORY_NEWS            = NEWS-y
 ACHIEVEMENTCATEGORY_PROGRAMMES      = Programy
 ACHIEVEMENTCATEGORY_STATIONMAP      = Mapa stacji
 ACHIEVEMENTCATEGORY_MISC            = Inne
