@@ -56,14 +56,14 @@ Type TScreenHandler_OfficeArchivedMessages extends TScreenHandler
 		_eventListeners = new TEventListenerBase[0]
 
 		'to reload message list when entering a screen
-		_eventListeners :+ [ EventManager.registerListenerFunction("screen.onBeginEnter", onEnterScreen, screen) ]
+		_eventListeners :+ [ EventManager.registerListenerFunction(GameEventKeys.Screen_onBeginEnter, onEnterScreen, screen) ]
 
 		'also reload when messages get added or removed
-		_eventListeners :+ [ EventManager.registerListenerFunction("ArchivedMessageCollection.onAdd", onAddOrRemoveArchivedMessage) ]
-		_eventListeners :+ [ EventManager.registerListenerFunction("ArchivedMessageCollection.onRemove", onAddOrRemoveArchivedMessage) ]
+		_eventListeners :+ [ EventManager.registerListenerFunction(GameEventKeys.ArchivedMessageCollection_OnAdd, onAddOrRemoveArchivedMessage) ]
+		_eventListeners :+ [ EventManager.registerListenerFunction(GameEventKeys.ArchivedMessageCollection_OnRemove, onAddOrRemoveArchivedMessage) ]
 
-		_eventListeners :+ [ EventManager.registerListenerFunction("guiobject.onClick", onClickMessage, "TGUIArchivedMessageListItem") ]
-		_eventListeners :+ [ EventManager.registerListenerMethod("GUIDropDown.onSelectEntry", Self, "onChangeShowModeDropdown", "TGUIDropDown" ) ]
+		_eventListeners :+ [ EventManager.registerListenerFunction(GUIEventKeys.GUIObject_OnClick, onClickMessage, "TGUIArchivedMessageListItem") ]
+		_eventListeners :+ [ EventManager.registerListenerMethod(GUIEventKeys.GUIDropDown_OnSelectEntry, Self, "onChangeShowModeDropdown", "TGUIDropDown" ) ]
 
 		'to update/draw the screen
 		_eventListeners :+ _RegisterScreenHandler( onUpdate, onDraw, screen )
@@ -141,14 +141,18 @@ Type TScreenHandler_OfficeArchivedMessages extends TScreenHandler
 	End Function
 
 	Function onClickMessage:int( triggerEvent:TEventBase )
+		local item:TGUIArchivedMessageListItem = TGUIArchivedMessageListItem(triggerEvent.GetSender())
+		if not item or not item.message then Return False
+
 		If GetInstance().showMode <> SHOW_ALL
-			local item:TGUIArchivedMessageListItem = TGUIArchivedMessageListItem(triggerEvent.GetSender())
 			If MouseManager.IsClicked(2) or MouseManager.IsLongClicked(1)
-				local room:TOwnedGameObject = TOwnedGameObject( triggerEvent.GetData().get("room") )
+				Local roomOwner:Int = item.message.owner
+				if roomOwner <= 0 then roomOwner = GetInstance().roomOwner
+
 				If GetInstance().showMode = SHOW_UNREAD
-					item.message.SetRead(room.owner, True)
+					item.message.SetRead(roomOwner, True)
 				Else
-					item.message.SetRead(room.owner, False)
+					item.message.SetRead(roomOwner, False)
 				EndIf
 				GetInstance().messageList.removeItem(item)
 				'make sure the heading is updated

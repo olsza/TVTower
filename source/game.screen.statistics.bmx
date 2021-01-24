@@ -92,11 +92,11 @@ Type TScreenHandler_OfficeStatistics Extends TScreenHandler
 
 		'=== register event listeners
 		'listen to clicks on the four buttons
-		_eventListeners :+ [ EventManager.registerListenerFunction("guiobject.onClick", onClickButtons, "TGUIArrowButton") ]
+		_eventListeners :+ [ EventManager.registerListenerFunction(GUIEventKeys.GUIObject_OnClick, onClickButtons, "TGUIArrowButton") ]
 		'listen to tab group selections
-		_eventListeners :+ [ EventManager.registerListenerMethod("guiTabGroup.onSetToggledButton", Self, "onToggleSubScreenTabGroupButton", tabGroup) ]
+		_eventListeners :+ [ EventManager.registerListenerMethod(GUIEventKeys.GUITabGroup_OnSetToggledButton, Self, "onToggleSubScreenTabGroupButton", tabGroup) ]
 		'reset show day when entering a screen
-		_eventListeners :+ [ EventManager.registerListenerFunction("screen.onBeginEnter", onEnterScreen, screen) ]
+		_eventListeners :+ [ EventManager.registerListenerFunction(GameEventKeys.Screen_OnBeginEnter, onEnterScreen, screen) ]
 
 
 		'to update/draw the screen
@@ -354,9 +354,9 @@ endrem
 
 
 		'refresh charts when a new broadcast begins (newsshow, movie...)
-		_eventListeners :+ [EventManager.registerListenerMethod("broadcasting.common.BeginBroadcasting", Self, "OnBeginBroadcasting")]
+		_eventListeners :+ [EventManager.registerListenerMethod(GameEventKeys.Broadcast_Common_BeginBroadcasting, Self, "OnBeginBroadcasting")]
 		'refresh charts when audience changes through station buy/sell
-		_eventListeners :+ [EventManager.registerListenerMethod("StationMap.onRecalculateAudienceSum", Self, "OnRecalculateAudienceSum")]
+		_eventListeners :+ [EventManager.registerListenerMethod(GameEventKeys.StationMap_OnRecalculateAudienceSum, Self, "OnRecalculateAudienceSum")]
 'RONNY
 'hier weitermachen:
 '- chartpunkte nach "aktueller stunde" sind mit "0" drin, statt "null"
@@ -672,10 +672,10 @@ endrem
 					boldTextFont.DrawBox(MathHelper.NumberToString(100.0 * audienceResult.GetAudienceQuotePercentage(), 2) + "%", valueArea.GetX(), valueArea.GetY() + 0*valueArea.GetH(), valueArea.GetW()-20, valueArea.GetH(), sALIGN_RIGHT_CENTER, lightFontColor)
 					TextFont.DrawBox("#"+audienceRanks[0], valueArea.GetX(), valueArea.GetY() + 0*valueArea.GetH() -2, valueArea.GetW(), valueArea.GetH(), sALIGN_RIGHT_CENTER, rankFontColor)
 
-					boldTextFont.DrawBox(TFunctions.convertValue(audienceResult.PotentialMaxAudience.GetTotalSum(),0), valueArea.GetX(), valueArea.GetY() + 1*valueArea.GetH(), valueArea.GetW() - 80, valueArea.GetH(), sALIGN_RIGHT_CENTER, fontColor)
+					boldTextFont.DrawBox(TFunctions.convertValue(audienceResult.PotentialMaxAudience.GetTotalSum(), 2, 0), valueArea.GetX(), valueArea.GetY() + 1*valueArea.GetH(), valueArea.GetW() - 80, valueArea.GetH(), sALIGN_RIGHT_CENTER, fontColor)
 					boldTextFont.DrawBox(MathHelper.NumberToString(100.0 * audienceResult.GetPotentialMaxAudienceQuotePercentage(), 2) + "%", valueArea.GetX(), valueArea.GetY() + 1*valueArea.GetH(), valueArea.GetW()-20, valueArea.GetH(), sALIGN_RIGHT_CENTER, lightFontColor)
 
-					boldTextFont.DrawBox(TFunctions.convertValue(audienceResult.WholeMarket.GetTotalSum(),0), valueArea.GetX(), valueArea.GetY() + 2*valueArea.GetH(), valueArea.GetW() - 80, valueArea.GetH(), sALIGN_RIGHT_CENTER, fontColor)
+					boldTextFont.DrawBox(TFunctions.convertValue(audienceResult.WholeMarket.GetTotalSum(),2, 0), valueArea.GetX(), valueArea.GetY() + 2*valueArea.GetH(), valueArea.GetW() - 80, valueArea.GetH(), sALIGN_RIGHT_CENTER, fontColor)
 					boldTextFont.DrawBox(MathHelper.NumberToString(100.0 * audienceResult.WholeMarket.GetTotalSum() / GetStationMapCollection().GetPopulation(), 2) + "%", valueArea.GetX(), valueArea.GetY() + 2*valueArea.GetH(), valueArea.GetW()-20, valueArea.GetH(), sALIGN_RIGHT_CENTER, lightFontColor)
 
 					'target groups
@@ -691,11 +691,11 @@ endrem
 
 						If drawOnLeft
 							smallTextFont.DrawBox(GetLocale("TARGETGROUP_"+TVTTargetGroup.GetAsString( TVTTargetGroup.GetAtIndex(i) )), labelArea.GetX(), labelArea.GetY() + row*int(labelArea.GetH()), halfWidth - splitter, int(labelArea.GetH()), sALIGN_LEFT_CENTER, fontColor)
-							smallBoldTextFont.DrawBox(TFunctions.convertValue( audienceResult.audience.GetTotalValue(TVTTargetGroup.GetAtIndex(i)), 0 ), labelArea.GetX(), labelArea.GetY() + row*int(labelArea.GetH()), halfWidth - splitter - 20, int(labelArea.GetH()), sALIGN_RIGHT_CENTER, fontColor)
+							smallBoldTextFont.DrawBox(TFunctions.convertValue( audienceResult.audience.GetTotalValue(TVTTargetGroup.GetAtIndex(i)), 2, 0 ), labelArea.GetX(), labelArea.GetY() + row*int(labelArea.GetH()), halfWidth - splitter - 20, int(labelArea.GetH()), sALIGN_RIGHT_CENTER, fontColor)
 							smallTextFont.DrawBox("#"+audienceRanks[i], labelArea.GetX(), labelArea.GetY() + row*int(labelArea.GetH()), halfWidth - splitter, int(labelArea.GetH()), sALIGN_RIGHT_CENTER, rankFontColor)
 						Else
 							smallTextFont.DrawBox(GetLocale("TARGETGROUP_"+TVTTargetGroup.GetAsString( TVTTargetGroup.GetAtIndex(i) )), labelArea.GetX() + halfWidth + splitter, labelArea.GetY() + row*int(labelArea.GetH()), halfWidth - splitter, int(labelArea.GetH()), sALIGN_LEFT_CENTER, fontColor)
-							smallBoldTextFont.DrawBox(TFunctions.convertValue( audienceResult.audience.GetTotalValue(TVTTargetGroup.GetAtIndex(i)), 0 ), labelArea.GetX() +  halfWidth + splitter, labelArea.GetY() + row*int(labelArea.GetH()), halfWidth - splitter - 20, int(labelArea.GetH()), sALIGN_RIGHT_CENTER, fontColor)
+							smallBoldTextFont.DrawBox(TFunctions.convertValue( audienceResult.audience.GetTotalValue(TVTTargetGroup.GetAtIndex(i)), 2, 0 ), labelArea.GetX() +  halfWidth + splitter, labelArea.GetY() + row*int(labelArea.GetH()), halfWidth - splitter - 20, int(labelArea.GetH()), sALIGN_RIGHT_CENTER, fontColor)
 							smallTextFont.DrawBox("#"+audienceRanks[i], labelArea.GetX() +  halfWidth + splitter, labelArea.GetY() + row*int(labelArea.GetH()), halfWidth - splitter, int(labelArea.GetH()), sALIGN_RIGHT_CENTER, rankFontColor)
 						EndIf
 						drawOnLeft = 1 - drawOnLeft

@@ -22,7 +22,7 @@ Type RoomHandler_Studio Extends TRoomHandler
 	Global deskGuiListPos:TVec2D = New TVec2D.Init(350,335)
 	Global suitcasePos:TVec2D = New TVec2D.Init(520,70)
 	Global trashBinPos:TVec2D = New TVec2D.Init(148,327)
-	Global suitcaseGuiListDisplace:TVec2D = New TVec2D.Init(19,32)
+	Global suitcaseGuiListDisplace:TVec2D = New TVec2D.Init(16,22)
 
 	Global studioManagerEntity:TSpriteEntity
 	Global studioManagerArea:TGUISimpleRect
@@ -73,12 +73,13 @@ Type RoomHandler_Studio Extends TRoomHandler
 			Local spriteScript:TSprite = GetSpriteFromRegistry("gfx_scripts_0")
 			Local spriteProductionConcept:TSprite = GetSpriteFromRegistry("gfx_studio_productionconcept_0")
 			Local spriteSuitcase:TSprite = GetSpriteFromRegistry("gfx_scripts_0_dragged")
-			guiListStudio = New TGUIScriptSlotList.Create(New TVec2D.Init(730, 300), New TVec2D.Init(17, 52), "studio")
+			guiListStudio = New TGUIScriptSlotList.Create(New TVec2D.Init(710, 290), New TVec2D.Init(17, 52), "studio")
+			guiListStudio.SetEntriesBlockDisplacement( 23, 10)
 			guiListStudio.SetOrientation( GUI_OBJECT_ORIENTATION_HORIZONTAL )
 			guiListStudio.SetItemLimit( studioScriptLimit )
 			'increase list size by 2 times - makes it easier to drop
-			guiListStudio.SetSize(2 * spriteScript.area.GetW(), spriteScript.area.GetH() )
-			guiListStudio.SetSlotMinDimension(2 * spriteScript.area.GetW(), spriteScript.area.GetH())
+			guiListStudio.SetSize(90, 80)
+			guiListStudio.SetSlotMinDimension(90, 80)
 			guiListStudio.SetAcceptDrop("TGuiScript")
 
 			guiListSuitcase	= New TGUIScriptSlotlist.Create(New TVec2D.Init(suitcasePos.GetX() + suitcaseGuiListDisplace.GetX(), suitcasePos.GetY() + suitcaseGuiListDisplace.GetY()), New TVec2D.Init(200,80), "studio")
@@ -118,22 +119,22 @@ Type RoomHandler_Studio Extends TRoomHandler
 
 		'=== register event listeners
 		'to react on changes in the programmeCollection (eg. custom script finished)
-		_eventListeners :+ [ EventManager.registerListenerFunction( "programmecollection.removeScript", onRemoveScriptFromProgrammeCollection ) ]
-		_eventListeners :+ [ EventManager.registerListenerFunction( "programmecollection.removeScript", onChangeProgrammeCollection ) ]
-		_eventListeners :+ [ EventManager.registerListenerFunction( "programmecollection.moveScript", onChangeProgrammeCollection ) ]
-		_eventListeners :+ [ EventManager.registerListenerFunction( "programmecollection.removeProductionConcept", onChangeProgrammeCollection ) ]
-		_eventListeners :+ [ EventManager.registerListenerFunction( "programmecollection.addProductionConcept", onChangeProgrammeCollection ) ]
+		_eventListeners :+ [ EventManager.registerListenerFunction(GameEventKeys.ProgrammeCollection_RemoveScript, onRemoveScriptFromProgrammeCollection) ]
+		_eventListeners :+ [ EventManager.registerListenerFunction(GameEventKeys.ProgrammeCollection_RemoveScript, onChangeProgrammeCollection) ]
+		_eventListeners :+ [ EventManager.registerListenerFunction(GameEventKeys.ProgrammeCollection_MoveScript, onChangeProgrammeCollection) ]
+		_eventListeners :+ [ EventManager.registerListenerFunction(GameEventKeys.ProgrammeCollection_RemoveProductionConcept, onChangeProgrammeCollection) ]
+		_eventListeners :+ [ EventManager.registerListenerFunction(GameEventKeys.ProgrammeCollection_AddProductionConcept, onChangeProgrammeCollection) ]
 		'instead of "guiobject.onDropOnTarget" the event "guiobject.onDropOnTargetAccepted"
 		'is only emitted if the drop is successful (so it "visually" happened)
 		'drop ... to studio manager or suitcase
-		_eventListeners :+ [ EventManager.registerListenerFunction( "guiobject.onDropOnTargetAccepted", onDropScript, "TGuiScript" ) ]
-		_eventListeners :+ [ EventManager.registerListenerFunction( "guiobject.onDropOnTargetAccepted", onDropProductionConcept, "TGuiProductionConceptListItem" ) ]
+		_eventListeners :+ [ EventManager.registerListenerFunction(GUIEventKeys.GUIObject_OnDropOnTargetAccepted, onDropScript, "TGuiScript") ]
+		_eventListeners :+ [ EventManager.registerListenerFunction(GUIEventKeys.GUIObject_onDropOnTargetAccepted, onDropProductionConcept, "TGuiProductionConceptListItem") ]
 		'we want to know if we hover a specific block - to show a datasheet
-		_eventListeners :+ [ EventManager.registerListenerFunction( "guiobject.OnMouseOver", onMouseOverScript, "TGuiScript" ) ]
-		_eventListeners :+ [ EventManager.registerListenerFunction( "guiobject.OnMouseOver", onMouseOverProductionConcept, "TGuiProductionConceptListItem" ) ]
+		_eventListeners :+ [ EventManager.registerListenerFunction(GUIEventKeys.GUIObject_OnMouseOver, onMouseOverScript, "TGuiScript") ]
+		_eventListeners :+ [ EventManager.registerListenerFunction(GUIEventKeys.GUIObject_OnMouseOver, onMouseOverProductionConcept, "TGuiProductionConceptListItem") ]
 		'this lists want to delete the item if a right mouse click happens...
-		_eventListeners :+ [ EventManager.registerListenerFunction("guiobject.onClick", onClickScript, "TGuiScript") ]
-		_eventListeners :+ [ EventManager.registerListenerFunction("guiobject.onClick", onClickProductionConcept, "TGuiProductionConceptListItem") ]
+		_eventListeners :+ [ EventManager.registerListenerFunction(GUIEventKeys.GUIObject_OnClick, onClickScript, "TGuiScript") ]
+		_eventListeners :+ [ EventManager.registerListenerFunction(GUIEventKeys.GUIObject_OnClick, onClickProductionConcept, "TGuiProductionConceptListItem")]
 
 		'(re-)localize content
 		SetLanguage()
@@ -427,19 +428,9 @@ Type RoomHandler_Studio Extends TRoomHandler
 
 		'handle interactivity for room owners
 		If IsRoomOwner(figure, TRoom(triggerEvent.GetReceiver()))
-			'if the manager dialogue is open - just close the dialogue and
-			'veto against leaving the room
+			'if the manager dialogue is open - just close the dialogue
 			If studioManagerDialogue
 				studioManagerDialogue = Null
-
-				triggerEvent.SetVeto()
-				Return False
-			EndIf
-
-			'do not allow leaving as long as we have a dragged block
-			If draggedGuiProductionConcept Or draggedGuiScript
-				triggerEvent.setVeto()
-				Return False
 			EndIf
 		EndIf
 
@@ -1130,7 +1121,7 @@ Type RoomHandler_Studio Extends TRoomHandler
 
 		If studioManagerEntity Then studioManagerEntity.Render()
 
-		GetSpriteFromRegistry("gfx_suitcase").Draw(suitcasePos.GetX(), suitcasePos.GetY())
+		GetSpriteFromRegistry("gfx_suitcase_scripts").Draw(suitcasePos.GetX(), suitcasePos.GetY())
 
 		'=== HIGHLIGHT INTERACTIONS ===
 		'make suitcase/vendor highlighted if needed
@@ -1161,7 +1152,7 @@ Type RoomHandler_Studio Extends TRoomHandler
 				GetSpriteFromRegistry("gfx_studio_deskhint").Draw(710, 325)
 			EndIf
 			If highlightSuitcase 
-				GetSpriteFromRegistry("gfx_suitcase").Draw(suitcasePos.GetX(), suitcasePos.GetY())
+				GetSpriteFromRegistry("gfx_suitcase_scripts").Draw(suitcasePos.GetX(), suitcasePos.GetY())
 			EndIf
 			If highlightTrashBin 
 				'DrawRect(140, 330, 76, 59)
@@ -1250,16 +1241,25 @@ Type RoomHandler_Studio Extends TRoomHandler
 			If MouseManager.IsClicked(1) and THelper.MouseIn( trashBinPos.GetIntX(), trashBinPos.GetIntY(), 76, 59)
 				Local roomOwner:Int = TRoom(triggerEvent.GetSender()).owner
 				Local programmeCollection:TPlayerProgrammeCollection = GetPlayerProgrammeCollection(roomOwner)
-
-				'Destroy, not just remove (would keep it in the concept collection)
-				If programmeCollection and programmeCollection.DestroyProductionConcept(draggedGuiProductionConcept.productionConcept)
-					draggedGuiProductionConcept = null
-			
-					'handled left click
-					MouseManager.SetClickHandled(1)
-				ElseIf draggedGuiScript and programmeCollection.RemoveScript(draggedGuiScript.script, FALSE)
-					draggedGuiScript = null
-					MouseManager.SetClickHandled(1)
+				If programmeCollection
+					Local handledC:Int = False
+					'do not do a "if ... elseif" as we could even delete
+					'both (if for whatever reason we have both dragged
+					'simultaneously 
+					'Destroy, not just remove (would keep it in the concept collection)
+					If draggedGuiProductionConcept and programmeCollection.DestroyProductionConcept(draggedGuiProductionConcept.productionConcept)
+						draggedGuiProductionConcept = null
+				
+						handledC = True
+					EndIf
+					
+					If draggedGuiScript and programmeCollection.RemoveScript(draggedGuiScript.script, FALSE)
+						draggedGuiScript = null
+						
+						handledC = True
+					EndIf
+					
+					if handledC Then MouseManager.SetClickHandled(1)
 				EndIf
 			EndIf
 		EndIf

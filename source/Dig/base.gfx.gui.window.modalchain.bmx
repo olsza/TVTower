@@ -190,7 +190,7 @@ Type TGUIModalWindowChain Extends TGUIObject
 
 
 	Method Open:Int()
-		EventManager.triggerEvent(TEventSimple.Create("guiModalWindowChain.onOpen", Self))
+		TriggerBaseEvent(GUIEventKeys.GUIModalWindowChain_OnOpen, Self)
 	End Method
 
 
@@ -205,7 +205,7 @@ Type TGUIModalWindowChain Extends TGUIObject
 
 		'fire event so others know that the window is closed
 		'and what button was used
-		EventManager.triggerEvent(TEventSimple.Create("guiModalWindowChain.onClose", new TData.AddNumber("closeButton", closeButton) , Self))
+		TriggerBaseEvent(GUIEventKeys.GUIModalWindowChain_OnClose, new TData.AddNumber("closeButton", closeButton) , Self)
 	End Method
 
 
@@ -242,7 +242,7 @@ Type TGUIModalWindowChain Extends TGUIObject
 		'so call Super.Update as it calls UpdateChildren already
 		Super.Update()
 
-		if Not GuiManager.GetKeystrokeReceiver() and KeyManager.IsHit(KEY_ESCAPE)
+		if Not GuiManager.GetKeyboardInputReceiver() and KeyManager.IsHit(KEY_ESCAPE)
 			'do not allow another ESC-press for X ms
 			if activeChainElement and activeChainElement.previousChainElement
 				KeyManager.blockKey(KEY_ESCAPE, 350)
@@ -411,7 +411,7 @@ Type TGUIModalWindowChainDialogue extends TGUIModalWindowChainElement
 '		guiBackground.spriteBaseName = "gfx_gui_modalWindow"
 
 		'we want to know if one clicks on a windows buttons
-		AddEventListener(EventManager.registerListenerMethod("guibutton.onClick", Self, "onButtonClick", "tguibutton"))
+		AddEventListener(EventManager.registerListenerMethod(GUIEventKeys.GUIButton_OnClick, Self, "onButtonClick", "tguibutton"))
 		return self
 	End Method
 

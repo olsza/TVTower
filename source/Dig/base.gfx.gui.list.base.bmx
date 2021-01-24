@@ -103,12 +103,14 @@ Type TGUIListBase Extends TGUIobject
 
 
 		'register events
-		'someone uses the mouse wheel to scroll over the panel
-		AddEventListener(EventManager.registerListenerFunction( "guiobject.OnScrollwheel", onScrollWheel, Self))
 		'- we are interested in certain events from the scroller or self
-		AddEventListener(EventManager.registerListenerFunction( "guiobject.onScrollPositionChanged", onScroll, guiScrollerH ))
-		AddEventListener(EventManager.registerListenerFunction( "guiobject.onScrollPositionChanged", onScroll, guiScrollerV ))
-		AddEventListener(EventManager.registerListenerFunction( "guiobject.onScrollPositionChanged", onScroll, Self ))
+		AddEventListener(EventManager.registerListenerFunction( GUIEventKeys.GUIObject_OnScrollPositionChanged, onScroll, guiScrollerH ))
+		AddEventListener(EventManager.registerListenerFunction( GUIEventKeys.GUIObject_OnScrollPositionChanged, onScroll, guiScrollerV ))
+		'listening to our own scroll events redirects them to the same 
+		'as the scrollers - but without requiring it
+		AddEventListener(EventManager.registerListenerFunction( GUIEventKeys.GUIObject_OnScrollPositionChanged, onScroll, self ))
+		'redirect the scroll event of the panel 
+		AddEventListener(EventManager.registerListenerFunction( GUIEventKeys.GUIObject_OnMouseScrollwheel, onPanelMouseScrollWheel, guiEntriespanel ))
 
 
 		'is something dropping - check if it this list
@@ -334,7 +336,7 @@ Type TGUIListBase Extends TGUIobject
 		'so a normal AddItem-handler can work with calculated dimensions from now on
 		'Local dimension:TVec2D = item.getDimension()
 
-		EventManager.triggerEvent(TEventSimple.Create("guiList.addItem", New TData.Add("item", item) , Self))
+		TriggerBaseEvent(GUIEventKeys.GUIList_AddItem, New TData.Add("item", item) , Self)
 
 		entries.addLast(item)
 		if TGUIListItem(item) then TGUIListItem(item).parentListID = self._id
@@ -353,7 +355,7 @@ Type TGUIListBase Extends TGUIobject
 			EndIf
 		EndIf
 
-		EventManager.triggerEvent(TEventSimple.Create("guiList.addedItem", New TData.Add("item", item) , Self))
+		TriggerBaseEvent(GUIEventKeys.GUIList_AddedItem, New TData.Add("item", item) , Self)
 
 		Return True
 	End Method
@@ -362,14 +364,14 @@ Type TGUIListBase Extends TGUIobject
 	'base handling of remove item
 	Method _RemoveItem:Int(item:TGUIobject)
 		If entries.Remove(item)
-			EventManager.triggerEvent(TEventSimple.Create("guiList.removeItem", New TData.Add("item", item) , Self))
+			TriggerBaseEvent(GUIEventKeys.GUIList_RemoveItem, New TData.Add("item", item) , Self)
 
 			if TGUIListItem(item) then TGUIListItem(item).parentListID = -1
 
 			'remove from panel and item gets managed by guimanager
 			guiEntriesPanel.removeChild(item)
 
-			EventManager.triggerEvent(TEventSimple.Create("guiList.removedItem", New TData.Add("item", item) , Self))
+			TriggerBaseEvent(GUIEventKeys.GUIList_RemovedItem, New TData.Add("item", item) , Self)
 
 			Return True
 		Else
@@ -707,7 +709,7 @@ Type TGUIListBase Extends TGUIobject
 			'removing and adding the item
 			If fromList.HandleDropBack(triggerEvent)
 				'inform others about that dropback
-				EventManager.triggerEvent( TEventSimple.Create("guiobject.onDropBack", Null , item, toList))
+				TriggerBaseEvent(GUIEventKeys.GUIObject_OnDropBack, Null , item, toList)
 				Return True
 			EndIf
 			'no drop back?
@@ -745,14 +747,26 @@ endrem
 	End Function
 
 
-	'handle clicks on the up/down-buttons and inform others about changes
-	Function onScrollWheel:Int( triggerEvent:TEventBase )
-		Local list:TGUIListBase = TGUIListBase(triggerEvent.GetSender())
+	'redirect panel scrolling to parental list
+	Function onPanelMouseScrollWheel:Int( triggerEvent:TEventBase )
+		Local guiSender:TGUIObject = TGUIObject(triggerEvent.GetSender())
+		If Not guiSender Then Return False
+
+		Local guiList:TGUIListBase = FindGUIListBaseParent(guiSender)
+		If Not guiList Then Return False
+		
+		If guiList
+			guiList.onMouseScrollWheel(triggerEvent)
+		EndIf
+	End Function
+	
+	
+	Method onMouseScrollWheel:Int( triggerEvent:TEventBase ) override
 		Local value:Int = triggerEvent.GetData().getInt("value",0)
-		If Not list Or value=0 Then Return False
+		If value = 0 Then Return False
 		'emit event that the scroller position has changed
 		Local direction:String = ""
-		Select list._orientation
+		Select _orientation
 			Case GUI_OBJECT_ORIENTATION_VERTICAL
 				If value < 0 Then direction = "up"
 				If value > 0 Then direction = "down"
@@ -764,14 +778,23 @@ endrem
 			Local scrollAmount:Int = 25
 			'try to scroll by X percent of an item height
 			Local item:TGUIObject
-			If list.entries.Count() > 0 Then item = TGUIObject(list.entries.First())
-			If item Then scrollAmount = item.rect.GetH() * list.scrollItemHeightPercentage
+			If entries.Count() > 0 Then item = TGUIObject(entries.First())
+			If item Then scrollAmount = item.rect.GetH() * scrollItemHeightPercentage
 
-			EventManager.triggerEvent(TEventSimple.Create("guiobject.onScrollPositionChanged", New TData.AddString("direction", direction).AddNumber("scrollAmount", scrollAmount), list))
+
+			'instead of scrolling on our own - we just emulate scrolling
+			'via scrollers (which should only exist if scrolling is there)
+			'but IF there was no scroller
+'			if direction = "left" or direction = "right"
+'				TriggerBaseEvent(GUIEventKeys.GUIObject_OnScrollPositionChanged, New TData.AddString("direction", direction).AddNumber("scrollAmount", scrollAmount), guiScrollerH)
+'			else
+'				TriggerBaseEvent(GUIEventKeys.GUIObject_OnScrollPositionChanged, New TData.AddString("direction", direction).AddNumber("scrollAmount", scrollAmount), guiScrollerV)
+'			endif
+			TriggerBaseEvent(GUIEventKeys.GUIObject_OnScrollPositionChanged, New TData.AddString("direction", direction).AddNumber("scrollAmount", scrollAmount), self)
 		EndIf
 		'set to accepted so that nobody else receives the event
 		triggerEvent.SetAccepted(True)
-	End Function
+	End Method
 
 
 	'handle events from the connected scroller
@@ -816,7 +839,7 @@ endrem
 
 		'maybe data was given in percents - so something like a
 		'"scrollTo"-value
-		If data.getString("changeType") = "percentage"
+		If data.GetInt("isRelative") = 1
 			Local percentage:Float = data.GetFloat("percentage", 0)
 			If guiSender = guiList.guiScrollerH
 				guiList.SetScrollPercentageX(percentage)
@@ -852,9 +875,14 @@ endrem
 
 
 	Method SetScrollPercentageX:Float(percentage:Float = 0.0)
+		if percentage = guiEntriesPanel.GetScrollPercentageX() 
+			Return percentage
+		EndIf
+
 		InvalidateLayout()
 
 
+		rem
 		'scroller displays "0 - 100%" along his axis
 		'entries panel might be bigger than the container, to ensure
 		'that the panel is always visible, percentage must take
@@ -865,18 +893,23 @@ endrem
 		'avoid "bottom alignment" (if list being bigger than entries panel)
 		panelScrollValue = Min(0, panelScrollValue)
 		guiEntriesPanel.ScrollToX(panelScrollValue)
+		endrem
+		guiEntriesPanel.SetScrollPercentageX(percentage)
 
 
 		If guiScrollerH Then guiScrollerH.SetRelativeValue(percentage)
-		'Return guiEntriesPanel.SetScrollPercentageX(percentage)
 		Return guiEntriesPanel.GetScrollPercentageX()
 	End Method
 
 
 	Method SetScrollPercentageY:Float(percentage:Float = 0.0)
-		
+		if percentage = guiEntriesPanel.GetScrollPercentageY() 
+			Return percentage
+		EndIf
+
 		InvalidateLayout()
 
+		rem
 		'scroller displays "0 - 100%" along his axis
 		'entries panel might be bigger than the container, to ensure
 		'that the panel is always visible, percentage must take
@@ -887,9 +920,11 @@ endrem
 		'avoid "bottom alignment" (if list being bigger than entries panel)
 		panelScrollValue = Min(0, panelScrollValue)
 		guiEntriesPanel.ScrollToY(panelScrollValue)
+		endrem
+
+		guiEntriesPanel.SetScrollPercentageY(percentage)
 
 		If guiScrollerV Then guiScrollerV.SetRelativeValue( percentage )
-'		Return guiEntriesPanel.SetScrollPercentageY(percentage)
 		Return guiEntriesPanel.GetScrollPercentageY()
 	End Method
 	
@@ -1051,8 +1086,10 @@ endrem
 		
 		'react if "activated" or no other element was focused but this
 		'is hovered
-		If IsFocused() or (not GUIManager.GetFocus() and IsHovered())
-			HandleKeyBoardScrolling()
+		If HasListOption(GUILIST_SCROLLING_ENABLED)
+			If IsFocused() or (not GUIManager.GetFocus() and IsHovered())
+				HandleKeyBoardScrolling()
+			EndIf
 		EndIf
 	End Method
 
@@ -1398,6 +1435,19 @@ Type TGUIListItem Extends TGUIobject
 	End Method
 
 
+	Method onMouseScrollWheel:Int( triggerEvent:TEventBase ) override
+		'redirect mouse scrolling to parent list
+		If not IsDragged()
+			Local guiList:TGUIListBase = TGUIListBase.FindGUIListBaseParent(_parent)
+			If guiList And guiList.HasItem(Self) 
+				Return guiList.onMouseScrollWheel(triggerEvent)
+			EndIf
+		EndIf
+		
+		Return super.onMouseScrollWheel(triggerEvent)
+	End Method
+
+
 	Method SetExtra:TGUIListItem(extra:Object)
 		Self.extra = extra
 		Return Self
@@ -1435,7 +1485,9 @@ Type TGUIListItem Extends TGUIobject
 		'this makes the "listitem-clicked"-event filterable even
 		'if the itemclass gets extended (compared to the general approach
 		'of "guiobject.onclick")
-		EventManager.triggerEvent(TEventSimple.Create("GUIListItem.onClick", Null, Self, triggerEvent.GetReceiver()) )
+		TriggerBaseEvent(GUIEventKeys.GUIListItem_OnClick, new TData.AddInt("button", 1), Self, triggerEvent.GetReceiver())
+		
+		Return True
 	End Method
 
 

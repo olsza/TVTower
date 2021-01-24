@@ -20,7 +20,7 @@ Import "game.publicimage.bmx"
 Import "game.pressuregroup.bmx"
 Import "basefunctions.bmx"
 Import "common.misc.numericpairinterpolator.bmx"
-
+Import "game.gameeventkeys.bmx"
 
 
 
@@ -88,16 +88,16 @@ Type TStationMapCollection
 	Method New()
 		If Not _initDone
 			'handle savegame loading (reload the map configuration)
-			EventManager.registerListenerFunction("SaveGame.OnLoad", onSaveGameLoad)
+			EventManager.registerListenerFunction(GameEventKeys.SaveGame_OnLoad, onSaveGameLoad)
 			'handle <stationmapdata>-area in loaded xml files
-			EventManager.registerListenerFunction("RegistryLoader.onLoadResourceFromXML", onLoadStationMapData, Null, "STATIONMAPDATA" )
+			EventManager.registerListenerFunction(TRegistryLoader.eventKey_OnLoadResourceFromXML, onLoadStationMapData, Null, "STATIONMAPDATA")
 			'handle activation of stations
-			EventManager.registerListenerFunction("station.onSetActive", onSetStationActiveState)
-			EventManager.registerListenerFunction("station.onSetInactive", onSetStationActiveState)
+			EventManager.registerListenerFunction(GameEventKeys.Station_OnSetActive, onSetStationActiveState)
+			EventManager.registerListenerFunction(GameEventKeys.Station_OnSetInactive, onSetStationActiveState)
 			'handle activation of broadcast providers
-			EventManager.registerListenerFunction("broadcastprovider.onLaunch", onSetBroadcastProviderActiveState)
-			EventManager.registerListenerFunction("broadcastprovider.onSetActive", onSetBroadcastProviderActiveState)
-			EventManager.registerListenerFunction("broadcastprovider.onSetInactive", onSetBroadcastProviderActiveState)
+			EventManager.registerListenerFunction(GameEventKeys.BroadcastProvider_OnLaunch, onSetBroadcastProviderActiveState)
+			EventManager.registerListenerFunction(GameEventKeys.BroadcastProvider_OnSetActive, onSetBroadcastProviderActiveState)
+			EventManager.registerListenerFunction(GameEventKeys.BroadcastProvider_OnSetInactive, onSetBroadcastProviderActiveState)
 
 			_initdone = True
 		EndIf
@@ -259,11 +259,14 @@ Type TStationMapCollection
 
 		local result:Float
 		For local section:TStationMapSection = EachIn sections
+			result :+ section.GetPopulationAntennaShareRatio()
+			rem
 			if section.populationAntennaShare < 0
 				result :+ GetCurrentPopulationAntennaShare()
 			else
 				result :+ section.populationAntennaShare
 			endif
+			endrem
 		Next
 		return result / sections.Count()
 	End Method
@@ -301,7 +304,9 @@ Type TStationMapCollection
 
 	Method GetSatelliteUplinkSectionName:string()
 		if not satelliteUplinkSectionName
-			local randomSection:TStationMapSection = TStationMapSection(sections.ValueAtIndex(RandRange(0, sections.Count())))
+			If Not sections or sections.count() = 0 Then Return ""
+
+			local randomSection:TStationMapSection = TStationMapSection(sections.ValueAtIndex(RandRange(0, sections.Count()-1)))
 			if randomSection
 				satelliteUplinkSectionName = randomSection.name
 			endif
@@ -445,20 +450,18 @@ Type TStationMapCollection
 	End Method
 
 
-	Method GetTotalShareAudience:Int(channelNumbers:Int[], withoutChannelNumbers:Int[]=Null)
-		Return GetTotalShare(channelNumbers, withoutChannelNumbers).x
+	Method GetTotalShareAudience:Int(includeChannelMask:SChannelMask, excludeChannelMask:SChannelMask)
+		Return GetTotalShare(includeChannelMask, excludeChannelMask).total
 	End Method
 
 
-	Method GetTotalSharePercentage:Float(channelNumbers:Int[], withoutChannelNumbers:Int[]=Null)
-		Return GetTotalShare(channelNumbers, withoutChannelNumbers).z
+	Method GetTotalSharePercentage:Float(includeChannelMask:SChannelMask, excludeChannelMask:SChannelMask)
+		Return GetTotalShare(includeChannelMask, excludeChannelMask).populationShareRatio
 	End Method
 
 
-	'returns a share between channels, encoded in a TVec3D containing:
-	'x=sharedAudience,y=totalAudience,z=percentageOfSharedAudience
-	Method GetTotalShare:TVec3D(channelNumbers:Int[], withoutChannelNumbers:Int[]=Null)
-		local result:TVec3D = new TVec3D.Init(0,0,0)
+	Method GetTotalShare:TStationMapPopulationShare(includeChannelMask:SChannelMask, excludeChannelMask:SChannelMask)
+		local result:TStationMapPopulationShare = new TStationMapPopulationShare
 
 		If populationReceiverMode = RECEIVERMODE_SHARED
 			Throw "GetTotalShare: Todo"
@@ -468,62 +471,35 @@ Type TStationMapCollection
 			'either
 			'ATTENTION: contains only cable and antenna
 			For local section:TStationMapSection = EachIn sections
-				local v:TVec3D = section.GetReceiverShare(channelNumbers, withoutChannelNumbers)
-				'add integer values for "population"
-				result.x :+ v.GetIntX()
-				result.y :+ v.GetIntY()
-				result.z :+ v.z
-				'result.AddVec( section.GetReceiverShare(channelNumbers, withoutChannelNumbers) )
+				result.Add( section.GetReceiverShare(includeChannelMask, excludeChannelMask) )
 			Next
 			'or:
-			'result.AddVec( GetTotalAntennaShare(channelNumbers, withoutChannelNumbers) )
-			'result.AddVec( GetTotalCableNetworkShare(channelNumbers, withoutChannelNumbers) )
+			'result.Add( GetTotalAntennaShare(channelNumbers, withoutChannelNumbers) )
+			'result.Add( GetTotalCableNetworkShare(channelNumbers, withoutChannelNumbers) )
 
 			'add Satellite shares
-			local v2:TVec3D = GetTotalSatelliteReceiverShare(channelNumbers, withoutChannelNumbers)
-			'add integer values for "population"
-			result.x :+ v2.GetIntX()
-			result.y :+ v2.GetIntY()
-			result.z :+ v2.z
-			'result.AddVec( GetTotalSatelliteReceiverShare(channelNumbers, withoutChannelNumbers) )
+			result.Add( GetTotalSatelliteReceiverShare(includeChannelMask, excludeChannelMask) )
 		EndIf
 
-		if result.y > 0 then result.z = result.x / result.y
 		return result
 	End Method
 
 
-	'returns a share between channels, encoded in a TVec3D containing:
-	'x=sharedAudience,y=totalAudience,z=percentageOfSharedAudience
-	Method GetTotalAntennaReceiverShare:TVec3D(channelNumbers:Int[], withoutChannelNumbers:Int[]=Null)
-		local result:TVec3D = new TVec3D.Init(0,0,0)
+	Method GetTotalAntennaReceiverShare:TStationMapPopulationShare(includeChannelMask:SChannelMask, excludeChannelMask:SChannelMask)
+		local result:TStationMapPopulationShare = new TStationMapPopulationShare
 		For local section:TStationMapSection = EachIn sections
-			local v:TVec3D = section.GetAntennaReceiverShare(channelNumbers, withoutChannelNumbers)
-			'add integer values for "population"
-			result.x :+ v.GetIntX()
-			result.y :+ v.GetIntY()
-			result.z :+ v.z
-			'result.AddVec( section.GetAntennaReceiverShare(channelNumbers, withoutChannelNumbers) )
+			result.Add( section.GetAntennaReceiverShare(includeChannelMask, excludeChannelMask) )
 		Next
-		If result.y = 0 Then result.z = 0.0 Else result.z = result.x/result.y
 
 		return result
 	End Method
 
 
-	'returns a share between channels, encoded in a TVec3D containing:
-	'x=sharedAudience,y=totalAudience,z=percentageOfSharedAudience
-	Method GetTotalCableNetworkReceiverShare:TVec3D(channelNumbers:Int[], withoutChannelNumbers:Int[]=Null)
-		local result:TVec3D = new TVec3D.Init(0,0,0)
+	Method GetTotalCableNetworkReceiverShare:TStationMapPopulationShare(includeChannelMask:SChannelMask, excludeChannelMask:SChannelMask)
+		local result:TStationMapPopulationShare = new TStationMapPopulationShare
 		For local section:TStationMapSection = EachIn sections
-			local v:TVec3D = section.GetCableNetworkReceiverShare(channelNumbers, withoutChannelNumbers)
-			'add integer values for "population"
-			result.x :+ v.GetIntX()
-			result.y :+ v.GetIntY()
-			result.z :+ v.z
-			'result.AddVec( section.GetCableNetworkReceiverShare(channelNumbers, withoutChannelNumbers) )
+			result.Add( section.GetCableNetworkReceiverShare(includeChannelMask, excludeChannelMask) )
 		Next
-		If result.y = 0 Then result.z = 0.0 Else result.z = result.x/result.y
 
 		return result
 	End Method
@@ -531,58 +507,58 @@ Type TStationMapCollection
 
 	'returns a share between channels, encoded in a TVec3D containing:
 	'x=sharedAudience,y=totalAudience,z=percentageOfSharedAudience
-	Method GetTotalSatelliteReceiverShare:TVec3D(channelNumbers:Int[], withoutChannelNumbers:Int[]=Null)
-		local result:TVec3D = new TVec3D.Init(0,0,0)
-
+	Method GetTotalSatelliteReceiverShare:TStationMapPopulationShare(includeChannelMask:SChannelMask, excludeChannelMask:SChannelMask)
+		local result:TStationMapPopulationShare = new TStationMapPopulationShare
+		'no channel requested?
+		if includeChannelMask.value = 0 then Return result
+		
 		For local satellite:TStationMap_Satellite = EachIn satellites
-			local satResult:TVec3D = new TVec3D.Init(0,0,0)
+			local satResult:TStationMapPopulationShare = new TStationMapPopulationShare
 			Local channelsUsingThisSatellite:Int = 0
+			Local allUseThisSatellite:Int = True
 			'amount of non-ignored channels
-			Local interestingChannelsCount:Int = 0
-			Local allUseThisSatellite:Int = False
-
-			if channelNumbers and channelNumbers.length > 0
-				allUseThisSatellite = True
-				For local channelID:int = EachIn channelNumbers
-					'ignore unwanted
-					if withoutChannelNumbers and MathHelper.InIntArray(channelID, withoutChannelNumbers) then continue
-
-					interestingChannelsCount :+ 1
-
-					if satellite.IsSubscribedChannel(channelID)
-						channelsUsingThisSatellite :+ 1
-					else
-						allUseThisSatellite = False
-					endif
-				Next
-			endif
+			Local interestingChannelsCount:Int
 
 
+			For Local channelID:Int = 1 to stationMaps.length
+				'ignore unwanted
+				If not includeChannelMask.Has(channelID) Then continue
+				'skip if to exclude - exclusive reaches requested
+				If excludeChannelMask.Has(channelID) Then continue
+
+				interestingChannelsCount :+ 1
+	
+				if satellite.IsSubscribedChannel(channelID)
+					channelsUsingThisSatellite :+ 1
+				else
+					allUseThisSatellite = False
+				endif
+			Next
+
+
+			local channelUsageRatio:Float
 			if channelsUsingThisSatellite > 0
 				'print "GetTotalSatelliteShare: " + satellite.name + "   channelsUsingThisSatellite="+channelsUsingThisSatellite +"  reach="+satellite.GetReach()
 				'total - if there is at least _one_ channel uses this satellite
-				satResult.y = satellite.GetReach()
+				satResult.total = satellite.GetReach()
 
 				'share is only available if we checked some channels
 				if interestingChannelsCount > 0
 					'share - if _all_ channels use this satellite here
 					if allUseThisSatellite
-						satResult.x = satellite.GetReach()
+						satResult.shared = satellite.GetReach()
 					endif
 
 					'share percentage
-					satResult.z = channelsUsingThisSatellite / interestingChannelsCount
+					channelUsageRatio = channelsUsingThisSatellite / Float(interestingChannelsCount)
 				endif
 			endif
 
-			result.x :+ satResult.x
-			result.y :+ satResult.y
+
+			result.total :+ satResult.total
+			result.shared :+ satResult.shared
 			'total share percentage depends on the reach of a satellite - or its market share
-			result.z :+ satellite.populationShare * satResult.z
-
-
-			'store new cached data
-			'If shareCache Then shareCache.insert(cacheKey, result )
+			result.populationShareRatio :+ satellite.populationShare * (channelsUsingThisSatellite / float(interestingChannelsCount))
 		Next
 
 		return result
@@ -856,7 +832,7 @@ Type TStationMapCollection
 					TXmlHelper.LoadAllValuesToData(sectionConfigNode, sectionConfig)
 				endif
 				'override config if pressureGroups are defined already
-				if pressureGroups >= 0 then sectionConfig.AddNumber("pressureGroups", pressureGroups)
+				if pressureGroups >= 0 then sectionConfig.AddInt("pressureGroups", pressureGroups)
 
 				'add state section if data is ok
 				If name<>"" And sprite<>""
@@ -1254,7 +1230,7 @@ Type TStationMapCollection
 			UpdateSatelliteSharesAndQuality()
 
 			'inform others
-			EventManager.triggerEvent( TEventSimple.Create( "StationMapCollection.addSatellite", New TData.Add("satellite", satellite), Self ) )
+			TriggerBaseEvent(GameEventKeys.StationMapCollection_AddSatellite, New TData.Add("satellite", satellite), Self )
 			return True
 		endif
 
@@ -1268,7 +1244,7 @@ Type TStationMapCollection
 			UpdateSatelliteSharesAndQuality()
 
 			'inform others
-			EventManager.triggerEvent( TEventSimple.Create( "StationMapCollection.removeSatellite", New TData.Add("satellite", satellite), Self ) )
+			TriggerBaseEvent(GameEventKeys.StationMapCollection_RemoveSatellite, New TData.Add("satellite", satellite), Self )
 			return True
 		endif
 
@@ -1277,7 +1253,7 @@ Type TStationMapCollection
 
 
 	Method OnLaunchSatellite:int(satellite:TStationMap_Satellite)
-		EventManager.triggerEvent( TEventSimple.Create( "StationMapCollection.launchSatellite", New TData.Add("satellite", satellite), Self ) )
+		TriggerBaseEvent(GameEventKeys.StationMapCollection_LaunchSatellite, New TData.Add("satellite", satellite), Self )
 
 		'recalculate shared audience percentage between satellites
 		UpdateSatelliteSharesAndQuality()
@@ -1285,7 +1261,7 @@ Type TStationMapCollection
 
 
 	Method OnLetDieSatellite:int(satellite:TStationMap_Satellite)
-		EventManager.triggerEvent( TEventSimple.Create( "StationMapCollection.letDieSatellite", New TData.Add("satellite", satellite), Self ) )
+		TriggerBaseEvent(GameEventKeys.StationMapCollection_LetDieSatellite, New TData.Add("satellite", satellite), Self )
 
 		TLogger.Log("TStationMapCollection", "Let die satellite ~q"+satellite.name+"~q", LOG_DEBUG)
 
@@ -1474,7 +1450,7 @@ Type TStationMapCollection
 			UpdateCableNetworkSharesAndQuality()
 
 			'inform others
-			EventManager.triggerEvent( TEventSimple.Create( "StationMapCollection.addCableNetwork", New TData.Add("cableNetwork", cableNetwork), Self ) )
+			TriggerBaseEvent(GameEventKeys.StationMapCollection_AddCableNetwork, New TData.Add("cableNetwork", cableNetwork), Self )
 			return True
 		endif
 
@@ -1488,7 +1464,7 @@ Type TStationMapCollection
 			UpdateCableNetworkSharesAndQuality()
 
 			'inform others
-			EventManager.triggerEvent( TEventSimple.Create( "StationMapCollection.removeCableNetwork", New TData.Add("cableNetwork", cableNetwork), Self ) )
+			TriggerBaseEvent(GameEventKeys.StationMapCollection_RemoveCableNetwork, New TData.Add("cableNetwork", cableNetwork), Self )
 			return True
 		endif
 
@@ -1751,7 +1727,7 @@ endrem
 	Method AddSection(section:TStationMapSection)
 		If sections.addLast(section)
 			'inform others
-			EventManager.triggerEvent( TEventSimple.Create( "StationMapCollection.addSection", New TData.Add("section", section), Self ) )
+			TriggerBaseEvent(GameEventKeys.StationMapCollection_AddSection, New TData.Add("section", section), Self )
 		EndIf
 	End Method
 
@@ -2182,7 +2158,7 @@ Type TStationMap extends TOwnedGameObject {_exposeToLua="selected"}
 		next
 
 		if GetReachLevel(reach) <> oldReachLevel
-			EventManager.triggerEvent( TEventSimple.Create( "StationMap.onChangeReachLevel", New TData.addNumber("reachLevel", GetReachLevel(reach)).AddNumber("oldReachLevel", oldReachLevel), Self ) )
+			TriggerBaseEvent(GameEventKeys.StationMap_OnChangeReachLevel, New TData.addInt("reachLevel", GetReachLevel(reach)).AddInt("oldReachLevel", oldReachLevel), Self )
 		endif
 
 		return True
@@ -2215,10 +2191,10 @@ Type TStationMap extends TOwnedGameObject {_exposeToLua="selected"}
 		reachInvalid = False
 
 		'inform others
-		EventManager.triggerEvent( TEventSimple.Create( "StationMap.onRecalculateAudienceSum", New TData.addNumber("reach", reach).AddNumber("reachBefore", reachBefore).AddNumber("playerID", owner), Self ) )
+		TriggerBaseEvent(GameEventKeys.StationMap_OnRecalculateAudienceSum, New TData.AddInt("reach", reach).AddInt("reachBefore", reachBefore).AddInt("playerID", owner), Self )
 
 		if GetReachLevel(reach) <> oldReachLevel
-			EventManager.triggerEvent( TEventSimple.Create( "StationMap.onChangeReachLevel", New TData.addNumber("reachLevel", GetReachLevel(reach)).AddNumber("oldReachLevel", oldReachLevel), Self ) )
+			TriggerBaseEvent(GameEventKeys.StationMap_OnChangeReachLevel, New TData.AddInt("reachLevel", GetReachLevel(reach)).AddInt("oldReachLevel", oldReachLevel), Self )
 		endif
 
 
@@ -2398,7 +2374,9 @@ Type TStationMap extends TOwnedGameObject {_exposeToLua="selected"}
 		station.OnAddToMap()
 
 		'emit an event so eg. network can recognize the change
-		If fireEvents Then EventManager.triggerEvent( TEventSimple.Create( "stationmap.addStation", New TData.add("station", station), Self ) )
+		If fireEvents 
+			TriggerBaseEvent(GameEventKeys.Stationmap_AddStation, New TData.add("station", station), Self )
+		EndIf
 
 		Return True
 	End Method
@@ -2413,7 +2391,7 @@ Type TStationMap extends TOwnedGameObject {_exposeToLua="selected"}
 
 			'check if we try to sell our last station...
 			If stations.count() = 1
-				EventManager.triggerEvent(TEventSimple.Create("StationMap.onTrySellLastStation", Null, Self))
+				TriggerBaseEvent(GameEventKeys.StationMap_OnTrySellLastStation, Null, Self)
 				Return False
 			EndIf
 		EndIf
@@ -2452,7 +2430,9 @@ Type TStationMap extends TOwnedGameObject {_exposeToLua="selected"}
 		'-> handled in main.bmx with a listener to "stationmap.removeStation"
 
 		'emit an event so eg. network can recognize the change
-		If fireEvents Then EventManager.triggerEvent(TEventSimple.Create("StationMap.removeStation", New TData.add("station", station), Self))
+		If fireEvents 
+			TriggerBaseEvent(GameEventKeys.StationMap_RemoveStation, New TData.add("station", station), Self)
+		EndIf
 
 		Return True
     End Method
@@ -2804,7 +2784,7 @@ Type TStationBase Extends TOwnedGameObject {_exposeToLua="selected"}
 		SetFlag(TVTStationFlag.ACTIVE, True)
 
 		'inform others (eg. to recalculate audience)
-		EventManager.triggerEvent(TEventSimple.Create("station.onSetActive", Null, Self))
+		TriggerBaseEvent(GameEventKeys.Station_OnSetActive, Null, Self)
 
 		return True
 	End Method
@@ -2816,7 +2796,7 @@ Type TStationBase Extends TOwnedGameObject {_exposeToLua="selected"}
 		SetFlag(TVTStationFlag.ACTIVE, False)
 
 		'inform others (eg. to recalculate audience)
-		EventManager.triggerEvent(TEventSimple.Create("station.onSetInactive", Null, Self))
+		TriggerBaseEvent(GameEventKeys.Station_OnSetInactive, Null, Self)
 	End Method
 
 
@@ -2826,7 +2806,7 @@ Type TStationBase Extends TOwnedGameObject {_exposeToLua="selected"}
 		SetFlag(TVTStationFlag.SHUTDOWN, True)
 
 		'inform others (eg. to refresh list content)
-		EventManager.triggerEvent(TEventSimple.Create("station.onShutdown", Null, Self))
+		TriggerBaseEvent(GameEventKeys.Station_OnShutdown, Null, Self)
 
 		return True
 	End Method
@@ -2838,7 +2818,7 @@ Type TStationBase Extends TOwnedGameObject {_exposeToLua="selected"}
 		SetFlag(TVTStationFlag.SHUTDOWN, False)
 
 		'inform others (eg. to refresh list content)
-		EventManager.triggerEvent(TEventSimple.Create("station.onResume", Null, Self))
+		TriggerBaseEvent(GameEventKeys.Station_OnResume, Null, Self)
 
 		return True
 	End Method
@@ -3003,7 +2983,7 @@ Type TStationBase Extends TOwnedGameObject {_exposeToLua="selected"}
 				If GetSubscriptionTimeLeft() <= TWorldTime.DAYLENGTH
 					SetFlag(TVTStationFlag.WARNED_OF_ENDING_CONTRACT, True)
 					'inform others
-					EventManager.triggerEvent( TEventSimple.Create( "Station.onContractEndsSoon", null, Self ) )
+					TriggerBaseEvent(GameEventKeys.Station_OnContractEndsSoon, null, Self )
 				EndIf
 			EndIf
 		EndIf
@@ -4252,9 +4232,10 @@ Type TStationMapSection
 	Field populationSatelliteShare:Float = -1
 	Field populationAntennaShare:Float = -1
 	'map containing bitmask-coded information for "used" pixels
-	Field antennaShareMap:TMap = Null {nosave}
+	Field antennaShareMap:TLongMap = Null {nosave}
 	'Field antennaShareMapImage:TImage {nosave}
-	Field shareCache:TMap = new TMap {nosave}
+	Field shareCache:TStringMap = new TStringMap {nosave}
+	Field calculationMutex:TMutex = CreateMutex() {nosave}
 
 
 	Method New()
@@ -4280,7 +4261,7 @@ Type TStationMapSection
 
 
 	Method InvalidateData()
-		shareCache = New TMap
+		shareCache = New TStringMap
 		antennaShareMap = Null
 	End Method
 
@@ -4562,6 +4543,10 @@ Type TStationMapSection
 
 
 	Method CalculatePopulation:int()
+		If not TryLockMutex(calculationMutex)
+			Notify "CalculatePopulation: concurrent access found!"
+			LockMutex(calculationMutex)
+		EndIf
 
 		populationMap = New Int[populationImage.width, populationImage.height]
 
@@ -4581,6 +4566,9 @@ Type TStationMapSection
 				population :+ populationMap[x, y]
 			Next
 		Next
+		
+		UnlockMutex(calculationMutex)
+		
 		return population
 	End Method
 
@@ -4592,13 +4580,19 @@ Type TStationMapSection
 
 
 	Method _FillAntennaShareMap:Int(stationMap:TStationMap, stations:TList)
+		If not TryLockMutex(calculationMutex)
+			Notify "_FillAntennaShareMap: concurrent access found!"
+			LockMutex(calculationMutex)
+		EndIf
+		
+		
 		'define locals outside of that for loops...
 		Local posX:Int		= 0
 		Local posY:Int		= 0
 		Local stationX:Int	= 0
 		Local stationY:Int	= 0
-		Local mapKey:String	= ""
-		Local mapValue:TVec3D = Null
+		Local shareKey:Long
+		Local shareMask:TStationMapShareMask
 		Local circleRect:TRectangle = New TRectangle.Init(0,0,0,0)
 		local antennaStationRadius:int = GetStationMapCollection().antennaStationRadius
 
@@ -4606,19 +4600,19 @@ Type TStationMapSection
 		if stationmap.cheatedMaxReach
 			'insert the players bitmask-number into the field
 			'and if there is already one ... add the number
+			Local shapeSprite:TSprite = GetShapeSprite()
 			For posX = 0 To populationImage.height-1
 				For posY = 0 To populationImage.width-1
 					'left the topographic borders ?
-					If not GetShapeSprite().PixelIsOpaque(posX, posY) > 0 then continue
+					If not shapeSprite.PixelIsOpaque(posX, posY) > 0 then continue
 
-					mapKey = posX+","+posY
-					mapValue = New TVec3D.Init(posX,posY, getMaskIndex(stationmap.owner) )
-					If antennaShareMap.Contains(mapKey)
-						mapValue.z = Int(mapValue.z) | Int(TVec3D(antennaShareMap.ValueForKey(mapKey)).z)
+					shareKey = GeneratePositionKey(posX, posY)
+					shareMask = new TStationMapShareMask(posX, posY, GetMaskIndex(stationmap.owner) )
+					Local shareMapMask:TStationMapShareMask = TStationMapShareMask(antennaShareMap.ValueForKey(shareKey))
+					If shareMapMask
+						shareMask.mask :| shareMapMask.mask
 					EndIf
-					antennaShareMap.Insert(mapKey, mapValue)
-
-					'antennaShareMapPix.WritePixel(posX, posY, ARGB_Color(255, mapValue.z*30, mapValue.z*30, mapValue.z*30) )
+					antennaShareMap.Insert(shareKey, shareMask)
 				Next
 			Next
 		else
@@ -4639,40 +4633,48 @@ Type TStationMapSection
 
 				posX = 0
 				posY = 0
+				Local shapeSprite:TSprite = GetShapeSprite()
 				For posX = circleRect.getX() To circleRect.getW()
 					For posY = circleRect.getY() To circleRect.getH()
 						'left the circle?
 						If Self.calculateDistance( posX - stationX, posY - stationY ) > antennaStationRadius Then Continue
 						'left the topographic borders ?
-						If not GetShapeSprite().PixelIsOpaque(posX, posY) > 0 then continue
+						If not shapeSprite.PixelIsOpaque(posX, posY) > 0 then continue
 
 
 						'insert the players bitmask-number into the field
 						'and if there is already one ... add the number
-						mapKey = posX+","+posY
-						mapValue = New TVec3D.Init(posX,posY, getMaskIndex(station.owner) )
-						If antennaShareMap.Contains(mapKey)
-							mapValue.z = Int(mapValue.z) | Int(TVec3D(antennaShareMap.ValueForKey(mapKey)).z)
+						shareKey = GeneratePositionKey(posX, posY)
+						shareMask = New TStationMapShareMask(posX, posY, GetMaskIndex(station.owner) )
+						Local shareMapMask:TStationMapShareMask = TStationMapShareMask(antennaShareMap.ValueForKey(shareKey))
+						If shareMapMask
+							shareMask.mask :| shareMapMask.mask
 						EndIf
-						antennaShareMap.Insert(mapKey, mapValue)
-
-						'antennaShareMapPix.WritePixel(posX, posY, ARGB_Color(255, Min(mapValue.z*60,255), (int(mapValue.z)&4 > 0)*80, (int(mapValue.z)&4 > 16)*80) )
+						antennaShareMap.Insert(shareKey, shareMask)
 					Next
 				Next
 			Next
 		endif
+		
+		UnlockMutex(calculationMutex)
 	End Method
-
+	
+	
+	private
+	Function GeneratePositionKey:Long(x:Int, y:Int)
+		Return Long(x) Shl 32 | Long(y)
+	End Function
+	public
 
 
 	'returns the shared amount of audience between channels
-	Method GetShareAudience:Int(channelNumbers:Int[], withoutChannelNumbers:Int[]=Null)
-		Return GetReceiverShare(channelNumbers, withoutChannelNumbers).x
+	Method GetShareAudience:Int(includeChannelMask:SChannelMask, excludeChannelMask:SChannelMask)
+		Return GetReceiverShare(includeChannelMask, excludeChannelMask).total
 	End Method
 
 
-	Method GetSharePercentage:Float(channelNumbers:Int[], withoutChannelNumbers:Int[]=Null)
-		Return GetReceiverShare(channelNumbers, withoutChannelNumbers).z
+	Method GetSharePercentage:Float(includeChannelMask:SChannelMask, excludeChannelMask:SChannelMask)
+		Return GetReceiverShare(includeChannelMask, excludeChannelMask).populationShareRatio
 	End Method
 
 
@@ -4708,23 +4710,23 @@ Type TStationMapSection
 	Method GetAntennaAudienceSum:Int(playerID:int)
 		'passing only the playerID and no other playerIDs is returning
 		'the playerID's audience (with share/total being useless)
-		Return GetAntennaReceiverShare([playerID]).x
+		Local includeChannelMask:SChannelMask = new SChannelMask().Set(playerID)
+		Local excludeChannelMask:SChannelMask = new SChannelMask()
+		Return GetAntennaReceiverShare( includeChannelMask, excludeChannelMask ).total
 	End Method
 
 
 	Method GetExclusiveAntennaAudienceSum:Int(playerID:int)
-		local without:int[]
-		for local i:int = 1 until 4
-			if i <> playerID then without :+ [i]
-		next
-		Return GetAntennaReceiverShare([playerID], without).x
+		Local includeChannelMask:SChannelMask = new SChannelMask().Set(playerID)
+		Local excludeChannelMask:SChannelMask = includeChannelMask.Negated()
+		Return GetAntennaReceiverShare(includeChannelMask, excludeChannelMask).total
 	End Method
 
 
 
-	Method GetAntennaShareMap:TMap()
+	Method GetAntennaShareMap:TLongMap()
 		if not antennaShareMap
-			antennaShareMap = New TMap
+			antennaShareMap = New TLongMap
 
 			local stations:TStationBase[][]
 			For local map:TStationMap = EachIn GetStationMapCollection().stationMaps
@@ -4735,76 +4737,70 @@ Type TStationMapSection
 	End Method
 
 
-	'There is no need to have a GetPopulationShare() as the value
-	'is not of use for us (PopulationShare is for caching the non-dynamic
-	'elements)
+	'returns a share between channels
+	'includeChannelMask contains "channels of interest" (unset are not excluded!)
+	'excludeChannelMask contains "channels not allowed"
+	'
+	'Ex. including "channel 1 and 2" but excluding "3" will only take 
+	'    areas into consideration which 1+2 share but "3" does not occupy
+	'    Others, like "4" are ignored
+	'    (but includeChannelMask would still have "3" and "4" unset, 
+	'    this is why an "excludeChannelMask" is needed 
+	'Ex. include=(1)   and exclude=(0    ) to get total reach for player 1
+	'Ex. include=(1)   and exclude=(2+4+8) to getexclusive reach for player 1
+	'Ex. include=(1+2) and exclude=(0    ) to get reach player 1 and 2 have together
+	Method GetReceiverShare:TStationMapPopulationShare(includeChannelMask:SChannelMask, excludeChannelMask:SChannelMask)
+		local result:TStationMapPopulationShare = new TStationMapPopulationShare
 
-	'returns a share between channels, encoded in a TVec3D containing:
-	'returns AUDIENCE/RECEIVERS, not POPULATION
-	'x=sharedAudience,y=totalAudience,z=percentageOfSharedAudience
-	Method GetReceiverShare:TVec3D(channelNumbers:Int[], withoutChannelNumbers:Int[]=Null)
-		local result:TVec3D = new TVec3D.Init(0,0,0)
 		If TStationMapCollection.populationReceiverMode = TStationMapCollection.RECEIVERMODE_SHARED
 			Throw "GetShare: TODO"
-			'result.AddVec( GetMixedShare(channelNumbers, withoutChannelNumbers) )
+			'result.Add( GetMixedShare(channelMask) )
 		ElseIf TStationMapCollection.populationReceiverMode = TStationMapCollection.RECEIVERMODE_EXCLUSIVE
-			local v1:TVec3D = GetAntennaReceiverShare(channelNumbers, withoutChannelNumbers)
-			local v2:TVec3D = GetCableNetworkReceiverShare(channelNumbers, withoutChannelNumbers)
-			'add integer values for "population"
-			result.x :+ v1.GetIntX()
-			result.y :+ v1.GetIntY()
-			result.z :+ v1.z
-			result.x :+ v2.GetIntX()
-			result.y :+ v2.GetIntY()
-			result.z :+ v2.z
-
-			'result.AddVec( GetAntennaReceiverShare(channelNumbers, withoutChannelNumbers) )
-			'result.AddVec( GetCableNetworkReceiverShare(channelNumbers, withoutChannelNumbers) )
+			result.Add( GetAntennaReceiverShare(includeChannelMask, excludeChannelMask) )
+			result.Add( GetCableNetworkReceiverShare(includeChannelMask, excludeChannelMask) )
 		EndIf
-		if result.y > 0 then result.z = result.x / result.y
 		return result
 	End Method
 
 
-	Method GetCableNetworkReceiverShare:TVec3D(channelNumbers:Int[], withoutChannelNumbers:Int[]=Null)
-		return GetCableNetworkPopulationShare(channelNumbers, withoutChannelNumbers).Copy().MultiplyFactor(GetPopulationCableShareRatio())
+	Method GetCableNetworkReceiverShare:TStationMapPopulationShare(includeChannelMask:SChannelMask, excludeChannelMask:SChannelMask)
+		return GetCableNetworkPopulationShare(includeChannelMask, excludeChannelMask).Copy().MultiplyFactor(GetPopulationCableShareRatio())
 	End Method
 
 
-	Method GetAntennaReceiverShare:TVec3D(channelNumbers:Int[], withoutChannelNumbers:Int[]=Null)
-		return GetAntennaPopulationShare(channelNumbers, withoutChannelNumbers).Copy().MultiplyFactor(GetPopulationAntennaShareRatio())
+	Method GetAntennaReceiverShare:TStationMapPopulationShare(includeChannelMask:SChannelMask, excludeChannelMask:SChannelMask)
+		return GetAntennaPopulationShare(includeChannelMask, excludeChannelMask).Copy().MultiplyFactor(GetPopulationAntennaShareRatio())
 	End Method
 
 
-	'returns a share between channels, encoded in a TVec3D containing:
-	'value is POPULATION, not AUDIENCE (so not multiplied with receiver share)
-	'x=sharedAudience,y=totalAudience,z=percentageOfSharedAudience
-	Method GetCableNetworkPopulationShare:TVec3D(channelNumbers:Int[], withoutChannelNumbers:Int[]=Null)
-'		return new TVec3D.Init(0,0,0)
-		If channelNumbers.length <1 Then Return New TVec3D.Init(0,0,0.0)
-		If Not withoutChannelNumbers Then withoutChannelNumbers = New Int[0]
+	'returns a share between channels
+	'includeChannelMask contains "channels of interest" (unset are not excluded!)
+	'excludeChannelMask contains "channels not allowed"
+	'
+	'Ex. including "channel 1 and 2" but excluding "3" will only take 
+	'    areas into consideration which 1+2 share but "3" does not occupy
+	'    Others, like "4" are ignored
+	'    (but includeChannelMask would still have "3" and "4" unset, 
+	'    this is why an "excludeChannelMask" is needed 
+	'Ex. include=(1)   and exclude=(0    ) to get total reach for player 1
+	'Ex. include=(1)   and exclude=(2+4+8) to getexclusive reach for player 1
+	'Ex. include=(1+2) and exclude=(0    ) to get reach player 1 and 2 have together
+	Method GetCableNetworkPopulationShare:TStationMapPopulationShare(includeChannelMask:SChannelMask, excludeChannelMask:SChannelMask)
+		If includeChannelMask.value = 0 Then Return New TStationMapPopulationShare
 
-		Local result:TVec3D
+		Local result:TStationMapPopulationShare
 
 		'=== CHECK CACHE ===
 		'if already cached, save time...
 
 		'== GENERATE KEY ==
-		Local cacheKey:String = "cablenetwork_"
-		For Local i:Int = 0 To channelNumbers.length-1
-			cacheKey:+ "_"+channelNumbers[i]
-		Next
-		If withoutChannelNumbers.length > 0
-			cacheKey:+"_without_"
-			For Local i:Int = 0 To withoutChannelNumbers.length-1
-				cacheKey:+ "_"+withoutChannelNumbers[i]
-			Next
-		EndIf
-
+		Local cacheKey:String = "cablenetwork"
+		cacheKey :+ "_"+includeChannelMask.value
+		cacheKey :+ "_"+excludeChannelMask.value
 
 		'== LOAD CACHE ==
-		If shareCache And shareCache.contains(cacheKey)
-			result = TVec3D(shareCache.ValueForKey(cacheKey))
+		If shareCache
+			result = TStationMapPopulationShare(shareCache.ValueForKey(cacheKey))
 		EndIf
 
 
@@ -4812,39 +4808,40 @@ Type TStationMapSection
 		If Not result
 			Local channelsWithCableNetwork:Int = 0
 			'amount of non-ignored channels
-			Local interestingChannelsCount:Int = 0
+			Local interestingChannelsCount:Int
 			Local allHaveCableNetwork:Int = False
 
-			if channelNumbers and channelNumbers.length > 0
-				allHaveCableNetwork = True
-				For local channelID:int = EachIn channelNumbers
-					'ignore unwanted
-					if withoutChannelNumbers and MathHelper.InIntArray(channelID, withoutChannelNumbers) then continue
+			allHaveCableNetwork = True
+			For local channelID:int = 1 to GetStationMapCollection().stationMaps.length
+				'ignore unwanted
+				If not includeChannelMask.Has(channelID) Then continue
+				'skip if to exclude - exclusive reaches requested
+				If excludeChannelMask.Has(channelID) Then continue
 
-					interestingChannelsCount :+ 1
+				interestingChannelsCount :+ 1
 
-					if GetStationMap(channelID).GetCableNetworkUplinksInSectionCount( name ) > 0
-						channelsWithCableNetwork :+ 1
-					else
-						allHaveCableNetwork = False
-					endif
-				Next
-			endif
+				if GetStationMap(channelID).GetCableNetworkUplinksInSectionCount( name ) > 0
+					channelsWithCableNetwork :+ 1
+				else
+					allHaveCableNetwork = False
+				endif
+			Next
 
-			result = new TVec3D.Init(0,0,0)
+
+			result = new TStationMapPopulationShare
 			if channelsWithCableNetwork > 0
 				'total - if there is at least _one_ channel uses a cable network here
-				result.y = population
+				result.total = population
 
 				'share is only available if we checked some channels
 				if interestingChannelsCount > 0
 					'share - if _all_ channels use a cable network here
 					if allHaveCableNetwork
-						result.x = result.y
+						result.shared = population
 					endif
 
 					'share percentage
-					result.z = channelsWithCableNetwork / interestingChannelsCount
+					result.populationShareRatio =  channelsWithCableNetwork / Float(interestingChannelsCount)
 				endif
 			endif
 
@@ -4864,39 +4861,59 @@ Type TStationMapSection
 	End Method
 
 
-	'returns a share between channels, encoded in a TVec3D containing:
-	'value is POPULATION, not AUDIENCE (so not multiplied with receiver share)
-	'x=sharedAudience,y=totalAudience,z=percentageOfSharedAudience
-	Method GetAntennaPopulationShare:TVec3D(channelNumbers:Int[], withoutChannelNumbers:Int[]=Null)
-		If channelNumbers.length <1 Then Return New TVec3D.Init(0,0,0.0)
-		If Not withoutChannelNumbers Then withoutChannelNumbers = New Int[0]
+	'returns a share between channels
+	'includeChannelMask contains "channels of interest" (unset are not excluded!)
+	'excludeChannelMask contains "channels not allowed" (at the points of the antenna)
+	'
+	'Ex. including "channel 1 and 2" but excluding "3" will only take 
+	'    areas into consideration which 1+2 share but "3" does not occupy
+	'    Others, like "4" are ignored
+	'    (but includeChannelMask would still have "3" and "4" unset, 
+	'    this is why an "excludeChannelMask" is needed 
+	'Ex. include=(1)   and exclude=(0    ) to get total reach for player 1
+	'Ex. include=(1)   and exclude=(2+4+8) to getexclusive reach for player 1
+	'Ex. include=(1+2) and exclude=(0    ) to get reach player 1 and 2 have together
+	Method GetAntennaPopulationShare:TStationMapPopulationShare(includeChannelMask:SChannelMask, excludeChannelMask:SChannelMask)
+		If includeChannelMask.value = 0 Then Return New TStationMapPopulationShare
 
-		Local result:TVec3D
+		Local result:TStationMapPopulationShare
 
 		'=== CHECK CACHE ===
 		'if already cached, save time...
 
 		'== GENERATE KEY ==
-		Local cacheKey:String = ""
-		For Local i:Int = 0 To channelNumbers.length-1
-			cacheKey:+ "_"+channelNumbers[i]
-		Next
-		If withoutChannelNumbers.length > 0
-			cacheKey:+"_without_"
-			For Local i:Int = 0 To withoutChannelNumbers.length-1
-				cacheKey:+ "_"+withoutChannelNumbers[i]
-			Next
-		EndIf
+		Local cacheKey:String = "antennas_"
+		cacheKey :+ "_"+includeChannelMask.value
+		cacheKey :+ "_"+excludeChannelMask.value
 
 		'== LOAD CACHE ==
-		If shareCache And shareCache.contains(cacheKey)
-			result = TVec3D(shareCache.ValueForKey(cacheKey))
+		If shareCache
+			result = TStationMapPopulationShare(shareCache.ValueForKey(cacheKey))
 		EndIf
 
 
 		'== GENERATE CACHE ==
 		If Not result
-			result = _CalculateShare(GetAntennaShareMap(), channelNumbers, withoutChannelNumbers)
+			result = New TStationMapPopulationShare
+
+			Local shareMap:TLongMap = GetAntennaShareMap()
+			For Local mapMask:TStationMapShareMask = EachIn shareMap.Values()
+				'skip if none of our interested is here
+				If includeChannelMask.HasNone(mapMask.mask) Then Continue
+				'skip if one of the to exclude is here
+				If not excludeChannelMask.HasNone(mapMask.mask) Then Continue
+
+				'someone has a station there
+				'-> check already done in the skip above
+				'If ((mapMask.mask & includeChannelMask) <> 0)
+					result.total :+ populationmap[mapMask.x, mapMask.y]
+				'EndIf
+				'all searched have a station there
+				If (mapMask.mask & includeChannelMask.value) = includeChannelMask.value
+					result.shared :+ populationmap[mapMask.x, mapMask.y]
+				EndIf
+			Next
+
 			'store new cached data
 			If shareCache Then shareCache.insert(cacheKey, result )
 
@@ -4911,79 +4928,10 @@ Type TStationMapSection
 	End Method
 
 
-	'channel numbers: channels we are interested in
-	'without channel numbers: channels not allowed at the checked points!
-	'("missing channel numbers" is different to "without channel numbers" !)
-	Method _CalculateShare:TVec3D(shareMap:TMap, channelNumbers:int[], withoutChannelNumbers:int[]=Null)
-		Local result:TVec3D = New TVec3D.Init(0,0,0.0)
-		Local share:Int	= 0
-		Local total:Int	= 0
-		Local channelFlags:Int[]
-		Local allFlag:Int = 0
-		Local withoutChannelFlags:Int[]
-		Local withoutFlag:Int = 0
-		channelFlags = channelFlags[.. channelNumbers.length]
-		withoutChannelFlags = withoutChannelFlags[.. withoutChannelNumbers.length]
-
-		For Local i:Int = 0 To channelNumbers.length-1
-			'channel 1=1, 2=2, 3=4, 4=8 ...
-			channelFlags[i] = getMaskIndex( channelNumbers[i] )
-			allFlag :| channelFlags[i]
-		Next
-
-		For Local i:Int = 0 To withoutChannelNumbers.length-1
-			'channel 1=1, 2=2, 3=4, 4=8 ...
-			withoutChannelFlags[i] = getMaskIndex( withoutChannelNumbers[i] )
-			withoutFlag :| withoutChannelFlags[i]
-		Next
-
-
-		Local someoneUsesPoint:Int = False
-		Local allUsePoint:Int = False
-		For Local mapValue:TVec3D = EachIn shareMap.Values()
-			someoneUsesPoint = False
-			allUsePoint = False
-
-			'we need to check if one on our ignore list is there
-				'no need to do this individual, we can just check the groupFlag
-				Rem
-				local someoneUnwantedUsesPoint:int	= FALSE
-				for local i:int = 0 to withoutChannelFlags.length-1
-					if int(mapValue.z) & withoutChannelFlags[i]
-						someoneUnwantedUsesPoint = true
-						exit
-					endif
-				Next
-				if someoneUnwantedUsesPoint then continue
-				endrem
-			If Int(mapValue.z) & withoutFlag Then Continue
-
-			'as we have multiple flags stored in AllFlag, we have to
-			'compare the result to see if all of them hit,
-			'if only one of it hits, we just check for <>0
-			If (Int(mapValue.z) & allFlag) = allFlag
-				allUsePoint = True
-				someoneUsesPoint = True
-			Else
-				For Local i:Int = 0 To channelFlags.length-1
-					If Int(mapValue.z) & channelFlags[i] Then someoneUsesPoint = True;Exit
-				Next
-			EndIf
-			'someone has a station there
-			If someoneUsesPoint Then total:+ populationmap[mapValue.x, mapValue.y]
-			'all searched have a station there
-			If allUsePoint Then share:+ populationmap[mapValue.x, mapValue.y]
-		Next
-		result.setXY(share, total)
-		If total = 0 Then result.z = 0.0 Else result.z = Float(share)/Float(total)
-
-		return result
-	End Method
-
 
 	'params of advanced types (no ints, strings, bytes) are automatically
 	'passed "by reference" (change it here, and it is changed globally)
-	Method _FillAntennaPoints(map:TMap, stationX:Int, stationY:Int, radius:int, color:Int)
+	Method _FillAntennaPoints(map:TLongMap, stationX:Int, stationY:Int, radius:int, color:Int)
 		local stationRect:TRectangle = New TRectangle.Init(stationX - radius, stationY - radius, 2*radius, 2*radius)
 		'find minimal rectangle/intersection between section and station
 		local sectionStationIntersectRect:TRectangle = rect.IntersectRect(stationRect)
@@ -5004,7 +4952,7 @@ Type TStationMapSection
 				'left the topographic borders ?
 				If not GetShapeSprite().PixelIsOpaque(posX, posY) > 0 then continue
 
-				map.Insert(String(posX + "," + posY), New TVec3D.Init((posX) , (posY), color ))
+				map.Insert(GeneratePositionKey(posX, posY), New TStationMapAntennaPoint(posX , posY, color))
 			Next
 		Next
 	End Method
@@ -5056,17 +5004,17 @@ endrem
 		'if station is not hitting the section
 		if not removeStation.GetRect().Intersects(rect) then Return 0
 
-		Local Points:TMap = New TMap
+		Local Points:TLongMap = New TLongMap
 		Local result:Int = 0
 
-		'mark the station to removed as "red"
-		'mark all others (except the given one) as "white"
-		'-> then count on all spots "just red" and not "white"
+		'mark the station points of the to remove as "2"
+		'mark all others (except the given one) as "1"
+		'-> then count on all spots still "2"
 
-		Self._FillAntennaPoints(Points, Int(removeStation.pos.x), Int(removeStation.pos.y), removeStation.radius, ARGB_Color(255, 0, 255, 255))
+		Self._FillAntennaPoints(Points, Int(removeStation.pos.x), Int(removeStation.pos.y), removeStation.radius, 2)
 
-		'overwrite with stations owner already has - red pixels get
-		'overwritten with white, count red at the end for decrease amount
+		'overwrite with stations owner already has (with value "1")
+		'count points with value "2" at the end
 		For Local station:TStationAntenna = EachIn stations
 			'DO NOT SKIP INACTIVE/SHUTDOWN STATIONS !!
 			'decreases are for estimations - so they should include
@@ -5079,12 +5027,12 @@ endrem
 			'skip antennas not overlapping the station to remove
 			if not station.GetRect().Intersects(removeStation.GetRect()) then continue
 
-			Self._FillAntennaPoints(Points, Int(station.pos.x), Int(station.pos.y), station.radius, ARGB_Color(255, 255, 255, 255))
+			Self._FillAntennaPoints(Points, Int(station.pos.x), Int(station.pos.y), station.radius, 1)
 		Next
 
-		'count all "exclusively blue" spots
-		For Local point:TVec3D = EachIn points.Values()
-			If ARGB_Red(Int(point.z)) = 0 'And ARGB_Blue(point.z) = 255
+		'count all "still 2" spots
+		For Local point:TStationMapAntennaPoint = EachIn points.Values()
+			If point.value = 2
 				result :+ populationmap[point.x, point.y]
 			EndIf
 		Next
@@ -5106,14 +5054,14 @@ endrem
 		if not rect.Intersects(stationRect) then return 0
 
 
-		Local Points:TMap = New TMap
+		Local Points:TLongMap = New TLongMap
 		Local result:Int = 0
 
-		'add "new" station which may be bought
-		Self._FillAntennaPoints(Points, stationX, stationY, radius, ARGB_Color(255, 0, 255, 255))
+		'add "new" station which may be bought - mark points as ""
+		Self._FillAntennaPoints(Points, stationX, stationY, radius, 2)
 
-		'overwrite with stations owner already has - red pixels get
-		'overwritten with white, count red at the end for increase amount
+		'overwrite with stations owner already has (with value "1")
+		'count points with value "2" at the end
 		For Local station:TStationAntenna = EachIn stations
 			'DO NOT SKIP INACTIVE/SHUTDOWN STATIONS !!
 			'increases are for estimations - so they should include
@@ -5126,11 +5074,12 @@ endrem
 			'skip antennas not overlapping the station to add
 			if not station.GetRect().Intersects(stationRect) then continue
 
-			Self._FillAntennaPoints(Points, Int(station.pos.x), Int(station.pos.y), station.radius, ARGB_Color(255, 255, 255, 255))
+			Self._FillAntennaPoints(Points, Int(station.pos.x), Int(station.pos.y), station.radius, 1)
 		Next
 
-		For Local point:TVec3D = EachIn points.Values()
-			If ARGB_Red(Int(point.z)) = 0 And ARGB_Blue(Int(point.z)) = 255
+		'all points still "2" are what will be added in addition to existing ones
+		For Local point:TStationMapAntennaPoint = EachIn points.Values()
+			If point.value = 2
 				result :+ populationmap[point.x, point.y]
 			EndIf
 		Next
@@ -5153,11 +5102,14 @@ endrem
 
 
 	Function getMaskIndex:Int(number:Int)
+		Return 1 shl (number-1)
+		rem
 		Local t:Int = 1
 		For Local i:Int = 1 To number-1
 			t:*2
 		Next
 		Return t
+		endrem
 	End Function
 
 
@@ -5165,6 +5117,72 @@ endrem
 	Function calculateDistance:Double(x1:Int, x2:Int)
 		Return Sqr((x1*x1) + (x2*x2))
 	End Function
+End Type
+
+
+
+
+Type TStationMapShareMask
+	Field x:Int
+	Field y:Int
+	Field mask:Int
+	
+	Method New(x:Int, y:Int, mask:Int)
+		self.x = x
+		self.y = y
+		self.mask = mask
+	End Method
+End Type
+
+
+Type TStationMapAntennaPoint
+	Field x:Int
+	Field y:Int
+	Field value:Int
+	
+	Method New(x:Int, y:Int, value:Int)
+		self.x = x
+		self.y = y
+		self.value = value
+	End Method
+End Type
+
+
+
+Type TStationMapPopulationShare
+	Field shared:Int 'in people
+	Field total:Int 'in people
+	Field populationShareRatio:Float 'ratio of total population
+	
+	Method GetShareRatio:Float()
+		if total = 0 then return 0
+		Return shared/total
+	End Method
+	
+	
+	Method Copy:TStationMapPopulationShare()
+		local c:TStationMapPopulationShare = new TStationMapPopulationShare
+		c.shared = self.shared
+		c.total = self.total
+		c.populationShareRatio = self.populationShareRatio
+		return c
+	End Method
+	
+	
+	Method Add:TStationMapPopulationShare(other:TStationMapPopulationShare)
+		self.shared :+ other.shared
+		self.total :+ other.total
+		self.populationShareRatio :+ other.populationShareRatio
+	End Method
+	
+	
+	
+	Method MultiplyFactor:TStationMapPopulationShare(factor:Float)
+		self.shared :* factor
+		self.total :* factor
+		self.populationShareRatio :* factor
+		Return self
+	End Method
 End Type
 
 
@@ -5416,7 +5434,7 @@ Type TStationMap_BroadcastProvider extends TEntityBase {_exposeToLua="selected"}
 		launched = True
 
 		'inform others
-		EventManager.triggerEvent(TEventSimple.Create("broadcastprovider.onLaunch", Null, Self))
+		TriggerBaseEvent(GameEventKeys.BroadcastProvider_OnLaunch, Null, Self)
 
 		return True
 	End Method
@@ -5426,7 +5444,7 @@ Type TStationMap_BroadcastProvider extends TEntityBase {_exposeToLua="selected"}
 		If IsActive() Then Return False
 
 		'inform others (eg. to recalculate audience)
-		EventManager.triggerEvent(TEventSimple.Create("broadcastprovider.onSetActive", Null, Self))
+		TriggerBaseEvent(GameEventKeys.BroadcastProvider_OnSetActive, Null, Self)
 	End Method
 
 
@@ -5434,7 +5452,7 @@ Type TStationMap_BroadcastProvider extends TEntityBase {_exposeToLua="selected"}
 		If Not IsActive() Then Return False
 
 		'inform others (eg. to recalculate audience)
-		EventManager.triggerEvent(TEventSimple.Create("broadcastprovider.onSetInactive", Null, Self))
+		TriggerBaseEvent(GameEventKeys.BroadcastProvider_OnSetInactive, Null, Self)
 	End Method
 
 
@@ -5681,7 +5699,7 @@ Type TStationMap_Satellite extends TStationMap_BroadcastProvider {_exposeToLua="
 				if nextTechUpgradeTime > 0
 					quality :+ nextTechUpgradeValue
 					'inform others (eg. for news)
-					EventManager.triggerEvent( TEventSimple.Create( "Satellite.onUpgradeTech", New TData.AddNumber("quality", quality).AddNumber("oldQuality", quality - nextTechUpgradeValue), Self ) )
+					TriggerBaseEvent(GameEventKeys.Satellite_OnUpgradeTech, New TData.AddInt("quality", quality).Addint("oldQuality", quality - nextTechUpgradeValue), Self )
 					'print "satellite " + name +" upgraded technology " + (quality - nextTechUpgradeValue) +" -> " + quality
 				endif
 
@@ -5697,7 +5715,7 @@ Type TStationMap_Satellite extends TStationMap_BroadcastProvider {_exposeToLua="
 					'avoid reducing very small values for ever and ever
  					if minimumChannelImage <= 0.1 then minimumChannelImage = 0
 					'inform others (eg. for news)
-					EventManager.triggerEvent( TEventSimple.Create( "Satellite.onReduceMinimumChannelImage", New TData.AddNumber("minimumChannelImage", minimumChannelImage).AddNumber("oldMinimumChannelImage", oldMinimumChannelImage), Self ) )
+					TriggerBaseEvent(GameEventKeys.Satellite_OnReduceMinimumChannelImage, New TData.AddFloat("minimumChannelImage", minimumChannelImage).AddFloat("oldMinimumChannelImage", oldMinimumChannelImage), Self )
 				endif
 
 				nextImageReductionTime = GetWorldTime().ModifyTime(-1, 0, 0, int(RandRange(20,30)))
@@ -5706,3 +5724,71 @@ Type TStationMap_Satellite extends TStationMap_BroadcastProvider {_exposeToLua="
 		endif
 	End Method
 End Type
+
+
+
+
+
+
+Struct SChannelMask
+	Field Readonly value:Int
+	
+	Method New(value:Int)
+		self.value = value
+	End Method
+	
+
+	Method Set:SChannelMask(channelID:Int, enable:Int = True)
+		'activate the bit for a given channelID
+		'each channel corresponds to an index/position
+		'id1 = mask 1, id2 = mask 2
+		'id3 = mask 4, id4 = mask 8 ...
+
+		Return New SChannelMask( value | (enable Shl (channelID-1)) )
+	End Method
+	
+
+	Method Has:Int(channelID:Int)
+		'each channel corresponds to an index/position
+		'id1 = mask 1, id2 = mask 2
+		'id3 = mask 4, id4 = mask 8 ...
+
+		Return value & (1:Int Shl (channelID-1)) <> 0
+	End Method
+
+
+	'returns if none of the mask hits
+	Method HasNone:Int(mask:Int)
+		Return mask & value = 0
+	End Method
+
+
+	'return if at least one of the mask hits
+	Method HasOne:Int(mask:Int)
+		Return (mask & value) <> 0
+	End Method
+
+
+	Method HasAll:Int(mask:Int)
+		Return (value & mask) = mask
+	End Method
+
+
+	Method Negated:SChannelMask()
+		Return New SChannelMask( ~value )
+	End Method
+	
+	
+	Method GetEnabledCount:Int()
+		'counts bits set in the mask
+		Local count:Int
+		Local mask:int = value
+		
+		While mask
+			mask = mask & (mask - 1)
+			count:+ 1
+		Wend
+		
+		Return count
+	End Method
+End Struct

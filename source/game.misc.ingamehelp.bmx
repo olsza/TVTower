@@ -94,7 +94,7 @@ Type TIngameHelpWindowCollection
 				If currentIngameHelpWindow.active Then Return
 			EndIf
 			If currentIngameHelpWindow.Show(force)
-				EventManager.triggerEvent(TEventSimple.Create("InGameHelp.ShowHelpWindow", New TData.Add("window", currentIngameHelpWindow) , Self))
+				TriggerBaseEvent(GameEventKeys.InGameHelp_ShowHelpWindow, New TData.Add("window", currentIngameHelpWindow) , Self)
 			EndIf
 		EndIf
 	End Method
@@ -107,12 +107,12 @@ Type TIngameHelpWindowCollection
 
 			If currentIngameHelpWindow.IsClosing()
 				If Not wasClosing
-					EventManager.triggerEvent(TEventSimple.Create("InGameHelp.CloseHelpWindow", New TData.Add("window", currentIngameHelpWindow) , Self))
+					TriggerBaseEvent(GameEventKeys.InGameHelp_CloseHelpWindow, New TData.Add("window", currentIngameHelpWindow) , Self)
 				EndIf
 
 				currentIngameHelpWindowLocked = False
 			ElseIf currentIngameHelpWindow.IsClosed()
-				EventManager.triggerEvent(TEventSimple.Create("InGameHelp.ClosedHelpWindow", New TData.Add("window", currentIngameHelpWindow) , Self))
+				TriggerBaseEvent(GameEventKeys.InGameHelp_ClosedHelpWindow, New TData.Add("window", currentIngameHelpWindow) , Self)
 
 				currentIngameHelpWindow = Null
 			EndIf
@@ -247,7 +247,12 @@ Type TIngameHelpWindow
 
 
 		'=== EVENTS ===
-		_eventListeners :+ [ EventManager.registerListenerMethod("guiCheckBox.onSetChecked", Self, "OnSetCheckbox", checkboxHideAll) ]
+		_eventListeners :+ [ EventManager.registerListenerMethod(GUIEventKeys.GUICheckbox_OnSetChecked, Self, "OnSetCheckbox", checkboxHideAll) ]
+	End Method
+	
+	
+	Method Close:Int()
+		modalDialogue.Close()
 	End Method
 	
 	
@@ -326,12 +331,19 @@ Type TIngameHelpWindow
 				if GuiManager.GetFocus() = guiTextArea
 					'do not allow another ESC-press for X ms
 					KeyManager.blockKey(KEY_ESCAPE, 250)
-					modalDialogue.Close()
+					Close()
 				EndIf
 			endif
 
+			'block right clicks?
 			'no right clicking allowed as long as "help window" is active
-			MouseManager.SetClickHandled(2)
+			'MouseManager.SetClickHandled(2)
+
+			'close the help, do not propagate right-click
+			If MouseManager.IsClicked(2) or MouseManager.IsLongClicked(1)
+				Close()
+				MouseManager.SetClickHandled(2)
+			EndIf
 		EndIf
 	End Method
 
