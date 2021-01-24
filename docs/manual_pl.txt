@@ -1,5 +1,4 @@
 Instrukcja gry (dla wersji deweloperska)
-========================================
 
 Autor: Själe (tłumaczenie: Olsza [TT: @czlowiek_it])
 
