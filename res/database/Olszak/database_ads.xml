@@ -917,6 +917,7 @@ Jest słonecznie</pl>
 			<description>
 				<de>Hier gibt's Schnäppchen en masse. Der sympathische Krempelmarkt um die Ecke.</de>
 				<en>Here is bargain en mass. The friendly mumbo jumbo market around the corner</en>
+				<pl>Jest tu mnóstwo okazji. Przyjazny market za rogiem.</pl>
 			</description>
 			<conditions min_audience="0.62" min_image="0" target_group="0" pro_pressure_groups="0" contra_pressure_groups="0"/>
 			<data quality="9" repetitions="2" duration="3" fix_price="0" profit="1500" penalty="2118" infomercial_profit="118" fix_infomercial_profit="1"/>
@@ -925,12 +926,15 @@ Jest słonecznie</pl>
 			<title>
 				<de>Hartz Bier</de>
 				<en>Hartz Beer</en>
+				<pl>Piwo Hartz</pl>
 			</title>
 			<description>
 				<de>Unser Bier ist nicht nur günstig, es ist auch billig.
 Aktionswoche: Pfandfrei.</de>
 				<en>Our beer is not only reasonable priced, it also is cheap.
 Special week: no bottle deposit.</en>
+				<pl>Nasze piwo jest nie tylko tanie, to bardzo tanie.
+Tydzień specjalny: bez depozytu za butelkę.</pl>
 			</description>
 			<conditions min_audience="2.34" min_image="7" target_group="16" pro_pressure_groups="0" contra_pressure_groups="0"/>
 			<data quality="11" repetitions="4" duration="4" profit="784" penalty="1085" infomercial_profit="74" fix_infomercial_profit="1"/>
@@ -939,10 +943,12 @@ Special week: no bottle deposit.</en>
 			<title>
 				<de>Polstermöbel Dobrawa</de>
 				<en>Upholstery Dobrawa</en>
+				<pl>Tapicerka Dobrawa</pl>
 			</title>
 			<description>
 				<de>Polsterwerkstatt Dobrawa seit 1933.</de>
 				<en>Upholstery workshop Dobrawa since 1933.</en>
+				<pl>Warsztat tapicerski Dobrawa od 1933 roku.</pl>
 			</description>
 			<conditions min_audience="1.04" min_image="4" target_group="128" pro_pressure_groups="0" contra_pressure_groups="0"/>
 			<data quality="6" repetitions="4" duration="3" profit="1300" penalty="1400" fix_infomercial_profit="1"/>
@@ -951,10 +957,12 @@ Special week: no bottle deposit.</en>
 			<title>
 				<de>Schlimm-Schnell</de>
 				<en>Trim-Fast</en>
+				<pl>Flap i Flip</pl>
 			</title>
 			<description>
 				<de>Verlieren Sie 50 Kilo innerhalb eines Monats!</de>
 				<en>Loose 50 kilograms within one month!</en>
+				<pl>Schudnij 50 kilogramów w ciągu miesiąca!</pl>
 			</description>
 			<conditions min_audience="0.31" min_image="4" target_group="128" pro_pressure_groups="0" contra_pressure_groups="0"/>
 			<data quality="10" repetitions="3" duration="4" profit="2433" penalty="2675" infomercial_profit="116" fix_infomercial_profit="1"/>
@@ -966,6 +974,7 @@ Special week: no bottle deposit.</en>
 			<description>
 				<de>Schon längst zum Schulkameraden geworden: Die Patronen, die den Füller füllen.</de>
 				<en>Already become a schoolmate: The ink cartridges charging the pen.</en>
+				<pl>Jesteś kolegą ze szkoły: naboje wypełniające pióro wieczne.</pl>
 			</description>
 			<conditions min_audience="4.17" min_image="7" target_group="2" pro_pressure_groups="0" contra_pressure_groups="0"/>
 			<data quality="12" repetitions="3" duration="2" profit="612" penalty="840" infomercial_profit="55" fix_infomercial_profit="1"/>
@@ -978,6 +987,7 @@ Special week: no bottle deposit.</en>
 			<description>
 				<de>Der Schlummertrunk aus der Alutüte.</de>
 				<en>The nightcap in the tin foil bag.</en>
+				<pl>Czapka z aluminiowej torby.</pl>
 			</description>
 			<conditions min_audience="7.29" min_image="7" target_group="1" pro_pressure_groups="0" contra_pressure_groups="0"/>
 			<data quality="13" repetitions="3" duration="3" profit="461" penalty="672" infomercial_profit="39" fix_infomercial_profit="1"/>
@@ -989,6 +999,7 @@ Special week: no bottle deposit.</en>
 			<description>
 				<de>Das Fruchtsaftgetränk in der weltberühmten bauchigen Flasche. Teuer, aber so gut wie immer richtig.</de>
 				<en>The fruit juice drink in the world famous bulgy bottle. Expensive but as good as always right.</en>
+				<pl>Napój owocowy w słynnej na całym świecie bulwiastej butelce. Drogie, ale tak dobre, jak zawsze.</pl>
 			</description>
 			<conditions min_audience="10.42" min_image="12" target_group="8" pro_pressure_groups="0" contra_pressure_groups="0"/>
 			<data quality="13" repetitions="2" duration="2" profit="365" penalty="500" infomercial_profit="31" fix_infomercial_profit="1"/>
@@ -1000,6 +1011,7 @@ Special week: no bottle deposit.</en>
 			<description>
 				<de>Wurth Paris liefert den Duft ausgewählter Essenzen für ein edles Parfüm.</de>
 				<en>Wurth Paris delivers the scent of selected essences for a noble perfume.</en>
+				<pl>Wurth Paris dostarcza zapach wybranych esencji do szlachetnych perfum.</pl>
 			</description>
 			<conditions min_audience="5.21" min_image="4" target_group="128" pro_pressure_groups="0" contra_pressure_groups="0"/>
 			<data quality="14" repetitions="3" duration="3" profit="530" penalty="750" fix_infomercial_profit="1"/>
@@ -1011,6 +1023,7 @@ Special week: no bottle deposit.</en>
 			<description>
 				<de>Computerschrott ab 50 Pfennig das Kilo. Jetzt auch moderne S/W-Monitore im Angebot.</de>
 				<en>Computer scrap beginning at 50 pfennig per kilo. Now also offering modern B/W monitors.</en>
+				<pl>Złom komputerowy od 50 groszy za kilogram. Teraz oferuje również nowoczesne monitory czarno-białe.</pl>
 			</description>
 			<conditions min_audience="4.1671" min_image="0" target_group="0" pro_pressure_groups="0" contra_pressure_groups="0"/>
 			<data quality="12" repetitions="7" duration="3" profit="581" penalty="746" year_range_from="0" year_range_to="2002" infomercial_profit="40" fix_infomercial_profit="1"/>
@@ -1022,6 +1035,7 @@ Special week: no bottle deposit.</en>
 			<description>
 				<de>Computerschrott ab 50 Eurocent das Kilo. Jetzt auch moderne Farb-Röhren-Monitore im Angebot.</de>
 				<en>Computer scrap beginning at 50 eurocent per kilo. Now also offering modern CRT screens.</en>
+				<pl>Złom komputerowy od 50 eurocentów za kilogram. Teraz w ofercie również nowoczesne kolorowe monitory lampowe.</pl>
 			</description>
 			<conditions min_audience="4.1671" min_image="0" target_group="0" pro_pressure_groups="0" contra_pressure_groups="0"/>
 			<data quality="14" repetitions="7" duration="3" profit="581" penalty="746" year_range_from="2003" year_range_to="0" infomercial_profit="40" fix_infomercial_profit="1"/>
@@ -1033,6 +1047,7 @@ Special week: no bottle deposit.</en>
 			<description>
 				<de>Raumschiffe, Phaserwaffen, Marsschürfrechte. Bei Aeroswift diese Woche mit knallhart kalkulierten Preisen im Angebot.</de>
 				<en>Spaceships, phaser weapons, prospecting rights for Mars. Really tough prices - only this week - only at Aeroswift.</en>
+				<pl>Statki kosmiczne, broń fazowa, prawa do poszukiwań Marsa. Naprawdę wysokie ceny - tylko w tym tygodniu - tylko w Aeroswift.</pl>
 			</description>
 			<conditions min_audience="8.3352" min_image="7" target_group="32" pro_pressure_groups="0" contra_pressure_groups="0"/>
 			<data quality="19" repetitions="3" duration="4" profit="400" penalty="650" infomercial_profit="24" fix_infomercial_profit="1"/>
@@ -1041,10 +1056,12 @@ Special week: no bottle deposit.</en>
 			<title>
 				<de>Fleischerei Fettmit</de>
 				<en>Fad's Meat Market</en>
+				<pl>Sklep mięsny Zwierzaki</pl>
 			</title>
 			<description>
 				<de>Das Auge isst man mit!</de>
 				<en>A feast with the eyes!</en>
+				<pl>Jesz oczami!</pl>
 			</description>
 			<conditions min_audience="0.78" min_image="7" target_group="4" pro_pressure_groups="0" contra_pressure_groups="0"/>
 			<data quality="9" repetitions="4" duration="3" profit="1533" penalty="2094" fix_infomercial_profit="1"/>
@@ -1052,10 +1069,12 @@ Special week: no bottle deposit.</en>
 		<ad id="ddfbfa22-5af8-4558-afc4-b34619bab1c9">
 			<title>
 				<de>Superfurni</de>
+				<pl>Agata M.</pl>
 			</title>
 			<description>
 				<de>Gestalten Sie ihre Möbel selber!</de>
 				<en>Design your own furniture!</en>
+				<pl>Zaprojektuj własne meble!</pl>
 			</description>
 			<conditions min_audience="0.4679" min_image="0" target_group="0" pro_pressure_groups="0" contra_pressure_groups="0"/>
 			<data quality="12" repetitions="4" duration="2" profit="1911" penalty="2031" fix_infomercial_profit="1"/>
@@ -1064,10 +1083,12 @@ Special week: no bottle deposit.</en>
 			<title>
 				<de>Leckerfett</de>
 				<en>Tasty Fat</en>
+				<pl>Pyszny Tłuszcz</pl>
 			</title>
 			<description>
 				<de>Die perfekte Mischung aus Gänsefett und natürlichem Pflanzenfett macht Leckerfett soooo unglaublich lecker.</de>
 				<en>The perfect mix of goose fat and natural vegetable fat makes Tasty Fat that incredibly deeeelicious.</en>
+				<pl>Idealna mieszanka gęsiego tłuszczu i naturalnego tłuszczu roślinnego sprawia, że Pyszny Tłuszcz jest niesamowicie pyszny.</pl>
 			</description>
 			<conditions min_audience="10.42" min_image="0" target_group="0" pro_pressure_groups="0" contra_pressure_groups="0"/>
 			<data quality="13" repetitions="2" duration="3" fix_price="0" profit="305" penalty="507" infomercial_profit="30" fix_infomercial_profit="1"/>
@@ -1081,6 +1102,8 @@ Special week: no bottle deposit.</en>
 Nur echt mit Elch!</de>
 				<en>Care products around the skin. Ointments/creams, bath additives, deodorants and much more.
 Only genuine with elk!</en>
+				<pl>Produkty pielęgnacyjne do skóry. Maści i kremy, dodatki do kąpieli, dezodoranty i wiele więcej.
+Tylko prawdziwe z łosiem!</pl>
 			</description>
 			<conditions min_audience="14.07" min_image="0" target_group="0" pro_pressure_groups="0" contra_pressure_groups="0"/>
 			<data quality="15" repetitions="2" duration="2" profit="248" penalty="401" infomercial_profit="24" fix_infomercial_profit="1"/>
@@ -1088,10 +1111,12 @@ Only genuine with elk!</en>
 		<ad id="e1f2329c-2a43-453d-8711-11de240d1fbf">
 			<title>
 				<de>Sylters</de>
+				<pl>Świnia-ujście</pl>
 			</title>
 			<description>
 				<de>Aus den Tiefen Sylts kommt dieses herrlich prickelnde Mineralwasser.</de>
 				<en>From the depths of Sylt comes this wonderfully sparkling mineral water.</en>
+				<pl>Z głębi Świnoujścia pochodzi ta cudowna gazowana woda mineralna.</pl>
 			</description>
 			<conditions min_audience="1.56" min_image="0" target_group="0" pro_pressure_groups="0" contra_pressure_groups="0"/>
 			<data quality="15" repetitions="4" duration="2" profit="900" penalty="1300" fix_infomercial_profit="1"/>
@@ -1100,10 +1125,12 @@ Only genuine with elk!</en>
 			<title>
 				<de>Reisebüro Teurl</de>
 				<en>Travel agency Kostli</en>
+				<pl>Biuro podróży Petarda</pl>
 			</title>
 			<description>
 				<de>Schnäppchenpreise für exklusive Rucksack-Touren. Proviant und Pflaster nicht im Preis enthalten.</de>
 				<en>Bargain rates for well-heeled backpackers. Provisions and patches are not included in the price.</en>
+				<pl>Wyjątkowe ceny na ekskluzywne wycieczki z plecakiem. Prowizje i plastry nie są wliczone w cenę.</pl>
 			</description>
 			<conditions min_audience="0.2074" min_image="0" target_group="0" pro_pressure_groups="0" contra_pressure_groups="0"/>
 			<data quality="12" repetitions="3" duration="2" profit="2250" penalty="3250" fix_infomercial_profit="1"/>
@@ -1116,6 +1143,7 @@ Only genuine with elk!</en>
 			<description>
 				<de>Das Honigmonster präsentiert sein Leibgericht.</de>
 				<en>The honey monster presents his favourite dish.</en>
+				<pl>Miodowy potwór prezentuje swoje ulubione danie.</pl>
 			</description>
 			<conditions min_audience="6.7721" min_image="18" target_group="1" pro_pressure_groups="0" contra_pressure_groups="0"/>
 			<data quality="14" repetitions="2" duration="4" profit="476" penalty="788" infomercial_profit="45" fix_infomercial_profit="1"/>
@@ -1124,10 +1152,12 @@ Only genuine with elk!</en>
 			<title>
 				<de>Gold per Post</de>
 				<en>Gold by Mail</en>
+				<pl>Złoto pocztą</pl>
 			</title>
 			<description>
 				<de>Schwatz dem Opa die Zähne raus, ab heute gibt es Geld gegen Gold. Achtung: Gelb ist nicht gleich Gold!</de>
 				<en>Wheedle grandpa's teeth out. Beginning with today there is money for gold. Note: Yellow does not necessarily equal to gold!</en>
+				<pl>Porozmawiaj z dziadkiem, od dziś są pieniądze na złoto. Uwaga: żółty niekoniecznie oznacza złoto!</pl>
 			</description>
 			<conditions min_audience="2.08" min_image="0" target_group="0" pro_pressure_groups="0" contra_pressure_groups="0"/>
 			<data quality="6" repetitions="2" duration="3" profit="740" penalty="1164" infomercial_profit="77" fix_infomercial_profit="1"/>
@@ -1139,6 +1169,7 @@ Only genuine with elk!</en>
 			<description>
 				<de>Knusprig knackiger Knabberspass mit feurig scharfer Chilinote. Nur für kurze Zeit mit Tiermotiven.</de>
 				<en>Crispy crunchy nibbles with fiery chillies. Only for a short time with animal patterns.</en>
+				<pl>Chrupiące przekąski z ostrą nutą chilli. Tylko przez krótki czas z motywami zwierzęcymi.</pl>
 			</description>
 			<conditions min_audience="10.42" min_image="7" target_group="2" pro_pressure_groups="0" contra_pressure_groups="0"/>
 			<data quality="12" repetitions="2" duration="4" profit="345" penalty="581" infomercial_profit="31" fix_infomercial_profit="1"/>
@@ -1152,6 +1183,8 @@ Only genuine with elk!</en>
 Ich fühl mich wohl mit Lemur</de>
 				<en>The catchy music reveals the cuddly soft laundry and freshness.
 I feel good with Lemur</en>
+				<pl>Chwytliwa muzyka zapowiada przytulną miękką pościel i świeżość.
+Czuję się dobrze z Lemurem</pl>
 			</description>
 			<conditions min_audience="7.29" min_image="12" target_group="8" pro_pressure_groups="0" contra_pressure_groups="0"/>
 			<data quality="13" repetitions="4" duration="4" profit="484" penalty="645" fix_infomercial_profit="1"/>
@@ -1163,6 +1196,7 @@ I feel good with Lemur</en>
 			<description>
 				<de>Hoher Tragekomfort und nahezu unsichtbar - die neuen Maike-Hygieneeinlagen.</de>
 				<en>High wearing comfort and almost invisible - the new Maike hygiene pads.</en>
+				<pl>Wysoki komfort noszenia i prawie niewidoczne - nowe wkładki higieniczne Maike.</pl>
 			</description>
 			<conditions min_audience="9.38" min_image="4" target_group="128" pro_pressure_groups="0" contra_pressure_groups="0"/>
 			<data quality="9" repetitions="3" duration="4" profit="366" penalty="558" infomercial_profit="34" fix_infomercial_profit="1"/>
@@ -1174,6 +1208,7 @@ I feel good with Lemur</en>
 			<description>
 				<de>Der neueste Luxusschlitten aus dem Hause Bonze: Ästethisch einwandfreies Design, robust, klassisch.</de>
 				<en>The latest classy car from Bonze: aesthetically flawless design, robust, classic.</en>
+				<pl>Najnowsze luksusowe sanki firmy Bonze: estetycznie nienaganna konstrukcja, solidne, klasyczne.</pl>
 			</description>
 			<conditions min_audience="31.26" min_image="7" target_group="32" pro_pressure_groups="0" contra_pressure_groups="0"/>
 			<data quality="19" repetitions="1" duration="4" profit="146" penalty="220" infomercial_profit="14" fix_infomercial_profit="1"/>
@@ -1182,10 +1217,12 @@ I feel good with Lemur</en>
 			<title>
 				<de>Brillen Zorn</de>
 				<en>Angry Glasses</en>
+				<pl>Wizja Express</pl>
 			</title>
 			<description>
 				<de>Wie die Faust aufs Auge - unsere Brillen sitzen immer!</de>
 				<en>Clashes horrible - our absolutely perfect fitting glasses. Break-proof through years of experience!</en>
+				<pl>Jak pięść w oko - nasze okulary zawsze pasują!</pl>
 			</description>
 			<conditions min_audience="0.1553" min_image="0" target_group="0"/>
 			<data infomercial="1" quality="15" repetitions="5" duration="4" profit="2466" penalty="3288" fix_infomercial_profit="1"/>
@@ -1197,6 +1234,7 @@ I feel good with Lemur</en>
 			<description>
 				<de>DAS Fantasy-Rollenspiel von Goldfisch Bytes. Lasst uns Wildschweine jagen!</de>
 				<en>THE fantasy-RPG by Goldfish Bytes. Lets hunt boars!</en>
+				<pl>Fantasy-RPG autorstwa Goldfish Bytes. Pozwala zapolować na dziki!</pl>
 			</description>
 			<conditions min_audience="5.7301" min_image="0" target_group="0"/>
 			<data infomercial="1" quality="25" repetitions="3" duration="4" profit="472" penalty="661" infomercial_profit="133" fix_infomercial_profit="1"/>
