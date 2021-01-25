@@ -422,10 +422,12 @@ Ale tylko z Nami!</pl>
 			<title>
 				<de>Spruzzi Plöpp</de>
 				<en>Fizzy Plop</en>
+				<en>Chrząszcz Plop</en>
 			</title>
 			<description>
 				<de>Unsere Limonade beinhaltet nur natürliche Aromastoffe. Hmm lecker Käferflügel...</de>
 				<en>Our lemonade contains just natural aromas. Hmm tasty beetle wings...</en>
+				<pl>Nasza lemoniada zawiera tylko naturalne aromaty. Hmm smaczne skrzydełka chrząszcza...</pl>
 			</description>
 			<conditions min_audience="2.08" min_image="0" target_group="0" pro_pressure_groups="0" contra_pressure_groups="0"/>
 			<data quality="17" repetitions="4" duration="2" profit="775" penalty="1000" infomercial_profit="77" fix_infomercial_profit="1"/>
@@ -434,10 +436,12 @@ Ale tylko z Nami!</pl>
 			<title>
 				<de>Tussishop</de>
 				<en>Broadshop</en>
+				<pl>WomenShop</pl>
 			</title>
 			<description>
 				<de>Nette Frauen aus aus dem Katalog. Dank Fernabsatz Rückgabe ohne Probleme möglich.</de>
 				<en>Nice women from the catalog. Thanks to remote sales return possible without problems.</en>
+				<pl>Ładne kobiety z katalogu. Dzięki zdalnej sprzedaży możliwy bezproblemowy zwrot.</pl>
 			</description>
 			<conditions min_audience="0.62" min_image="4" target_group="256" pro_pressure_groups="0" contra_pressure_groups="0"/>
 			<data quality="12" repetitions="3" duration="3" profit="1766" penalty="2800" infomercial_profit="124" fix_infomercial_profit="1"/>
@@ -446,10 +450,12 @@ Ale tylko z Nami!</pl>
 			<title>
 				<de>Raus Hier</de>
 				<en>Get Out</en>
+				<en>Traver Out</en>
 			</title>
 			<description>
 				<de>Dein freundliches Reisebüro... Wohin Du willst - solang die Kohle stimmt.</de>
 				<en>Your friendly travel agency ... Wherever you want - as long as money is not an issue.</en>
+				<pl>Twoje przyjazne biuro podróży... Gdziekolwiek chcesz - o ile pieniądze nie są problemem.</pl>
 			</description>
 			<conditions min_audience="0.0511" min_image="0" target_group="0" pro_pressure_groups="0" contra_pressure_groups="0"/>
 			<data quality="18" repetitions="3" duration="2" fix_price="0" profit="3000" penalty="3800" infomercial_profit="90" fix_infomercial_profit="1"/>
@@ -459,10 +465,12 @@ Ale tylko z Nami!</pl>
 				<de>Tu-doch-so</de>
 				<!-- <en>Fakation</en> -->
 				<en>Pre-Tend-Astic</en>
+				<pl>Fake-Photo</pl>
 			</title>
 			<description>
 				<de>Kein Geld für den Urlaub oder die Yacht? Wir schicken Postkarten aus Uganda oder fälschen Fotos.</de>
 				<en>No money for the holidays or a yacht? We send postcards from Uganda or fake photos.</en>
+				<pl>Nie masz pieniędzy na wakacje lub na jacht? Wysyłamy pocztówki z Wysp Kanadyjskich lub fałszujemy zdjęcia.</pl>
 			</description>
 			<conditions min_audience="0.2074" min_image="12" target_group="16" pro_pressure_groups="0" contra_pressure_groups="0"/>
 			<data quality="16" repetitions="3" duration="3" profit="2500" penalty="3800" infomercial_profit="100" fix_infomercial_profit="1"/>
@@ -471,10 +479,12 @@ Ale tylko z Nami!</pl>
 			<title>
 				<de>Jesse Wasser- und Wärmedienst</de>
 				<en>Jesse water and heat services</en>
+				<pl>WC oj oj</pl>
 			</title>
 			<description>
 				<de>Wir sorgen für ihre Sanitäranlagen. Schon ab 10 € - ohne Scheiß!</de>
 				<en>We take care of your sanitary facilities. Beginning from 10 € - no shit!</en>
+				<pl>Dbamy o Twoje sanitariaty. Począwszy od 10 € - bez gówna!</pl>
 			</description>
 			<conditions min_audience="0.4679" min_image="7" target_group="8" pro_pressure_groups="0" contra_pressure_groups="0"/>
 			<data quality="9" repetitions="3" duration="3" profit="2111" penalty="3280" infomercial_profit="119" fix_infomercial_profit="1"/>
@@ -483,10 +493,12 @@ Ale tylko z Nami!</pl>
 			<title>
 				<de>Hobelmarkt</de>
 				<en>Plane-Market</en>
+				<pl>TarPol</pl>
 			</title>
 			<description>
 				<de>Hier fallen nicht nur Späne, nein auch die Preise. Ein Hobelmarkt ist sicher auch in Ihrer Nähe.</de>
 				<en>It's not only chips dropping down but also the prices. A Plane-Market is certainly also near you.</en>
+				<pl>Spadają nie tylko żetony, ale także ceny. Z pewnością w pobliżu znajduje się również TarPol.</pl>
 			</description>
 			<conditions min_audience="2.6" min_image="7" target_group="8" pro_pressure_groups="0" contra_pressure_groups="0"/>
 			<data quality="12" repetitions="4" duration="3" profit="750" penalty="1200" infomercial_profit="72" fix_infomercial_profit="1"/>
@@ -495,10 +507,12 @@ Ale tylko z Nami!</pl>
 			<title>
 				<de>Weißer Friese</de>
 				<en>White Friesian</en>
+				<pl>Biała Plama</pl>
 			</title>
 			<description>
 				<de>Waschen Sie ihre Wäsche mit „Weißer Friese“ porentief rein!</de>
 				<en>With "White Friesian" you will wash your laundry deep-down clean!</en>
+				<pl>Dzięki "Białej Plamie" upierzesz pranie dogłębnie i czysto!</pl>
 			</description>
 			<conditions min_audience="15.63" min_image="7" target_group="8" pro_pressure_groups="0" contra_pressure_groups="0"/>
 			<data quality="18" repetitions="1" duration="3" profit="260" penalty="433" infomercial_profit="23" fix_infomercial_profit="1"/>
@@ -510,6 +524,7 @@ Ale tylko z Nami!</pl>
 			<description>
 				<de>Die Markenkleidung mit dem Sonnenschirm. Modische Schnitte und trendige Farben inklusive.</de>
 				<en>The brand name clothing with the umbrella. Fashionable cuts and trendy colors included.</en>
+				<pl>Markowa odzież z parasolem. W zestawie modne kroje i modne kolory.</pl>
 			</description>
 			<conditions min_audience="9.38" min_image="0" target_group="0" pro_pressure_groups="0" contra_pressure_groups="0"/>
 			<data quality="19" repetitions="3" duration="2" profit="327" penalty="570" infomercial_profit="32" fix_infomercial_profit="1"/>
@@ -521,6 +536,7 @@ Ale tylko z Nami!</pl>
 			<description>
 				<de>Die „Vitalon Foods Company“ aus Taiwan läßt R. D. Handerson als MacGreifer für ihren Sporttrunk werben: auf dem Fahrrad, im Jeep, beim Tai Chi und auf dem Motorboot.</de>
 				<en>The "Vitalon Foods Company" from Taiwan shows R. D. Handerson advertising as MacGrabber for their sports drink: on a bicycle, in a jeep, while training Tai Chi and on the speedboat.</en>
+				<pl>Tajwańska firma "Vitalon Foods Company" pozwala R. D. Handersonowi reklamować swój napój sportowy jako MacGreifer: na rowerze, w jeepie, z Tai Chi i na motorówce.</pl>
 			</description>
 			<conditions min_audience="6.25" min_image="12" target_group="32" pro_pressure_groups="0" contra_pressure_groups="0"/>
 			<data quality="16" repetitions="3" duration="4" profit="525" penalty="825" infomercial_profit="43" fix_infomercial_profit="1"/>
@@ -532,6 +548,7 @@ Ale tylko z Nami!</pl>
 			<description>
 				<de>Das neue Modell des renommierten Autoherstellers Saipien verzückt die Presse - auch Sie?</de>
 				<en>The new model of the renowned car manufacturer Saipien enchants the press - and you too?</en>
+				<pl>Nowy model znanego producenta samochodów Saipien zachwyca prasę - Ciebie też?</pl>
 			</description>
 			<conditions min_audience="2.86" min_image="0" target_group="0" pro_pressure_groups="0" contra_pressure_groups="0"/>
 			<data quality="18" repetitions="5" duration="3" profit="672" penalty="812" infomercial_profit="67" fix_infomercial_profit="1"/>
@@ -540,10 +557,12 @@ Ale tylko z Nami!</pl>
 			<title>
 				<de>Nichts-wie-weg</de>
 				<en>Let's scram</en>
+				<pl>Randka w ciepło</pl>
 			</title>
 			<description>
 				<de>Günstige Urlaubstrips. Jetzt mit Datingbörse für Pauschaltouristen und „Gepäck zurück”-Garantie.</de>
 				<en>Cheap vacation trips. Now with dating pool for package tourists and "luggage back" guarantee.</en>
+				<pl>Tanie wyjazdy wakacyjne. Teraz z wymianą randek dla turystów zorganizowanych i gwarancją zwrotu bagażu.</pl>
 			</description>
 			<conditions min_audience="4.1671" min_image="0" target_group="0" pro_pressure_groups="0" contra_pressure_groups="0"/>
 			<data quality="14" repetitions="1" duration="4" profit="506" penalty="900" infomercial_profit="88" fix_infomercial_profit="1"/>
@@ -555,6 +574,7 @@ Ale tylko z Nami!</pl>
 			<description>
 				<de>Kein Bier mehr? Schick nicht die Frau, ruf Call-A-Beer!</de>
 				<en>Out of beer? Don't get your wife a runaround, just Call-A-Beer!</en>
+				<pl>Brak piwa? Nie wysyłaj kobiety, zadzwoń do Call-A-Beer!</pl>
 			</description>
 			<conditions min_audience="3.6461" min_image="18" target_group="8" pro_pressure_groups="0" contra_pressure_groups="0"/>
 			<data quality="11" repetitions="5" duration="2" profit="685" penalty="1199" infomercial_profit="122" fix_infomercial_profit="1"/>
@@ -563,10 +583,12 @@ Ale tylko z Nami!</pl>
 			<title>
 				<de>Zimzi</de>
 				<en>Cinnamzy</en>
+				<pl>Cynamonowo</pl>
 			</title>
 			<description>
 				<de>Lecker Zimtstäbchen mit Reizhustengarantie. Noch nie war so trocken...so lecker.</de>
 				<en>Delicious cinnamon sticks with custody guarantee. Never dust-dry was ... so delicious.</en>
+				<pl>Pyszne laski cynamonu z gwarancją suchego kaszlu. Jeszcze nigdy nie było tak wytrawne... tak pyszne.</pl>
 			</description>
 			<conditions min_audience="3.65" min_image="12" target_group="1" pro_pressure_groups="0" contra_pressure_groups="0"/>
 			<data quality="12" repetitions="4" duration="4" profit="657" penalty="950" infomercial_profit="58" fix_infomercial_profit="1"/>
@@ -578,6 +600,7 @@ Ale tylko z Nami!</pl>
 			<description>
 				<de>Beim Kauf einer Flasche Rotwein gibts jetzt zwei Kopfschmerztabletten gratis dazu.</de>
 				<en>When buying a bottle of red wine, you now get two headache tablets for free.</en>
+				<pl>Kupując butelkę czerwonego wina, otrzymujesz dwie darmowe tabletki na ból głowy.</pl>
 			</description>
 			<conditions min_audience="3.65" min_image="7" target_group="16" pro_pressure_groups="0" contra_pressure_groups="0"/>
 			<data quality="8" repetitions="5" duration="3" profit="642" penalty="1022" fix_infomercial_profit="1"/>
@@ -586,10 +609,12 @@ Ale tylko z Nami!</pl>
 			<title>
 				<de>Copyshop Raub</de>
 				<en>Copy-Shop Piraczi</en>
+				<pl>Skopiowany Pirat</pl>
 			</title>
 			<description>
 				<de>Raub-Kopien sehen fast so gut aus wie die Originale. Wir verkaufen auch Permanentmarker!</de>
 				<en>Piraczi-copies look nearly as good as originals. We also sell permanent markers!</en>
+				<pl>Pirackie kopie wyglądają prawie tak dobrze, jak oryginały. Sprzedajemy również markery permanentne!</pl>
 			</description>
 			<conditions min_audience="3.13" min_image="0" target_group="0" pro_pressure_groups="0" contra_pressure_groups="0"/>
 			<data quality="4" repetitions="5" duration="2" profit="650" penalty="950" infomercial_profit="95" fix_infomercial_profit="1"/>
@@ -602,6 +627,7 @@ Ale tylko z Nami!</pl>
 			<description>
 				<de>Das Ketchup für diejenigen, die ihre Pommes nicht in Mayonnaise ersäufen. Auch geeignet für Buletten, Wurst und Hühnchen.</de>
 				<en>The ketchup for those who drown their fries in mayonnaise. Also suitable for burgers, sausages and chicken nuggets.</en>
+				<pl>Ketchup dla tych, którzy topią frytki w majonezie. Nadaje się również do burgerów, kiełbasek i nuggetsów z kurczaka.</pl>
 			</description>
 			<conditions min_audience="8.34" min_image="0" target_group="0" pro_pressure_groups="0" contra_pressure_groups="0"/>
 			<data quality="15" repetitions="3" duration="3" profit="356" penalty="558" infomercial_profit="35" fix_infomercial_profit="1"/>
@@ -613,6 +639,7 @@ Ale tylko z Nami!</pl>
 			<description>
 				<de>Surfen im Garten! WLan-Kabel bis 200m.</de>
 				<en>Surfing the web in the garden! WiFi cable up to 200m.</en>
+				<pl>Surfowanie po sieci w ogrodzie! Kabel WiFi do 200m.</pl>
 			</description>
 			<conditions min_audience="6.77" min_image="0" target_group="0" pro_pressure_groups="0" contra_pressure_groups="0"/>
 			<data quality="10" repetitions="2" duration="2" profit="407" penalty="625" year_range_from="1998" year_range_to="0" infomercial_profit="41" fix_infomercial_profit="1"/>
@@ -620,10 +647,12 @@ Ale tylko z Nami!</pl>
 		<ad id="a401f20f-8832-45df-a274-2599fd8d0afb">
 			<title>
 				<de>Berliner Pilsener</de>
+				<pl>Berlin</pl>
 			</title>
 			<description>
 				<de>Berlin, du bist so wunderbar!</de>
 				<en>Berlin, you are so wonderful!</en>
+				<pl>Berlin, jest taki wspaniały!</pl>
 			</description>
 			<conditions min_audience="6.25" min_image="0" target_group="0" pro_pressure_groups="0" contra_pressure_groups="0"/>
 			<data quality="16" repetitions="2" duration="3" profit="425" penalty="667" infomercial_profit="42" fix_infomercial_profit="1"/>
@@ -635,6 +664,7 @@ Ale tylko z Nami!</pl>
 			<description>
 				<de>Ist ihre Party mal wieder total langweilig? Buchen Sie Stilvento und ihr Anlass ist gerettet.</de>
 				<en>Is your party once again totally boring? Book Stilvento and your event is saved.</en>
+				<pl>Czy Twoja impreza znów jest nudna? Zarezerwuj Stilvento, a Twoje wydarzenie zostanie zapisane.</pl>
 			</description>
 			<conditions min_audience="2.3435" min_image="0" target_group="0" pro_pressure_groups="0" contra_pressure_groups="0"/>
 			<data quality="25" repetitions="5" duration="2" profit="766" penalty="1188" fix_infomercial_profit="1"/>
@@ -646,6 +676,7 @@ Ale tylko z Nami!</pl>
 			<description>
 				<de>Der unvergleichliche Schokoriegel mit dem hinreißenden Geschmack.</de>
 				<en>The incomparable chocolate bar with the captivating taste.</en>
+				<pl>Niezrównany baton czekoladowy o wspaniałym smaku.</pl>
 			</description>
 			<conditions min_audience="5.73" min_image="7" target_group="1" pro_pressure_groups="0" contra_pressure_groups="0"/>
 			<data quality="18" repetitions="2" duration="3" profit="500" penalty="823" infomercial_profit="45" fix_infomercial_profit="1"/>
@@ -657,6 +688,7 @@ Ale tylko z Nami!</pl>
 			<description>
 				<de>Die Nummer 1 im Modellbau. Ob Messerschmitt, Panther oder U.S.S. Enterprise - Ravelli führt es.</de>
 				<en>The number 1 in model building. Whether Messerschmitt, Panther, or U.S.S. Enterprise - Ravelli sells it.</en>
+				<pl>Numer 1 w budowaniu modeli. Czy Messerschmitt, Panther czy P.H.U. Przedsiębiorstwo - Ravelli je sprzedaje.</pl>
 			</description>
 			<conditions min_audience="4.69" min_image="4" target_group="256" pro_pressure_groups="0" contra_pressure_groups="0"/>
 			<data quality="22" repetitions="3" duration="2" profit="557" penalty="975" fix_infomercial_profit="1"/>
@@ -668,6 +700,7 @@ Ale tylko z Nami!</pl>
 			<description>
 				<de>Der Schorotti-Mohr bietet traumhafte Schokolade. Zugreifen und dahinschmelzen.</de>
 				<en>The Schorotti-Maure offers fantastic chocolate. Take one and melt away.</en>
+				<pl>Schorotti oferuje wspaniałą czekoladę. Chwyć go i rozpuść.</pl>
 			</description>
 			<conditions min_audience="2.6" min_image="0" target_group="0" pro_pressure_groups="0" contra_pressure_groups="0"/>
 			<data quality="14" repetitions="4" duration="2" profit="700" penalty="1050" fix_infomercial_profit="1"/>
@@ -682,6 +715,8 @@ Ale tylko z Nami!</pl>
 Der Vorteil: Kein Porto für Überweisungsträger.</de>
 				<en>Open an account at the Puff-Bank.
 The advantage: No postage for transfer carriers.</en>
+				<pl>Otwórz konto w naszym banku.
+Zaleta: brak opłaty pocztowej za potwierdzenia przelewu.</pl>
 			</description>
 			<conditions min_audience="17.19" min_image="0" target_group="0" pro_pressure_groups="0" contra_pressure_groups="0"/>
 			<data quality="12" repetitions="2" duration="4" profit="215" penalty="337" infomercial_profit="21" fix_infomercial_profit="1"/>
@@ -690,10 +725,12 @@ The advantage: No postage for transfer carriers.</en>
 			<title>
 				<de>Gib Pfote</de>
 				<en>Give paw!</en>
+				<pl>Daj łapę</pl>
 			</title>
 			<description>
 				<de>Die natürlichen Bestandteile von "Gib Pfote" wird ihr Hund lieben. Lecker Pudel.</de>
 				<en>Your dog will love the natural ingredients of "Give paw!". Tasty Poodle.</en>
+				<pl>Twój pies pokocha naturalne składniki preparatu "Daj łapę!". Smaczny Pudel.</pl>
 			</description>
 			<conditions min_audience="5.21" min_image="0" target_group="0" pro_pressure_groups="0" contra_pressure_groups="0"/>
 			<data quality="12" repetitions="3" duration="2" profit="470" penalty="690" infomercial_profit="75" fix_infomercial_profit="1"/>
@@ -705,6 +742,7 @@ The advantage: No postage for transfer carriers.</en>
 			<description>
 				<de>R. D. Handerson präsentiert für die Telecom USA in zwei Spots eine nützliche Telephonkarte.</de>
 				<en>In two spots the famous R. D. Handerson presents a useful phone card powered by Telecom USA.</en>
+				<pl>W dwóch spotach słynny R. O. Henderson prezentuje przydatną kartę telefoniczną obsługiwaną przez Telekom PL.</pl>
 			</description>
 			<conditions min_audience="11.46" min_image="0" target_group="0" pro_pressure_groups="0" contra_pressure_groups="0"/>
 			<data quality="15" repetitions="2" duration="3" profit="286" penalty="448" infomercial_profit="28" fix_infomercial_profit="1"/>
@@ -712,12 +750,15 @@ The advantage: No postage for transfer carriers.</en>
 		<ad id="ad62c53b-3d7d-404e-bb37-0babaed87df1">
 			<title>
 				<de>Althans</de>
+				<pl>Szwarc</pl>
 			</title>
 			<description>
 				<de>Qualität seit 1861.
 Solaruhren, Quartzuhren, Wecker, Großuhren, Damen- und Herrenmodelle.</de>
 				<en>Quality since 1861.
 Solar clocks, quartz clocks, alarm clocks, large clocks, ladies' and men's models.</en>
+				<pl>Jakość od 1861 roku.
+Zegary słoneczne, zegary kwarcowe, budziki, duże zegary, modele damskie i męskie.</pl>
 			</description>
 			<conditions min_audience="12.5" min_image="4" target_group="128" pro_pressure_groups="0" contra_pressure_groups="0"/>
 			<data quality="18" repetitions="2" duration="2" profit="304" penalty="459" infomercial_profit="27" fix_infomercial_profit="1"/>
