@@ -767,10 +767,12 @@ Zegary słoneczne, zegary kwarcowe, budziki, duże zegary, modele damskie i męs
 			<title>
 				<de>Buchstehude</de>
 				<en>Pantown</en>
+				<pl>Boxwieś</pl>
 			</title>
 			<description>
 				<de>Boxershorts vom Dorf. Garantiert nur einmal getragen - pro Seite.</de>
 				<en>Pants of the village. Guaranteed to be just worn once - par side.</en>
+				<pl>Bokserki ze wsi. Gwarantowane jednorazowe noszenie - z każdej strony.</pl>
 			</description>
 			<conditions min_audience="0.1" min_image="4" target_group="256" pro_pressure_groups="0" contra_pressure_groups="0"/>
 			<data quality="10" repetitions="3" duration="4" profit="2800" penalty="3400" infomercial_profit="80" fix_infomercial_profit="1"/>
@@ -778,10 +780,12 @@ Zegary słoneczne, zegary kwarcowe, budziki, duże zegary, modele damskie i męs
 		<ad id="b5dbf200-bd84-4126-b80e-66a71661c8aa">
 			<title>
 				<de>Speck</de>
+				<de>Mydło Speck</de>
 			</title>
 			<description>
 				<de>Speck-Seife steht seit Jahrzenten für Qualität und saubere Hände.</de>
 				<en>Speck soap stands since generations for quality and clean hands.</en>
+				<pl>Mydło Speck od pokoleń jest synonimem jakości i czystych rąk.</pl>
 			</description>
 			<conditions min_audience="1.82" min_image="0" target_group="0" pro_pressure_groups="0" contra_pressure_groups="0"/>
 			<data quality="10" repetitions="2" duration="3" profit="828" penalty="960" infomercial_profit="82" fix_infomercial_profit="1"/>
@@ -795,6 +799,9 @@ Zegary słoneczne, zegary kwarcowe, budziki, duże zegary, modele damskie i męs
 Tubenkrone - Schokolade mit Charakter.</de>
 				<en>So what?
 Tubenkrone - Chocolate with character.</en>
+				<pl>Więc co?
+Tubenkrone - Czekolada z charakterem.
+				</pl>
 			</description>
 			<conditions min_audience="7.29" min_image="0" target_group="0" pro_pressure_groups="0" contra_pressure_groups="0"/>
 			<data quality="15" repetitions="4" duration="2" profit="415" penalty="606" infomercial_profit="39" fix_infomercial_profit="1"/>
@@ -808,6 +815,8 @@ Tubenkrone - Chocolate with character.</en>
 It's a sunny</de>
 				<en>The manufacturer for high-tech all over the world.
 It's a sunny</en>
+			<pl>Kompleksowy producent zaawansowanej technologii.
+Jest słonecznie</pl>
 			</description>
 			<conditions min_audience="2.34" min_image="0" target_group="0" pro_pressure_groups="0" contra_pressure_groups="0"/>
 			<data quality="14" repetitions="4" duration="3" profit="733" penalty="950" infomercial_profit="73" fix_infomercial_profit="1"/>
@@ -816,10 +825,12 @@ It's a sunny</en>
 			<title>
 				<de>Matratzendoktor</de>
 				<en>Mattress-Doc</en>
+				<pl>Dr-Materac</pl>
 			</title>
 			<description>
 				<de>Quietscht Ihre Matratze? Rufen Sie den Matratzendoktor. Inklusive Probestunde.</de>
 				<en>Is your mattress squeaking? Call the Mattress-Doc. Including trial lesson.</en>
+				<pl>Czy Twój materac piszczy? Zadzwoń do Dr-Materac. W tym lekcja próbna.</pl>
 			</description>
 			<conditions min_audience="1.82" min_image="7" target_group="8" pro_pressure_groups="0" contra_pressure_groups="0"/>
 			<data quality="8" repetitions="4" duration="2" profit="885" penalty="1101" infomercial_profit="85" fix_infomercial_profit="1"/>
@@ -831,6 +842,7 @@ It's a sunny</en>
 			<description>
 				<de>Aktionswoche bei Bikeshop. Beim Kauf eines Fahrrads gibt eines umsonst.</de>
 				<en>Specials week at Bikeshop. When buying a bike, there is one for free.</en>
+				<pl>Tydzień akcji w sklepie rowerowym "Bikeshop". Kupując rower, otrzymujesz go za darmo.</pl>
 			</description>
 			<conditions min_audience="0.7905" min_image="12" target_group="2" pro_pressure_groups="0" contra_pressure_groups="0"/>
 			<data quality="10" repetitions="3" duration="2" profit="1586" penalty="2296" infomercial_profit="118" fix_infomercial_profit="1"/>
@@ -839,10 +851,12 @@ It's a sunny</en>
 			<title>
 				<de>Kau-Tschuk</de>
 				<en>Chew-Chew gum</en>
+				<pl>Toy-gum</pl>
 			</title>
 			<description>
 				<de>Der lecker Knabberspass für Jung und Alt. Aus recycelten Altreifen, in 5 bunten Geschmacksrichtungen.</de>
 				<en>The tasty nibble fun for young and old. Made out of recycled wheels from toy trains. Available in 5 varied tastes.</en>
+				<pl>Super zabawa dla małych i dużych. Wykonane z kół pochodzących z recyklingu z zabawkowych pociągów. Dostępny w 5 różnych smakach.</pl>
 			</description>
 			<conditions min_audience="4.6881" min_image="0" target_group="0" pro_pressure_groups="0" contra_pressure_groups="0"/>
 			<data quality="11" repetitions="3" duration="3" profit="500" penalty="850" fix_infomercial_profit="1"/>
@@ -854,6 +868,7 @@ It's a sunny</en>
 			<description>
 				<de>Puzzeln, spielen, Spaß haben. Rabensburger empfiehlt Neuheiten und Klassiker aus seinem Sortiment.</de>
 				<en>Do a jigsaw, playing around, having fun. Rabensburger recommends novelties and classics from its assortment.</en>
+				<pl>Puzzle, graj, baw się dobrze. Rabensburger poleca nowości i klasykę ze swojego asortymentu.</pl>
 			</description>
 			<conditions min_audience="8.34" min_image="12" target_group="1" pro_pressure_groups="0" contra_pressure_groups="0"/>
 			<data quality="14" repetitions="3" duration="2" profit="421" penalty="684" infomercial_profit="37" fix_infomercial_profit="1"/>
@@ -865,6 +880,7 @@ It's a sunny</en>
 			<description>
 				<de>Ihre Baguettes in 1, 2 oder 3 Meter Länge!</de>
 				<en>Your baguettes in lengths of 1, 2 or 3 metres!</en>
+				<pl>Twoje bagietki o długości 1, 2 lub 3 metrów!</pl>
 			</description>
 			<conditions min_audience="5.73" min_image="0" target_group="0" pro_pressure_groups="0" contra_pressure_groups="0"/>
 			<data quality="15" repetitions="1" duration="1" profit="445" penalty="730" fix_infomercial_profit="1"/>
@@ -877,6 +893,7 @@ It's a sunny</en>
 			<description>
 				<de>Nicht nur Furrest Gomp trinkt leidenschaftlich Dr. Plapper.</de>
 				<en>It is not just Furrest Gomp who passionately drinks Dr. Blather.</en>
+				<pl>Nie tylko Furrest Gomp namiętnie pije.</pl>
 			</description>
 			<conditions min_audience="11.46" min_image="7" target_group="2" pro_pressure_groups="0" contra_pressure_groups="0"/>
 			<data quality="18" repetitions="2" duration="4" profit="340" penalty="425" infomercial_profit="28" fix_infomercial_profit="1"/>
@@ -888,6 +905,7 @@ It's a sunny</en>
 			<description>
 				<de>Reiz macht geil, so die Botschaft dieser Werbung.</de>
 				<en>Greed in need - so at least the message of this advertisement.</en>
+				<pl>Zaturno sprawia, że ​​jesteś fajny, więc nie słuchaj tej reklamy.</pl>
 			</description>
 			<conditions min_audience="1.04" min_image="0" target_group="0" pro_pressure_groups="0" contra_pressure_groups="0"/>
 			<data quality="17" repetitions="2" duration="3" profit="1100" penalty="1200" fix_infomercial_profit="1"/>
