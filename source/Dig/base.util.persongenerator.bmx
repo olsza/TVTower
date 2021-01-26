@@ -1310,7 +1310,7 @@ Type TPersonGeneratorCountry_Poland extends TPersonGeneratorCountry
 			"Urban", "Urbaniak", ..
 			"Walczak", "Wawrzyniak", "Wieczorek", "Wilk", "Włodarczyk", "Woźniak", "Wójcik", "Wójtowicz", "Wróbel", ..
 			"Zając", "Złodziej", "Zych", ..
-			"Żak", ..
+			"Żak" ..
 		]
 	End Method
 End Type
