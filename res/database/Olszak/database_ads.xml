@@ -1243,10 +1243,12 @@ Czuję się dobrze z Lemurem</pl>
 			<title>
 				<de>Krawatten-Minister</de>
 				<en>Tie-Minister</en>
+				<pl>Minister Krawatów</pl>
 			</title>
 			<description>
 				<de>Der Mode Discount nicht nur für Fliegenträger. Dicker Katalog, schmaler Preis.</de>
 				<en>The fashion discount not just for bow tie users. Extensive catalogue but lowest prices.</en>
+				<pl>Rabat modowy nie tylko dla noszących muchy. Obszerny katalog, niskie ceny.</pl>
 			</description>
 			<conditions min_audience="0.31" min_image="0" target_group="0"/>
 			<data infomercial="1" quality="15" repetitions="3" duration="3" profit="2166" penalty="2688" infomercial_profit="75" fix_infomercial_profit="1"/>
@@ -1255,10 +1257,12 @@ Czuję się dobrze z Lemurem</pl>
 			<title>
 				<de>Handy-Dandy</de>
 				<en>Puny Phones</en>
+				<pl>Elegancki Telefon</pl>
 			</title>
 			<description>
 				<de>Hol Dir die knalligen Cover für Dein Handy. Vorbei mit drögem Graublau. Jetzt auch für alle Sumens-Modelle verfügbar.</de>
 				<en>Get our  jazzy covers for your mobile phone. Well and truly over for drunken grayish blue. Now also available for all models of Sumens.</en>
+				<pl>Zdobądź jaskrawe etui na swój telefon komórkowy. Przeminęło z ponurym szaro-niebieskim. Teraz dostępny również dla wszystkich modeli Sumens.</pl>
 			</description>
 			<conditions min_audience="1.8225" min_image="18" target_group="2" allowed_programme_type="0" pro_pressure_groups="0" contra_pressure_groups="0"/>
 			<data infomercial="1" quality="20" repetitions="4" duration="4" profit="900" penalty="1274" year_range_from="1998" year_range_to="2003" infomercial_profit="50" fix_infomercial_profit="1"/>
@@ -1271,6 +1275,7 @@ Czuję się dobrze z Lemurem</pl>
 			<description>
 				<de>Deine Stammkneipe mit dem Hauch des Prätentiösen. Bierdeckel an den Wänden zeugen von weitreichender Bierkenntnis des Wirtes.</de>
 				<en>Your favourite pub with the touch of the pretentious. Beermats on the walls bear witness to the innkeepers knowledge of beer.</en>
+				<pl>Twój ulubiony bar z odrobiną pretensjonalne. Podkładki pod piwo na ścianach świadczą o dużej wiedzy gospodarza na temat piwa.</pl>
 			</description>
 			<conditions min_audience="0.7805" min_image="0" target_group="0" allowed_programme_type="0" pro_pressure_groups="0" contra_pressure_groups="0"/>
 			<data infomercial="1" quality="15" repetitions="1" duration="3" profit="1333" penalty="1716" infomercial_profit="90" fix_infomercial_profit="1"/>
@@ -1283,6 +1288,7 @@ Czuję się dobrze z Lemurem</pl>
 			<description>
 				<de>Lustige Laternen in zahlreichen Tierformen. Jetzt neu: Kuh und Marienkäfer. Der Knaller für jeden Kindergeburtstag.</de>
 				<en>Funny lanterns in numerous animal forms. New: Cow and Ladybug. The bang for every child's birthday.</en>
+				<pl>Zabawne lampiony w wielu zwierzęcych kształtach. Nowość: krowa i biedronka. Huk na urodziny każdego dziecka.</pl>
 			</description>
 			<conditions min_audience="0.0511" min_image="25" target_group="1" allowed_programme_type="0" pro_pressure_groups="0" contra_pressure_groups="0"/>
 			<data infomercial="1" quality="15" repetitions="5" duration="3" profit="875" penalty="1174" infomercial_profit="75" fix_infomercial_profit="1"/>
@@ -1291,10 +1297,12 @@ Czuję się dobrze z Lemurem</pl>
 			<title>
 				<de>Meschmucke</de>
 				<en>DJ Meshugge</en>
+				<pl>Ich Dwoje</pl>
 			</title>
 			<description>
 				<de>Crazy Beats vom israelischen Star-DJ 4Locke. Jetzt alle 3 Hits auf einem Album.</de>
 				<en>Crazy beats by Israelic superstar DJ Meshugge. All 3 hits on one Album.</en>
+				<pl>Szalone rytmy polskiej gwiazdy Ich Dwoje. Wszystkie 3 hity w jednym albumie.</pl>
 			</description>
 			<conditions min_audience="1.8225" min_image="18" target_group="2" allowed_programme_type="0" pro_pressure_groups="0" contra_pressure_groups="0"/>
 			<data infomercial="1" quality="18" repetitions="4" duration="4" profit="900" penalty="1474" year_range_from="1992" year_range_to="1995" infomercial_profit="50" fix_infomercial_profit="1"/>
@@ -1303,10 +1311,12 @@ Czuję się dobrze z Lemurem</pl>
 			<title>
 				<de>Senner-Käs</de>
 				<en>Herdsman Cheese</en>
+				<pl>Ser Senner</pl>
 			</title>
 			<description>
 				<de>Handgemachter Käse von hoch in den Alpen. Bärtige Senner, Sonne, saftige Wiesen und glückliche Kühe liefern den Gaumenschmaus für einen jeden Stadtmenschen.</de>
 				<en>Handmade cheese from high in the Alps. Bearded dairy farmers, the sun, lush meadows and happy cows provide the palate for every city dweller.</en>
+				<pl>Ręcznie robiony ser z wysokich Alp. Brodaci mleczarze, słońce, bujne łąki i szczęśliwe krowy to kulinarna rozkosz dla każdego mieszkańca miasta.</pl>
 			</description>
 			<conditions min_audience="1.041" min_image="0" target_group="0" allowed_programme_type="0" pro_pressure_groups="0" contra_pressure_groups="0"/>
 			<data infomercial="1" quality="21" repetitions="7" duration="6" profit="1225" penalty="2024" infomercial_profit="85" fix_infomercial_profit="1"/>
@@ -1315,10 +1325,12 @@ Czuję się dobrze z Lemurem</pl>
 			<title>
 				<de>Veggismecki</de>
 				<en>Veggismacky</en>
+				<pl>Vegesmecki</pl>
 			</title>
 			<description>
 				<de>Leckere Tofutörtchen für den Vegetarier von heute. Alle Tofutiere werden artgerecht gehalten und mit Biofutter aufgezogen.</de>
 				<en>Delicious tofu tarts for the contemporary vegetarian. All tofu grazer are kept in proper condition and reared with organic feed.</en>
+				<pl>Pyszne tofu dla dzisiejszego wegetarianina. Wszystkie zwierzęta tofu są trzymane w sposób odpowiedni dla gatunku i hodowane przy użyciu paszy ekologicznej.</pl>
 			</description>
 			<conditions min_audience="2.6041" min_image="0" target_group="0" allowed_programme_type="0" pro_pressure_groups="0" contra_pressure_groups="0"/>
 			<data infomercial="1" quality="27" repetitions="6" duration="5" profit="736" penalty="1314" infomercial_profit="80" fix_infomercial_profit="1"/>
@@ -1327,10 +1339,12 @@ Czuję się dobrze z Lemurem</pl>
 			<title>
 				<de>Wackeldackel</de>
 				<en>Nodding Dog</en>
+				<pl>Kiwający Pies</pl>
 			</title>
 			<description>
 				<de>Wir verkaufen nichts außer Wackeldackel. Dafür aber zu konkurrenzlos günstigen Preisen. Jetzt neu, der Zwergdackel im Format 1:1.</de>
 				<en>We sell nothing but nodding dogs. But this at competitive prices. New in the stores: the dwarf dachshund in the scale 1:1.</en>
+				<pl>Nie sprzedajemy niczego oprócz Kiwającego Psa. Ale za bezkonkurencyjnie niskie ceny. Teraz nowy, miniaturowy jamnik w formacie 1: 1.</pl>
 			</description>
 			<conditions min_audience="6.2511" min_image="0" target_group="0" allowed_programme_type="0" pro_pressure_groups="0" contra_pressure_groups="0"/>
 			<data infomercial="1" quality="19" repetitions="4" duration="3" profit="475" penalty="669" year_range_from="1973" year_range_to="1988" infomercial_profit="55" fix_infomercial_profit="1"/>
@@ -1339,10 +1353,12 @@ Czuję się dobrze z Lemurem</pl>
 			<title>
 				<de>Wackeldackel</de>
 				<en>Nodding Dog</en>
+				<pl>Kiwający Pies</pl>
 			</title>
 			<description>
 				<de>Wir verkaufen wieder nichts außer Wackeldackel. Dafür aber zu konkurrenzlos günstigen Preisen. Jetzt neu, der Zwergdackel im Format 1:1.</de>
 				<en>We, again, sell nothing but nodding dogs. But this at competitive prices. New in the stores: the dwarf dachshund in the scale 1:1.</en>
+				<pl>Nie sprzedajemy niczego oprócz Kiwającego Psa. Ale za bezkonkurencyjnie niskie ceny. Teraz nowy, miniaturowy jamnik w formacie 1: 1.</pl>
 			</description>
 			<conditions min_audience="6.2511" min_image="0" target_group="0" allowed_programme_type="0" pro_pressure_groups="0" contra_pressure_groups="0"/>
 			<data infomercial="1" quality="17" repetitions="4" duration="3" profit="475" penalty="669" year_range_from="1997" year_range_to="2008" infomercial_profit="50" fix_infomercial_profit="1"/>
@@ -1351,10 +1367,12 @@ Czuję się dobrze z Lemurem</pl>
 			<title>
 				<de>Alle Hits 1</de>
 				<en>All Hits 1</en>
+				<pl>Wszystkie hity 1</pl>
 			</title>
 			<description>
 				<de>Dein Musiksampler! Alle Hits der vergangenen 3 Tage auf einer randvoll gefüllten 90 Minuten Kassette. In Stereo!</de>
 				<en>Your music sampler! All hits of the last 3 days on one brimful filled 90 minutes audio cassette. In stereo!</en>
+				<pl>Twój sampler muzyczny! Wszystkie trafienia z ostatnich 3 dni na 90-minutowej kasecie wypełnionej po brzegi. W stereo!</pl>
 			</description>
 			<conditions min_audience="2.08" min_image="12" target_group="2"/>
 			<data infomercial="1" quality="20" repetitions="4" duration="3" profit="815" penalty="1220" year_range_from="1985" year_range_to="1986" fix_infomercial_profit="1"/>
@@ -1363,10 +1381,12 @@ Czuję się dobrze z Lemurem</pl>
 			<title>
 				<de>Alle Hits 2</de>
 				<en>All Hits 2</en>
+				<pl>Wszystkie hity 2</pl>
 			</title>
 			<description>
 				<de>„Alle Hits“ ist wieder da! 40 Wahnsinnshits auf einer Doppel-MC. Nur jetzt mit Faltposter zum selbst bemalen.</de>
 				<en>"All Hits 2" is back again!! 40 mega hits on one double MC. Only now with poster ready to get painted!</en>
+				<pl>"Wszystkie hity" powraca! 40 niesamowitych hitów na podwójnym MC. Tylko teraz ze składanymi plakatami do samodzielnego malowania.</pl>
 			</description>
 			<conditions min_audience="2.083" min_image="4" target_group="3"/>
 			<data infomercial="1" quality="22" repetitions="7" duration="4" profit="815" penalty="1150" year_range_from="1987" year_range_to="1988" fix_infomercial_profit="1"/>
@@ -1375,10 +1395,12 @@ Czuję się dobrze z Lemurem</pl>
 			<title>
 				<de>Alle Hits Best Of</de>
 				<en>All Hits Best Of</en>
+				<pl>Best Of Wszystkie hity</pl>
 			</title>
 			<description>
 				<de>Nicht eine Kassette, nicht zwei, nicht drei! Unglaubliche 4 Musikkassetten haben wir mit den Hits der letzten 5 Jahre bespielt. Euer Walkman wird nie wieder etwas anderes spielen wollen!</de>
 				<en>Not one cassette, not two or three! Unbelieveable 4 music cassettes got filled with hits of the last 5 years. Your walkman never will play other music!</en>
+				<pl>Nie kaseta, nie dwie, nie trzy! Nagraliśmy niewiarygodne 4 kasety muzyczne z przebojami ostatnich 5 lat. Twój Walkman już nigdy nie będzie chciał odtwarzać niczego innego!</pl>
 			</description>
 			<conditions min_audience="2.083" min_image="7" target_group="2"/>
 			<data infomercial="1" quality="18" repetitions="4" duration="3" profit="815" penalty="1100" year_range_from="1988" year_range_to="1990" fix_infomercial_profit="1"/>
@@ -1390,6 +1412,7 @@ Czuję się dobrze z Lemurem</pl>
 			<description>
 				<de>Sie hassen es, keinen Finger krumm zu machen? SOS Arthritis lindert die Beschwerden innerhalb weniger Stunden. Jetzt bestellen und 1 Flasche Schlangenöl umsonst dazubekommen.</de>
 				<en>You hate to not lift a finger? SOS Arthritis relieves the discomfort within a few hours. Order now and get 1 bottle snake oil for free.</en>
+				<pl>Czy nienawidzisz kiwnąć palcem? SOS Arthritis łagodzi objawy w ciągu kilku godzin. Zamów teraz i otrzymaj 1 darmową butelkę olejku z węża.</pl>
 			</description>
 			<conditions min_audience="2.86" min_image="12" target_group="64" allowed_programme_type="0" pro_pressure_groups="0" contra_pressure_groups="0"/>
 			<data infomercial="1" quality="12" repetitions="4" duration="3" profit="745" penalty="1042" infomercial_profit="50" fix_infomercial_profit="1"/>
@@ -1398,10 +1421,12 @@ Czuję się dobrze z Lemurem</pl>
 			<title>
 				<de>Bargeld-Kalle</de>
 				<en>Cash-Dave</en>
+				<pl>Inwestycja Dawida</pl>
 			</title>
 			<description>
 				<de>Antikes und Kram zu Spottpreisen. Egal was, egal woher - wir zahlen für Ihren alten Mist! Gern auch Hausbesuche. Einfach den Schlüssel unter den Abstreicher, wir kümmern uns um den Rest.</de>
 				<en>Antique and stuff at rock bottom prices. No matter what, no matter whenceever - we will pay for your old crap! House calls are no problem. Simply put the key under the plow, we take care of the rest.</en>
+				<pl>Antyki i inne rzeczy po najniższych cenach. Nie ważne co, nieważne gdziekolwiek - zapłacimy za twoje stare bzdury! Rozmowy domowe nie stanowią problemu. Wystarczy włożyć klucz pod wycieraczkę, a resztą zajmiemy się my.</pl>
 			</description>
 			<conditions min_audience="0.26" min_image="0" target_group="0"/>
 			<data infomercial="1" quality="20" repetitions="3" duration="2" profit="2200" penalty="2400" fix_infomercial_profit="1"/>
@@ -1410,12 +1435,15 @@ Czuję się dobrze z Lemurem</pl>
 			<title>
 				<de>Batterie-Tanke</de>
 				<en>Battery-Station</en>
+				<pl>Stacja akumulatorów</pl>
 			</title>
 			<description>
 				<de>Keine Zeit Ihre Akkus selbst aufzuladen?
 Wir bieten Lade-Vollautomaten. Batterie einlegen, Münzschacht befüllen. Knopf drücken - und schon nach 72 Stunden können Sie ihre vollgeladenen Batterien entnehmen. Laden war noch nie so einfach.</de>
 				<en>No time to recharge batteries yourself?
 We offer fully automatic charging. Insert battery, fill coin slot. Press the button - and after 72 hours, you can take your fully charged batteries. Charging has never been as simple as that.</en>
+				<pl>Nie masz czasu na samodzielne ładowanie baterii?
+Oferujemy w pełni automatyczne maszyny do ładowania. Włóż baterię, wypełnij szczelinę na monety. Naciśnij przycisk - w pełni naładowane baterie możesz wyjąć już po 72 godzinach. Ładowanie nigdy nie było łatwiejsze.</pl>
 			</description>
 			<conditions min_audience="5.73" min_image="0" target_group="0"/>
 			<data infomercial="1" quality="15" repetitions="2" duration="4" fix_price="0" profit="445" penalty="717" fix_infomercial_profit="1"/>
@@ -1429,6 +1457,8 @@ We offer fully automatic charging. Insert battery, fill coin slot. Press the but
 Brucey - herber Duft für Männer vom Fach.</de>
 				<en>Women absolutely love the nerd in you. Let them take your scent!
 Brucey - harsh fragrance for male experts.</en>
+				<pl>Kobiety przysięgają na kujona w tobie. Niech cię wąchają!
+Brucey - gorzki zapach dla profesjonalnych mężczyzn.</pl>
 			</description>
 			<conditions min_audience="5.21" min_image="0" target_group="0" pro_pressure_groups="0" contra_pressure_groups="0"/>
 			<data infomercial="1" quality="15" repetitions="1" duration="3" profit="440" penalty="800" infomercial_profit="49" fix_infomercial_profit="1"/>
@@ -1437,10 +1467,12 @@ Brucey - harsh fragrance for male experts.</en>
 			<title>
 				<de>Einkaufseck</de>
 				<en>Corner Shop</en>
+				<pl>Kącik</pl>
 			</title>
 			<description>
 				<de>Braten, Brot und Bier! Wir haben alles für alleinstehende Männer und Familien mit kochscheuen Hausfrauen.</de>
 				<en>Barbecue, bread and beer! We have everything for single men and families with housewives having cooking-phobia.</en>
+				<pl>Grill, chleb i piwo! Mamy wszystko dla samotnych mężczyzn i rodzin z gospodyniami domowymi mającymi fobię kulinarną.</pl>
 			</description>
 			<conditions min_audience="0.2074" min_image="0" target_group="0"/>
 			<data infomercial="1" quality="21" repetitions="6" duration="3" fix_price="0" profit="2375" penalty="3500" fix_infomercial_profit="1"/>
@@ -1453,6 +1485,7 @@ Brucey - harsh fragrance for male experts.</en>
 			<description>
 				<de>Bei uns wird Ihr Buch noch gewalzt! Egal ob Stammbuch oder Tagebuch, wir bringen Ihr Werk unters Volk.</de>
 				<en>We still mill your book! Whether register or diary, we propagate it to the hoi poloi.</en>
+				<pl>Twoja książka wciąż jest z nami rozwijana! Niezależnie od tego, czy jest to rejestr czy pamiętnik, przywieziemy Twoją pracę do ludzi.</pl>
 			</description>
 			<conditions min_audience="4.6881" min_image="0" target_group="0"/>
 			<data infomercial="1" quality="25" repetitions="5" duration="3" profit="528" penalty="823" fix_infomercial_profit="1"/>
@@ -1464,6 +1497,7 @@ Brucey - harsh fragrance for male experts.</en>
 			<description>
 				<de>Der Knallerkaubonbon aus Hawaii. Noch nie schmeckte Zucker so tro-tro-tropisch.</de>
 				<en>The hit chewy candy from Hawaii. Never before sugar tasted that tro-tro-tropical.</en>
+				<pl>Hitowe cukierki do żucia z Hawajów.Cukier nigdy nie smakował tak tro-tro-tropikalnie.</pl>
 			</description>
 			<conditions min_audience="2.6" min_image="18" target_group="1"/>
 			<data quality="15" repetitions="4" duration="2" profit="770" penalty="1167" fix_infomercial_profit="1" year_range_to="1999"/>
@@ -1475,6 +1509,7 @@ Brucey - harsh fragrance for male experts.</en>
 			<description>
 				<de>Der hawaiianische Kaubonbon jetzt mit neuem Trendgeschmack. Kandierte Hühnerkrallen verleihen die faszinierende Würze.</de>
 				<en>The Hawaiian chewy candy now with a brand new and trendy taste. Candied chicken claws create this fascinating seasoning.</en>
+				<pl>Hawajskie cukierki do żucia teraz o nowym, modnym smaku. Kandyzowane pazury kurczaka dodają fascynującego smaku.</pl>
 			</description>
 			<conditions min_audience="2.6041" min_image="18" target_group="1"/>
 			<data quality="20" repetitions="4" duration="2" profit="770" penalty="1082" fix_infomercial_profit="1" year_range_from="2000"/>
@@ -1486,6 +1521,7 @@ Brucey - harsh fragrance for male experts.</en>
 			<description>
 				<de>Lecker Kompott wie von Omi. Der einzig wahre Nachtisch - mit Kernbeiss-Garantie.</de>
 				<en>Delicious compote as if it was granny's. The only true dessert - with pip-bite guarantee.</en>
+				<pl>Pyszny kompot jak u babci. Jedyny prawdziwy deser - z gwarancją kęsa.</pl>
 			</description>
 			<conditions min_audience="0.62" min_image="0" target_group="0" pro_pressure_groups="0" contra_pressure_groups="0"/>
 			<data infomercial="1" quality="5" repetitions="6" duration="4" profit="1675" penalty="1957" infomercial_profit="138" fix_infomercial_profit="1"/>
@@ -1493,10 +1529,12 @@ Brucey - harsh fragrance for male experts.</en>
 		<ad id="ronny-ad-laola-01" creator="5578" created_by="Ronny">
 			<title>
 				<de>Laola</de>
+				<pl>Świerszczyk</pl>
 			</title>
 			<description>
 				<de>Das freche Jugendmagazin. Wir beantworten Fragen zu Liebe und Sex nur im Winter.</de>
 				<en>The naughty youth magazine. We answer your intimate questions without a grin :-).</en>
+				<pl>Bezczelny magazyn dla młodzieży. Odpowiadamy tylko na pytania dotyczące miłości i seksu zimą.</pl>
 			</description>
 			<conditions min_audience="5.21" min_image="12" target_group="2"/>
 			<data infomercial="1" quality="15" repetitions="4" duration="3" profit="560" penalty="1175" fix_infomercial_profit="1"/>
