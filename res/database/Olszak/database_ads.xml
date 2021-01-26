@@ -1543,10 +1543,12 @@ Brucey - gorzki zapach dla profesjonalnych mężczyzn.</pl>
 			<title>
 				<de>Litfaßsäule</de>
 				<en>Morris Column</en>
+				<pl>Ströje Polska</pl>
 			</title>
 			<description>
 				<de>Sie finden sich hübsch? Zeigen Sie Ihren Nachbarn ihre beste Seite: Auf der Plakatwand um die Ecke.</de>
 				<en>You think you are pretty beautiful? Show your neighbors your best side: On the morris column around the corner.</en>
+				<pl>Myślisz, że innym się podobasz? Pokaż sąsiadom swoją najlepszą stronę: na billboardzie Ströje Polska za rogiem.</pl>
 			</description>
 			<conditions min_audience="0.1" min_image="0"/>
 			<data infomercial="1" quality="18" repetitions="4" duration="4" profit="2650" penalty="3343" fix_infomercial_profit="1"/>
@@ -1555,10 +1557,12 @@ Brucey - gorzki zapach dla profesjonalnych mężczyzn.</pl>
 			<title>
 				<de>1-2-3-Porträt</de>
 				<en>1-2-3-Portrait</en>
+				<pl>1-2-3-Portret</pl>
 			</title>
 			<description>
 				<de>Wir bannen Sie oder Ihre Familie auf die Leinwand. Wenn Sie keine Zeit haben sollten, pausen wir auch von Fotos ab. Für andere ... Kunstprojekte ... bitte Termin vereinbaren.</de>
 				<en>We bring you or your family on a canvas. If you do not have time, we also trace from photos. For other ... art projects ... please make an appointment.</en>
+				<pl>Uchwycimy Ciebie lub Twoją rodzinę na płótnie. Jeśli nie masz czasu, robimy też przerwę od zdjęć. W przypadku innych... projektów artystycznych... proszę umówić się na spotkanie.</pl>
 			</description>
 			<conditions min_audience="0.4679" min_image="12" target_group="4"/>
 			<data infomercial="1" quality="14" repetitions="4" duration="4" profit="2222" penalty="3298" fix_infomercial_profit="1"/>
@@ -1567,10 +1571,12 @@ Brucey - gorzki zapach dla profesjonalnych mężczyzn.</pl>
 			<title>
 				<de>Rentner-Reisen</de>
 				<en>Retiree-Routes</en>
+				<pl>Emeryt Travel</pl>
 			</title>
 			<description>
 				<de>Sie haben Keine Lust den Lebensabend allein zu verbringen? Sie genießen die Anwesenheit anderer Ruheständler? Wir bieten Tagesreisen in die schönsten Dörfer - und die besten Rheumadecken.</de>
 				<en>You do not want to spend the evening of life alone? You enjoy to do things with of other retirees? We offer day trips to the most beautiful villages - and the best rheumatism blankets.</en>
+				<pl>Nie masz ochoty spędzać lat emerytalnych samotnie? Czy lubisz obecność innych emerytów? Oferujemy jednodniowe wycieczki do najpiękniejszych wiosek - oraz najlepsze koce reumatyczne.</pl>
 			</description>
 			<conditions min_audience="1.562" min_image="12" target_group="64"/>
 			<data infomercial="1" quality="12" repetitions="5" duration="4" profit="1000" penalty="1500" fix_infomercial_profit="1"/>
@@ -1579,10 +1585,12 @@ Brucey - gorzki zapach dla profesjonalnych mężczyzn.</pl>
 			<title>
 				<de>Wendebier</de>
 				<en>Reunion Beer</en>
+				<pl>Złote Piwo</pl>
 			</title>
 			<description>
 				<de>Aus dem Osten der Hopfen, aus dem Westen die Luft ... und das Gold. Lecker Bierchen für Väter aller Länder.</de>
 				<en>Eastern Germanys hop, and the bottles from Western Germany created this fascinating beer. Tasty beer for fathers of all countries.</en>
+				<pl>Od wschodu chmiel, od zachodu powietrze... a w środku złoto. Pyszne piwo dla ojców ze wszystkich krajów.</pl>
 			</description>
 			<conditions min_audience="9.3772" min_image="12" target_group="256"/>
 			<data infomercial="1" quality="25" repetitions="3" duration="4" profit="377" penalty="500" year_range_from="1990" year_range_to="1993" infomercial_profit="85" fix_infomercial_profit="1"/>
@@ -1590,10 +1598,12 @@ Brucey - gorzki zapach dla profesjonalnych mężczyzn.</pl>
 		<ad id="ronny-ad-sanitaxi-01" creator="5578" created_by="Ronny">
 			<title>
 				<de>Sanitaxi</de>
+				<pl>Sani</pl>
 			</title>
 			<description>
 				<de>Der Rollator verrostet? Die Verwandten glänzen seit Jahren mit Abwesenheit? Sanitaxi versorgt sie mit allen notwendigen Hygieneartikeln. Jetzt mit trendigen Motiven auf jeder zweiten Einlage.</de>
 				<en>The walker is rusted? Your relatives shine with absence since years? Sanitaxi provides you with all the necessary hygiene products. Now with trendy designs on every second liner.</en>
+				<pl>Chodzik jest zardzewiały? Krewni świecą nieobecnością od lat? Sani zapewnia wszystkie niezbędne produkty higieniczne. Teraz z modnymi wzorami na co drugiej wkładce.</pl>
 			</description>
 			<conditions min_audience="5.7301" min_image="12" target_group="64"/>
 			<data infomercial="1" quality="12" repetitions="2" duration="4" profit="527" penalty="952" infomercial_profit="67" fix_infomercial_profit="1"/>
@@ -1602,12 +1612,15 @@ Brucey - gorzki zapach dla profesjonalnych mężczyzn.</pl>
 			<title>
 				<de>Schminkstift</de>
 				<en>Beauty Pen</en>
+				<pl>Kij-Makijaż</pl>
 			</title>
 			<description>
 				<de>Verschönert Lippen, Augenlider und auch Wände. Von Frauen und Kindern erprobt!.
 Erhältlich in jeder gut sortierten Drogerie.</de>
 				<en>Decorate lips, eyelids and even walls. Tested by women and children !.
 Available in any well-stocked drugstore.</en>
+				<pl>Upiększa usta, powieki i ściany. Wypróbowane i przetestowane przez kobiety i dzieci!
+Dostępne w każdej dobrze zaopatrzonej drogerii.</pl>
 			</description>
 			<conditions min_audience="1.82" min_image="0" target_group="0" allowed_programme_type="0" pro_pressure_groups="0" contra_pressure_groups="0"/>
 			<data infomercial="1" quality="20" repetitions="1" duration="3" profit="771" penalty="900" infomercial_profit="50" fix_infomercial_profit="1"/>
@@ -1616,10 +1629,12 @@ Available in any well-stocked drugstore.</en>
 			<title>
 				<de>Speckfett</de>
 				<en>Fatty Bacon</en>
+				<pl>Tłuszcz-Boczek</pl>
 			</title>
 			<description>
 				<de>Griebenschmalz aus dem Ergebirge! Von stark behaarten Männern empfohlen. "Ruff off de Bemme" seit 1951.</de>
 				<en>Crackling fat made in the Ironore Mountains! Recommended by heavily haired men. "Just this and bread" since 1951.</en>
+				<pl>Tłuszcz z Ergebirge! Zalecane przez bardzo owłosionych mężczyzn. "Tylko to i chleb" od 1951 roku.</pl>
 			</description>
 			<conditions min_audience="1.8225" min_image="0" target_group="0" allowed_programme_type="0" pro_pressure_groups="0" contra_pressure_groups="0"/>
 			<data infomercial="1" quality="8" repetitions="3" duration="3" profit="828" penalty="1155" infomercial_profit="115" fix_infomercial_profit="1"/>
@@ -1631,6 +1646,7 @@ Available in any well-stocked drugstore.</en>
 			<description>
 				<de>Die Szenekneipe für Tussis und andere Tratschtanten. Dienstags Frei-Secco bei bunten Fingernägeln.</de>
 				<en>The trendy pub for birds and other chatterboxes. Tuesday free-secco if you come with multicolored finger nails.</en>
+				<pl>Modny pub dla ptaków i innych gadek. We wtorek free-secco, jeśli przyjedziesz z kolorowymi paznokciami.</pl>
 			</description>
 			<conditions min_audience="0.6242" min_image="18" target_group="2"/>
 			<data infomercial="1" quality="11" repetitions="4" duration="5" profit="1833" penalty="2244" fix_infomercial_profit="1"/>
@@ -1639,10 +1655,12 @@ Available in any well-stocked drugstore.</en>
 			<title>
 				<de>Zockomo</de>
 				<en>Screwmatic</en>
+				<pl>Albert Gold</pl>
 			</title>
 			<description>
 				<de>Sie zuviel Geld auf hoher Kante? Wir helfen finden ferne Verwandte für Vererbung!</de>
 				<en>You having to many moneys? We helping you to find distant relatives for te bequeth!</en>
+				<pl>Masz dużo pieniędzy? Pomagamy znaleźć dalekich krewnych do spadku!</pl>
 			</description>
 			<conditions min_audience="18.76" min_image="0"/>
 			<data infomercial="1" quality="15" repetitions="3" duration="7" profit="202" penalty="520" infomercial_profit="95" fix_infomercial_profit="1"/>
@@ -1651,10 +1669,12 @@ Available in any well-stocked drugstore.</en>
 			<title>
 				<de>Abschiedsgruß</de>
 				<en>Farewell</en>
+				<pl>Pożegnaj</pl>
 			</title>
 			<description>
 				<de>Wir suchen uns eine neue Erde. Macht's gut und danke für den Fisch. Eure Delphine.</de>
 				<en>We are looking for a new earth. Take care and thanks for the fish. Your dolphins.</en>
+				<pl>Szukamy nowej ziemi. Uważaj i dziękuję za rybę. Twoje delfiny.</pl>
 			</description>
 			<conditions min_audience="46.89" min_image="0" target_group="0" allowed_programme_type="0" prohibited_programme_type="0" pro_pressure_groups="0" contra_pressure_groups="0"/>
 			<data infomercial="1" quality="15" repetitions="1" duration="7" profit="170" penalty="453" year_range_from="1999" year_range_to="2000" infomercial_profit="50" fix_infomercial_profit="1"/>
@@ -1662,10 +1682,12 @@ Available in any well-stocked drugstore.</en>
 		<ad id="sjaele-ad-Bio-Tube" creator="7430" created_by="Sjaele">
 			<title>
 				<de>Bio-Tube</de>
+				<pl>Bio-Tuba</pl>
 			</title>
 			<description>
 				<de>Die vollwertige Bio-Mahlzeit aus der Tube. Schmeckt wie bei Muttern, krümelt nicht und sooo gesund! Ideal für lange Zockerpartien.</de>
 				<en>A tube full to the brim with organic whool-food. Tastes like mom's food, does not crumble and is sooo healthy! Ideal for long gaming sessions.</en>
+				<pl>Tuba wypełniona po brzegi pełnowartościową żywnością organiczną. Smakuje jak jedzenie mamy, nie kruszy się i jest taki zdrowy! Idealny do długich gier.</pl>
 			</description>
 			<conditions min_audience="1.3015" min_image="12" target_group="2" allowed_programme_type="0" pro_pressure_groups="0" contra_pressure_groups="0"/>
 			<data infomercial="1" quality="25" repetitions="3" duration="2" profit="1132" penalty="1900" year_range_from="0" year_range_to="0" infomercial_profit="50" fix_infomercial_profit="1"/>
@@ -1674,10 +1696,12 @@ Available in any well-stocked drugstore.</en>
 			<title>
 				<de>Macht nischt</de>
 				<en>Not a prob</en>
+				<pl>"Nie ma problemu"</pl>
 			</title>
 			<description>
 				<de>Das dicke Ausredenbuch. Ausreden für jeden Anlass vom Kindergarten bis zur eigenen Beerdigung. Nie wieder doof dastehn.</de>
 				<en>The big excuse book. Excuses for every occasion from kindergarten to your own funeral. Never be at a complete loss again.</en>
+				<pl>Wielka książka z wymówkami. Wymówki na każdą okazję od przedszkola po własny pogrzeb. Nigdy więcej nie będziesz całkowicie zagubiony.</pl>
 			</description>
 			<conditions min_audience="2.86" min_image="0" target_group="0" allowed_programme_type="0" pro_pressure_groups="0" contra_pressure_groups="0"/>
 			<data infomercial="1" quality="20" repetitions="7" duration="4" profit="718" penalty="1277" year_range_from="0" year_range_to="1998" infomercial_profit="105" fix_infomercial_profit="1"/>
