@@ -1710,10 +1710,12 @@ Dostępne w każdej dobrze zaopatrzonej drogerii.</pl>
 			<title>
 				<de>Macht nischt.deu</de>
 				<en>Not a prob.deu</en>
+				<pl>Sklep prob.deu</pl>
 			</title>
 			<description>
 				<de>Der Online-Shop. Ausreden für jeden Anlass vom Kindergarten bis zur eigenen Beerdigung. Nie wieder doof dastehn.</de>
 				<en>The online shop. Excuses for every occasion from kindergarten to your own funeral. Never be at a complete loss again.</en>
+				<pl>Sklep internetowy. Wymówki na każdą okazję od przedszkola po własny pogrzeb. Nigdy więcej nie będziesz całkowicie zagubiony.</pl>
 			</description>
 			<conditions min_audience="2.86" min_image="0" target_group="0" allowed_programme_type="0" pro_pressure_groups="0" contra_pressure_groups="0"/>
 			<data infomercial="1" quality="25" repetitions="7" duration="4" profit="718" penalty="1277" year_range_from="1999" year_range_to="0" infomercial_profit="100" fix_infomercial_profit="1"/>
@@ -1722,10 +1724,12 @@ Dostępne w każdej dobrze zaopatrzonej drogerii.</pl>
 			<title>
 				<de>Ratz-Fatz</de>
 				<en>Hassle Frazzle</en>
+				<pl>Ratz-Fatz</pl>
 			</title>
 			<description>
 				<de>Kein Bock mehr auf den Alten? Ratz-Fatz-Scheidungshotline. Wir liefern Gründe, Anlässe, Anwälte und Schuldfreigarantie!</de>
 				<en>Your missus is no longer worth a straw? Call the Hassle Frazzle divorce hotline. We provide reasons, occasions, attorneys and guarantee for not-guilty verdicts!</en>
+				<pl>Zmęczony? Infolinia rozwodowa Ratz-Fatz. Zapewniamy powody, okazjach prawników i gwarancje długów!</pl>
 			</description>
 			<conditions min_audience="11.4612" min_image="4" target_group="128" allowed_programme_type="0" pro_pressure_groups="0" contra_pressure_groups="0"/>
 			<data infomercial="1" quality="15" repetitions="3" duration="3" profit="322" penalty="504" year_range_from="0" year_range_to="0" infomercial_profit="50" fix_infomercial_profit="1"/>
@@ -1734,10 +1738,12 @@ Dostępne w każdej dobrze zaopatrzonej drogerii.</pl>
 			<title>
 				<de>Der große Umrechner</de>
 				<en>The bulky converter</en>
+				<pl>NRD konwerter</pl>
 			</title>
 			<description>
 				<de>Das Handbuch zum Umrechnen von Mark der DDR in D-Mark! Für alle, die's genau wissen wollen. Weil früher alles besser war. Und billiger?</de>
 				<en>The manual for converting East German mark (DDM) to Deutsche Mark (DEM)! For those who want to know exactly. Because everything used to be better. And cheaper?</en>
+				<pl>Instrukcja do przekształcania znaków z NRD w markach niemieckich! Dla każdego, kto chce wiedzieć dokładnie. Ponieważ w przeszłości wszystko było lepsze. I taniej?</pl>
 			</description>
 			<conditions min_audience="6.2511" min_image="0" target_group="0" allowed_programme_type="0" pro_pressure_groups="0" contra_pressure_groups="0"/>
 			<data infomercial="1" quality="25" repetitions="1" duration="2" profit="400" penalty="697" year_range_from="1990" year_range_to="2002" infomercial_profit="50" fix_infomercial_profit="1"/>
@@ -1746,10 +1752,12 @@ Dostępne w każdej dobrze zaopatrzonej drogerii.</pl>
 			<title>
 				<de>Umrechner.deu</de>
 				<en>BulkyConverter.deu</en>
+				<pl>NRD-konwerter.deu</pl>
 			</title>
 			<description>
 				<de>Die Webseite zum Umrechnen von Euro in D-Mark! Für alle, die's genau wissen wollen. Weil früher alles besser war.</de>
 				<en>The website for converting Euro (EUR) to Deutsche Mark (DEM). For those who want tok know exactly. Because everything used to be better.</en>
+				<pl>Witryna do przeliczania euro (EUR) na marki niemieckie (DEM). Dla tych, którzy chcą wiedzieć dokładnie. Ponieważ w przeszłości wszystko było lepsze.</pl>
 			</description>
 			<conditions min_audience="6.2511" min_image="0" target_group="0" allowed_programme_type="0" pro_pressure_groups="0" contra_pressure_groups="0"/>
 			<data infomercial="1" quality="25" repetitions="1" duration="2" profit="400" penalty="697" year_range_from="2003" year_range_to="0" infomercial_profit="50" fix_infomercial_profit="1"/>
@@ -1758,10 +1766,12 @@ Dostępne w każdej dobrze zaopatrzonej drogerii.</pl>
 			<title>
 				<de>Unternehmensberatung Beiselen</de>
 				<en>Business consultancy Beiselen</en>
+				<pl>Doradztwo biznesowe Beiselen</pl>
 			</title>
 			<description>
 				<de>Mir schwätzed Iha'ne nai und kriagat ah'no was dafiar! Guat, is net guat g'nuag! S'muss scho Beisele sai!</de>
 				<en>We do not meddle with your business but you still benefit of commissioning us. Good is not good enough!</en>
+				<pl>Nie wtrącamy się w Twój biznes. Dobry nie jest wystarczająco dobre!</pl>
 			</description>
 			<conditions min_audience="18.76" min_image="7" target_group="32"/>
 			<data infomercial="1" quality="15" repetitions="3" duration="6" profit="227" penalty="339" infomercial_profit="20" fix_infomercial_profit="1"/>
@@ -1770,10 +1780,12 @@ Dostępne w każdej dobrze zaopatrzonej drogerii.</pl>
 			<title>
 				<de>Bobo Wattebällchen</de>
 				<en>Bobo Cotton Balls</en>
+				<pl>Waciki Bawełniane Bobo</pl>
 			</title>
 			<description>
 				<de>Wattebällchen für jeden Anlass. Bobo Wattebällchen für die Frau, für das Kind und für den Soldat.</de>
 				<en>Cotton balls for every occasion. Bobo Cotton Balls for the woman, for the child and for the soldier.</en>
+				<pl>Waciki Bobo na każdą okazję. Dla kobiet, dzieci i żołnierzy.</pl>
 			</description>
 			<conditions min_audience="3.65" min_image="0" target_group="0"/>
 			<data infomercial="1" quality="10" repetitions="2" duration="2" profit="550" penalty="872" fix_infomercial_profit="1"/>
@@ -1782,10 +1794,12 @@ Dostępne w każdej dobrze zaopatrzonej drogerii.</pl>
 			<title>
 				<de>Spedition und Lagerei Bruch</de>
 				<en>Transport and Warehousing B. Reach</en>
+				<pl>Transport i magazynowanie L. Trans</pl>
 			</title>
 			<description>
 				<de>Wir fahren Ihre Waren zu Bruch. Dann verteilen wir sie über die ganze Welt.</de>
 				<en>First we drive your goods to B. Reach. Then we distribute them worldwide.</en>
+				<pl>Najpierw zawieziemy Twoje towary do naszego magazynu. Następnie dystrybuujemy je na cały świat.</pl>
 			</description>
 			<conditions min_audience="1.82" min_image="0" target_group="0"/>
 			<data infomercial="1" quality="8" repetitions="5" duration="2" profit="874" penalty="1251" infomercial_profit="90" fix_infomercial_profit="1"/>
@@ -1808,6 +1822,7 @@ Dostępne w każdej dobrze zaopatrzonej drogerii.</pl>
 			<description>
 				<de>3D Scanner und 3D Drucker in einem. Denken Sie an die Möglichkeiten! Verwandeln Sie eine Metallvorlage in ein Plastik-Original. Doublie-Kate von "Life is Groats"!</de>
 				<en>3D scanner and 3D printer in one. Think about the possibilities! Transform a metal template into a plastic original. Doublie-Kate of "Life is Groats"!</en>
+				<pl>Skaner 3D i drukarka 3D w jednym. Pomyśl o możliwościach! Przekształć metalowy szablon w plastikowy oryginał. Doublie-Kate to "Kupa radości"!</pl>
 			</description>
 			<conditions min_audience="28.65" min_image="0" target_group="0"/>
 			<data infomercial="1" quality="20" repetitions="2" duration="4" profit="156" penalty="309" infomercial_profit="35" fix_infomercial_profit="1"/>
@@ -1816,10 +1831,12 @@ Dostępne w każdej dobrze zaopatrzonej drogerii.</pl>
 			<title>
 				<de>Dörrobst Toni</de>
 				<en>Desiccation Dave</en>
+				<pl>Suszone owoce Toni</pl>
 			</title>
 			<description>
 				<de>Ganz neu Dörrgemüse bei uns im Spezialitäten-Regal. In den Sorten Dörr-Kürbis, Dörr-Gurke und Dörr-Wassermelone!</de>
 				<en>Brand new at our speciality shelf: dried vegetables. In the varieties dried pumpkin, dried cucumber and dried water melon!</en>
+				<pl>Nowe suszone warzywa na naszej półce specjalności. W smakach suszonej dyni, suszonego ogórka i suszonego arbuza!</pl>
 			</description>
 			<conditions min_audience="1.3015" min_image="0" target_group="0"/>
 			<data infomercial="1" quality="15" repetitions="6" duration="4" profit="1060" penalty="1571" fix_infomercial_profit="1"/>
@@ -1831,6 +1848,7 @@ Dostępne w każdej dobrze zaopatrzonej drogerii.</pl>
 			<description>
 				<de>Suchen Sie jemanden zum Dissen oder Haten? Fehlt Ihnen bisher ein Erzfeind? Nutzen Sie "Enemy24"! Wir finden Ihren persönlichen Gegenspieler!</de>
 				<en>Looking for someone to diss and hate? Do you still lack an archenemy? Use "Enemy24"! We find your personal opponent!</en>
+				<pl>Szukasz kogoś, kogo można by znienawidzić? Czy nadal brakuje ci wroga? Użyj "Enemy24"! Znajdziemy Twojego osobistego przeciwnika!</pl>
 			</description>
 			<conditions min_audience="11.46" min_image="0" target_group="0"/>
 			<data infomercial="1" quality="18" repetitions="3" duration="3" profit="304" penalty="558" infomercial_profit="28" fix_infomercial_profit="1"/>
@@ -1839,10 +1857,12 @@ Dostępne w każdej dobrze zaopatrzonej drogerii.</pl>
 			<title>
 				<de>Die halbe Enzyklopedie von Allem</de>
 				<en>Half the Encyclopedia of Everything</en>
+				<pl>Połowa encyklopedii wszystkiego</pl>
 			</title>
 			<description>
 				<de>Nehmen wir an, dass die Zeitrechnung unendlich in die Vergangenheit reicht und dass sie unendlich in die Zukunft reicht. So ist das Jetzt genau die Hälfte der Zeit, die Hälfte von Allem. Singularity Verlag.</de>
 				<en>Let us assume that the time-based calculus is infinite in the past and that it reaches infinitely into the future. So the now is exactly half the time, half of everything. Singularity Publishing.</en>
+				<pl>Załóżmy, że obliczenie czasu rozciąga się nieskończenie w przeszłość i nieskończenie w przyszłość. Więc teraz jest dokładnie połowa czasu, połowa wszystkiego. Wydawnictwo Singularity.</pl>
 			</description>
 			<conditions min_audience="20.84" min_image="0" target_group="0"/>
 			<data infomercial="1" quality="28" repetitions="3" duration="5" profit="198" penalty="303" infomercial_profit="25" fix_infomercial_profit="1"/>
@@ -1851,10 +1871,12 @@ Dostępne w każdej dobrze zaopatrzonej drogerii.</pl>
 			<title>
 				<de>Die ganze Enzyklopedie von Allem</de>
 				<en>The complete Encyclopedia of Everything</en>
+				<pl>Kompletna encyklopedia wszystkiego</pl>
 			</title>
 			<description>
 				<de>Herausgegeben in 2 Bänden. Band 1 bereits heute erhältlich. Jedoch können wir vorraussagen, dass Band 2 nie erscheinen wird, da wir nicht in die Zukunft sehen können. Ein Paradox? Singularity Verlag.</de>
 				<en>Published in 2 volumes. Volume 1 already available today. However, we can predict that Band 2 will never appear, as we can not see into the future. A paradox? Singularity Publishing.</en>
+				<pl>Opublikowano w 2 tomach. Tom 1 już dostępny. Możemy jednak przewidzieć, że Tom 2 nigdy nie zostanie wydany, ponieważ nie możemy patrzeć w przyszłość. Paradoks? Wydawnictwo Singularity.</pl>
 			</description>
 			<conditions min_audience="20.84" min_image="37" target_group="0"/>
 			<data infomercial="1" quality="31" repetitions="2" duration="2" profit="200" penalty="315" fix_infomercial_profit="1"/>
@@ -1863,10 +1885,12 @@ Dostępne w każdej dobrze zaopatrzonej drogerii.</pl>
 			<title>
 				<de>Fluchomat von Karkasonic</de>
 				<en>Cursomat by Karkasonic</en>
+				<pl>Cursomat od Karkasonic</pl>
 			</title>
 			<description>
 				<de>Stört sie der zensierende Piepston anstelle eines saftigen Fluches? Karkasonic hat die Lösung: Der Fluchomat. Mit Fluchneuheiten und Übertreibungsgarantie!!!</de>
 				<en>Annoyed by censoring beeps instead of a ribald curse? Karkasonic has the solution: The Cursomat. With innovative curses and exaggeration guarantee !!!</en>
+				<pl>Irytuje Cię cenzurowanie dźwięków zamiast niegrzecznej klątwy? Karkasonic ma rozwiązanie: Cursomat. Z nową gwarancją przekleństwa i przesady!!!</pl>
 			</description>
 			<conditions min_audience="12.5" min_image="0" target_group="0"/>
 			<data infomercial="1" quality="22" repetitions="3" duration="4" profit="287" penalty="422" fix_infomercial_profit="1"/>
@@ -1875,10 +1899,12 @@ Dostępne w każdej dobrze zaopatrzonej drogerii.</pl>
 			<title>
 				<de>Brauerei Hopfengurgler</de>
 				<en>Brewery Hopgurgler</en>
+				<pl>Browar Hopfengurgler</pl>
 			</title>
 			<description>
 				<de>Echt genial: Unser Doppelbock gibt's jetzt auch alkoholfrei! Oans, zwoa, droa, g'suffa!</de>
 				<en>A touch of genious: our double bock beer is now also free of alcohol! Oans, zwoa, droa, g'suffa!</en>
+				<pl>Naprawdę genialne: nasz Doppelbock jest teraz dostępny również bez alkoholu!</pl>
 			</description>
 			<conditions min_audience="4.1617" min_image="40" target_group="0"/>
 			<data infomercial="1" quality="22" repetitions="5" duration="2" profit="580" penalty="932" infomercial_profit="76" fix_infomercial_profit="1" year_range_from="2006"/>
