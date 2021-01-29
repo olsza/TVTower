@@ -1913,10 +1913,12 @@ Dostępne w każdej dobrze zaopatrzonej drogerii.</pl>
 			<title>
 				<de>Brauerei Hopfengurgler</de>
 				<en>Brewery Hopgurgler</en>
+				<pl>Browar Hopek</pl>
 			</title>
 			<description>
 				<de>Echt genial: Pilsner, Export und Weizen jetzt auch als Zäpfchen erhältlich! Praktisch im 40er Party-Pack! Das zieht! Oans, zwoa, droa, ziags!</de>
 				<en>Genuine: Pilsner, export and wheat bear now also available as suppository! Handy in a 40s party pack! That drags! Oans, zwoa, droa, ziags!</en>
+				<pl>Naprawdę genialne: Pilsner, Export i Pszeniczny są teraz dostępne również jako czopki! Praktyczny w pakiecie na 40 imprez! To ciągnie! Oans, zwoa, droa, ziags!</pl>
 			</description>
 			<conditions min_audience="4.17" min_image="0" target_group="0"/>
 			<data infomercial="1" quality="15" repetitions="5" duration="4" profit="568" penalty="450" fix_infomercial_profit="1" year_range_to="2005"/>
@@ -1925,10 +1927,12 @@ Dostępne w każdej dobrze zaopatrzonej drogerii.</pl>
 			<title>
 				<de>Imkerei Hummeldoof</de>
 				<en>Apiary Dumblebee</en>
+				<pl>Pszczelarstwo Bzykbeer</pl>
 			</title>
 			<description>
 				<de>Premium Honigprodukte von Ihrer Lieblings-Imkerei Hummeldoof. Wir gewähren unseren Bienen ein gutes, motivierendes Arbeitsumfeld. Feierabendbier inklusive!</de>
 				<en>Premium honey products from your favorite apiary Dumblebee. We offer our bees a good, motivating work environment. Including after-work pints!</en>
+				<pl>Produkty miodowe premium z ulubionych pszczelarstwa Bzykbeer. Naszym pszczołom oferujemy dobre, motywujące środowisko pracy. W tym kufle po pracy!</pl>
 			</description>
 			<conditions min_audience="0.0511" min_image="7" target_group="4"/>
 			<data infomercial="1" quality="12" repetitions="3" duration="3" profit="3500" penalty="5094" fix_infomercial_profit="1"/>
@@ -1937,10 +1941,12 @@ Dostępne w każdej dobrze zaopatrzonej drogerii.</pl>
 			<title>
 				<de>Immobilien-Haino</de>
 				<en>Real Estate Sharky</en>
+				<pl>Nieruchomości Skwary</pl>
 			</title>
 			<description>
 				<de>Von der Altbau-Baracke bis zur Luxusvilla. Wir haben alles im Programm! Zuerst: Selbstauskunft an uns schicken. Mit etwas Glück melden wir uns bei Ihnen.</de>
 				<en>From shacks to luxury villas. We list every kind of real estates! First: send self-report to us. With some luck, we will get back to you.</en>
+				<pl>Od starych koszar po luksusową willę. Wymieniamy wszystkie rodzaje nieruchomości! Po pierwsze: wyślij nam raport własny. Przy odrobinie szczęścia wrócimy do Ciebie.</pl>
 			</description>
 			<conditions min_audience="1.56" min_image="0" target_group="0"/>
 			<data infomercial="1" quality="11" repetitions="1" duration="1" profit="843" penalty="1129" fix_infomercial_profit="1"/>
@@ -1948,10 +1954,12 @@ Dostępne w każdej dobrze zaopatrzonej drogerii.</pl>
 		<ad id="speedminister-ad-Kung-Pau-Airlines" creator="8605" created_by="SpeedMinister">
 			<title>
 				<de>Kung Pau Airlines</de>
+				<pl>TOL Express</pl>
 			</title>
 			<description>
 				<de>Unsere doppelstöckigen Luftbusse sind großzügig eingerichtet. Für Kinder gibt es eine Wasserrutsche, ein Bällebad und Elefantenreiten im Heck.</de>
 				<en>Our double-storey air-buses are generously furnished. For the young ones there is a water slide, a bathing pool and elephant rides in the stern.</en>
+				<pl>Nasze piętrowe samoloty są bogato wyposażone. Dla dzieci jest zjeżdżalnia wodna, basen z piłeczkami i przejażdżki na słoniach na rufie.</pl>
 			</description>
 			<conditions min_audience="2.86" min_image="0" target_group="0"/>
 			<data infomercial="1" quality="23" repetitions="3" duration="2" profit="630" penalty="1001" infomercial_profit="67" fix_infomercial_profit="1"/>
@@ -1960,10 +1968,12 @@ Dostępne w każdej dobrze zaopatrzonej drogerii.</pl>
 			<title>
 				<de>Siggis Landwirtschafts-Discount</de>
 				<en>Old Joe's Farming-Discount</en>
+				<pl>Stary Farmer</pl>
 			</title>
 			<description>
 				<de>Egal ob Strohhäcksel, Heusilage, Maissilage, Bioabfall, Getreideschlempe, Rinder- oder Schweinegülle, wir haben alles! Kauf bei Siggi mit dem braunen Daumen!</de>
 				<en>Whether it's chopped straw, heusilage, hay silage, organic waste, cereal loin, cattle or pig slurry, we have everything! Buy from Old Joe with the brown thumb!</en>
+				<pl>Niezależnie od tego, czy posiekana słoma, kiszonka z siana, kiszonka z kukurydzy, odpady organiczne, ług zbożowy, obornik bydlęcy czy świński, mamy wszystko! Kup od Starego Farmera!</pl>
 			</description>
 			<conditions min_audience="0.78" min_image="0" target_group="0"/>
 			<data infomercial="1" quality="11" repetitions="6" duration="4" profit="1466" penalty="2009" fix_infomercial_profit="1"/>
@@ -1972,12 +1982,15 @@ Dostępne w każdej dobrze zaopatrzonej drogerii.</pl>
 			<title>
 				<de>Mietmaul - das Magazin</de>
 				<en>Hired Parrot - the magazine</en>
+				<pl>Brawa - magazyn</pl>
 			</title>
 			<description>
 				<de>Wir schleimen uns beim Pöbel ein, für die Auflage. Aber: wes Brot ich ess, des Lied ich sing.
 				Mietmaul - Wir sind gleicher als Andere.</de>
 				<en>We cozy up to the mob - for the circulation. But who pays the piper, calls the tune.
 				Hired Parrot - We are more equal than others.</en>
+				<pl>Wkradamy się do tłumu. Ale kto płaci dudziarzowi, woła melodię.
+				Brawa - Jesteśmy równiejsi niż inni.</pl>
 			</description>
 			<conditions min_audience="14.0663" min_image="7" target_group="32"/>
 			<data infomercial="1" quality="17" repetitions="2" duration="3" profit="277" penalty="452" infomercial_profit="14" fix_infomercial_profit="1"/>
@@ -1986,12 +1999,15 @@ Dostępne w każdej dobrze zaopatrzonej drogerii.</pl>
 			<title>
 				<de>Mietmaul - das Magazin</de>
 				<en>Hired Parrot - the magazine</en>
+				<pl>Brawa - magazyn</pl>
 			</title>
 			<description>
 				<de>Werbung als Dokumentation getarnt. Senden Sie uns Ihr Werbematerial. Copy- und Paste-Praktikanten, 24/7 verfügbar.
 				Mietmaul - Wir sind gleicher als Andere.</de>
 				<en>Advertising disguised as documentation. Please send us your advertising material. Copy and paste interns available 24/7.
 				Hired Parrot - We are more equal than others.</en>
+				<pl>Reklama przebrana za dokumentację. Prosimy o przesłanie nam materiałów reklamowych. Kopiuj i wklej stażystów dostępnych 24/7.
+				Brawa - Jesteśmy równiejsi niż inni.</pl>
 			</description>
 			<conditions min_audience="14.0663" min_image="18" target_group="32"/>
 			<data infomercial="1" quality="17" repetitions="2" duration="3" profit="307" penalty="543" fix_infomercial_profit="1"/>
@@ -2000,12 +2016,15 @@ Dostępne w każdej dobrze zaopatrzonej drogerii.</pl>
 			<title>
 				<de>Mietmaul - das Magazin</de>
 				<en>Hired Parrot - the magazine</en>
+				<pl>Brawa - magazyn</pl>
 			</title>
 			<description>
 				<de>Diskriminierung oder Hetzschrift. Gerne. - Ehre? Menschenwürde oder Mitgefühl? Das kennen wir nicht!
 				Mietmaul - Wir sind gleicher als Andere.</de>
 				<en>Discrimination or prosecution. With pleasure. - Honor? Human dignity or compassion? Are not known to us!
 				Hired Parrot - We are more equal than others.</en>
+				<pl>Dyskryminacja lub ściganie. Z przyjemnością. - Honor? Godność ludzka czy współczucie? Tego nie wiemy!
+				Brawa - Jesteśmy równiejsi niż inni.</pl>
 			</description>
 			<conditions min_audience="14.0663" min_image="30" target_group="32"/>
 			<data infomercial="1" quality="17" repetitions="2" duration="3" profit="337" penalty="532" infomercial_profit="14" fix_infomercial_profit="1"/>
@@ -2014,11 +2033,13 @@ Dostępne w każdej dobrze zaopatrzonej drogerii.</pl>
 			<title>
 				<de>Mietmaul - das Magazin</de>
 				<en>Hired Parrot - the magazine</en>
+				<pl>Brawa - magazyn</pl>
 			</title>
 			<description>
 				<de>Mietmaul - Dein bester Froooind. Wir sind ja so suuuper investigativ. Mietmaul - Wir sind besser als Andere.</de>
 				<en>Hired Parrot - your beeeest friend. We are soo suuuper investigative.
 				Hired Parrot - We are more equal than others.</en>
+				<pl>Brawa - Twój najlepszy przyjaciel. Jesteśmy tak super śledczy. Brawa - Jesteśmy równiejsi niż inni.</pl>
 			</description>
 			<conditions min_audience="28.65" min_image="52" target_group="8"/>
 			<data infomercial="1" quality="18" repetitions="5" duration="4" profit="156" penalty="290" infomercial_profit="15" fix_infomercial_profit="1"/>
@@ -2027,10 +2048,12 @@ Dostępne w każdej dobrze zaopatrzonej drogerii.</pl>
 			<title>
 				<de>Moporatret</de>
 				<en>Mobikepedal</en>
+				<pl>Veturilo</pl>
 			</title>
 			<description>
 				<de>Ihr Zwei- und Dreiradhändler ganz in Ihrer Nähe. Für jung und alt, wir haben für jeden etwas. Wir machen auch Umbauten, solange es nicht 4 Räder hat.</de>
 				<en>Your two- and three-wheeler dealer in your area. For young and old, we have something for everyone. We also make conversions as long as it does not have 4 wheels.</en>
+				<pl>Twój dystrybutor dwu- i trójkołowych pojazdów w Twojej okolicy. Dla młodszych i starszych mamy coś dla siebie. Wykonujemy również konwersje, o ile nie ma 4 kół.</pl>
 			</description>
 			<conditions min_audience="6.77" min_image="0" target_group="0"/>
 			<data infomercial="1" quality="19" repetitions="4" duration="4" profit="430" penalty="988" infomercial_profit="40" fix_infomercial_profit="1"/>
@@ -2039,10 +2062,12 @@ Dostępne w każdej dobrze zaopatrzonej drogerii.</pl>
 			<title>
 				<de>Musikscheune Konzelmann</de>
 				<en>Music Shack Konzelmann</en>
+				<pl>Muzyka Konzelmann</pl>
 			</title>
 			<description>
 				<de>Tonbänder, Schallplatten, Kassetten, Compact Discs. Wir haben alle physisch anwesend. Zum tasten, fühlen, schnuppern, schmecken und hören!</de>
 				<en>Tapes, records, cassettes, compact discs. We have all of them physically present. To sense, feel, taste and listen!</en>
+				<pl>Taśmy, płyty, kasety, płyty kompaktowe. Wszyscy jesteśmy fizycznie obecni. Dotykać, czuć, wąchać, smakować i słyszeć!</pl>
 			</description>
 			<conditions min_audience="1.3" min_image="0" target_group="0"/>
 			<data infomercial="1" quality="13" repetitions="3" duration="5" profit="1000" penalty="1450" fix_infomercial_profit="1"/>
@@ -2051,12 +2076,15 @@ Dostępne w każdej dobrze zaopatrzonej drogerii.</pl>
 			<title>
 				<de>Ohrostopf Lärmschutz</de>
 				<en>Ear-O-Plug noise control</en>
+				<pl>Kontrola hałasu Uchosza</pl>
 			</title>
 			<description>
 				<de>Nölt Ihr Chef? Die Alte sowieso? Die Kinder sind nicht auszuhalten? - RUHE !!!
 				Jetzt im Handel: Ohrostopf!</de>
 				<en>Is your boss always nagging at you? Your hag anyway? The children are unbearable? - SILENCE !!!
 				Now available: Ear-O-Plug</en>
+				<pl>Czy twój szef zawsze na ciebie narzeka? Twoja kobieta też? Dzieci są nie do zniesienia? - CISZA !!!
+				Teraz dostępne: Uchosza</pl>
 			</description>
 			<conditions min_audience="5.21" min_image="0" target_group="0"/>
 			<data infomercial="1" quality="21" repetitions="5" duration="4" profit="500" penalty="1056" fix_infomercial_profit="1"/>
@@ -2065,10 +2093,12 @@ Dostępne w każdej dobrze zaopatrzonej drogerii.</pl>
 			<title>
 				<de>Pemto Taschentücher</de>
 				<en>Pemto Tissues</en>
+				<pl>Chusteczki Pemto</pl>
 			</title>
 			<description>
 				<de>Reißfest und kugelsicher. Pemto - stoppt auch 150 km/h-Nieser.</de>
 				<en>Tear-resistant and bulletproof. Pemto - even stops 150mph sneezers.</en>
+				<pl>Odporny na rozdarcie i kuloodporny. Pemto - nawet zatrzymuje kichanie z prędkością 150 km/h.</pl>
 			</description>
 			<conditions min_audience="14.07" min_image="0" target_group="0"/>
 			<data infomercial="1" quality="22" repetitions="3" duration="3" profit="262" penalty="425" fix_infomercial_profit="1"/>
@@ -2077,10 +2107,12 @@ Dostępne w każdej dobrze zaopatrzonej drogerii.</pl>
 			<title>
 				<de>Pemto Toilettenpapier</de>
 				<en>Pemto Toilet Paper</en>
+				<pl>Papier toaletowy Pemto</pl>
 			</title>
 			<description>
 				<de>Reißfest und kugelsicher. Pemto - wenn's mal pressiert.</de>
 				<en>Tear-resistant and bulletproof. Pemto - if something is urgent.</en>
+				<pl>Odporny na rozdarcie i kuloodporny. Pemto - gdy robi się ciężko.</pl>
 			</description>
 			<conditions min_audience="14.07" min_image="32" target_group="0"/>
 			<data infomercial="1" quality="24" repetitions="5" duration="4" profit="270" penalty="420" fix_infomercial_profit="1"/>
@@ -2089,10 +2121,12 @@ Dostępne w każdej dobrze zaopatrzonej drogerii.</pl>
 			<title>
 				<de>Antiquitäten Pillreis</de>
 				<en>Antiques Pillreis</en>
+				<pl>Antyki Pillreis</pl>
 			</title>
 			<description>
 				<de>Wir sind nicht gegen Quitäten! Das Wort kommt nicht von Anti-, sondern von Antique. Ankauf und Verkauf von historischem Mobiliar also.</de>
 				<en>We are not against Ques! The word does not come from Anti-, but from Antique. Means purchase and sale of historical furniture.</en>
+				<pl>Nie sprzeciwiamy się dziwactwom! Słowo to nie pochodzi z Anty-, ale z Antyku. A więc kupno i sprzedaż mebli historycznych.</pl>
 			</description>
 			<conditions min_audience="2.6" min_image="0" target_group="0"/>
 			<data infomercial="1" quality="11" repetitions="1" duration="4" profit="660" penalty="948" fix_infomercial_profit="1"/>
@@ -2101,10 +2135,12 @@ Dostępne w każdej dobrze zaopatrzonej drogerii.</pl>
 			<title>
 				<de>Plörre Bier</de>
 				<en>Muck Beer</en>
+				<pl>Piwo Amper Gold</pl>
 			</title>
 			<description>
 				<de>Schon ein Kanzler einst sang: "Plörre Bier - Plörre Bier - das hol' ich mir."</de>
 				<en>As a Chancellor once sang: "Muck Beer - Muck Beer - I'll get it."</en>
+				<pl>Kanclerz śpiewał kiedyś: "Piwo Amper Gold - Piwo Amper Gold - dostanę go".</pl>
 			</description>
 			<conditions min_audience="3.13" min_image="4" target_group="256"/>
 			<data infomercial="1" quality="15" repetitions="5" duration="4" profit="683" penalty="879" fix_infomercial_profit="1"/>
@@ -2113,10 +2149,12 @@ Dostępne w każdej dobrze zaopatrzonej drogerii.</pl>
 			<title>
 				<de>Rapunzel Haarteile</de>
 				<en>Rapunzel's Hairpieces</en>
+				<pl>Roszpunka</pl>
 			</title>
 			<description>
 				<de>Toupets und Perücken. Wenn man nicht darauf angewiesen ist - gut so. Sonst komm zu Rapunzel. Ab 5 Meter Länge, gibt es einen Meter gratis dazu!</de>
 				<en>Toupets and wigs. Good for you if you do not have to rely on it. Otherwise come to Rapunzel's. Buy 5 meters or more and get a meter for free!</en>
+				<pl>Tupety i peruki. Jeśli nie musisz - to dobrze. W przeciwnym razie przyjdź do Roszpunki. Od 5 metrów długości jeden metr gratis!</pl>
 			</description>
 			<conditions min_audience="18.76" min_image="0" target_group="0"/>
 			<data infomercial="1" quality="15" repetitions="4" duration="6" profit="215" penalty="372" infomercial_profit="20" fix_infomercial_profit="1"/>
@@ -2125,10 +2163,12 @@ Dostępne w każdej dobrze zaopatrzonej drogerii.</pl>
 			<title>
 				<de>Rhinozerosfarm Aschenbühl</de>
 				<en>Rhinoceros farm Aschenbuehl</en>
+				<pl>Farma nosorożców Aschenbuehl</pl>
 			</title>
 			<description>
 				<de>Urlaub auf dem Bauernhof. Ebenfalls sehenswert: Unsere Babyrhinozerosse. Besuchen Sie unsere Kleinen und ihre schnaubenden Mütter. Kleiner Tipp: Testament ablegen.</de>
 				<en>Vacation on the farm. Also worth seeing: our baby rhinoceroses. Visit our little ones and their snorting mothers. Small tip: Make your will.</en>
+				<pl>Urlop na farmie. Warto też zobaczyć: nasze małe nosorożce. Odwiedź nasze maluchy i ich parskające mamy. Mała wskazówka: spisz testament.</pl>
 			</description>
 			<conditions min_audience="7.29" min_image="0" target_group="0"/>
 			<data infomercial="1" quality="13" repetitions="5" duration="3" profit="438" penalty="682" infomercial_profit="39" fix_infomercial_profit="1"/>
@@ -2141,6 +2181,7 @@ Dostępne w każdej dobrze zaopatrzonej drogerii.</pl>
 			<description>
 				<de>Sniffmaster 2000, der unendlich nützliche Geruchstransmitter. Das ist wie telefonieren für die Nase. Komm schon und riech mit, egal wo Du bist! Sniffmaster 2000!</de>
 				<en>Sniffmaster 2000, the infinitely useful smell transmitter. This is like phone calls for the nose. Come on and smell, no matter where you are! Sniffmaster 2000!</en>
+				<pl>Sniffmaster 2000, nieskończenie użyteczny transmiter zapachów. To jest jak telefony do nosa. Chodź i powąchaj, bez względu na to, gdzie jesteś! Sniffmaster 2000!</pl>
 			</description>
 			<conditions min_audience="23.44" min_image="0" target_group="0"/>
 			<data infomercial="1" quality="15" repetitions="2" duration="4" profit="182" penalty="327" infomercial_profit="17" fix_infomercial_profit="1"/>
@@ -2149,10 +2190,12 @@ Dostępne w każdej dobrze zaopatrzonej drogerii.</pl>
 			<title>
 				<de>Der Roll-Shop</de>
 				<en>The Roll-Shop</en>
+				<pl>Roll-Shop</pl>
 			</title>
 			<description>
 				<de>Wir haben alles mit einem "Roll" im Namen: Rollmops - Rollkragenpullover - Rollwagen. Tritt ein und roll raus. Der Roll-Shop.</de>
 				<en>We have everything with a "roll" in its name: Rollmop - Roll-neck sweaters - Roll cars. Step in and roll out. The Roll Shop.</en>
+				<pl>Mamy wszystko z "Roll" w nazwie: rollmopy - rollady - rollki. Wejdź i wyjdź. Sklep z Roll-jami.</pl>
 			</description>
 			<conditions min_audience="9.38" min_image="0" target_group="0"/>
 			<data infomercial="1" quality="23" repetitions="4" duration="4" profit="347" penalty="537" infomercial_profit="32" fix_infomercial_profit="1"/>
@@ -2161,10 +2204,12 @@ Dostępne w każdej dobrze zaopatrzonej drogerii.</pl>
 			<title>
 				<de>Autohaus Schmierlapp</de>
 				<en>Greasy's Cars</en>
+				<pl>Samochodowe klocki lOgo</pl>
 			</title>
 			<description>
 				<de>Von uns bekommt jeder einen Satz Bremsbeläge verordnet. Der SICHERHEIT wegen. Was dachten Sie? Ich, Franz Schmierlapp, stehe mit meinem Namen für Authentizität!</de>
 				<en>Everyone gets a set of brake pads from us. For the sake of SECURITY. What did you think? I, Franz Greasy, stand with my name for authenticity!</en>
+				<pl>Każdy dostaje od nas komplet klocków hamulcowych. W trosce o BEZPIECZEŃSTWO. Co pomyślałeś? Ja, Franz Greasy, opowiadam się za autentycznością!</pl>
 			</description>
 			<conditions min_audience="0.26" min_image="0" target_group="0"/>
 			<data infomercial="1" quality="10" repetitions="5" duration="3" profit="2320" penalty="3105" fix_infomercial_profit="1"/>
@@ -2173,10 +2218,12 @@ Dostępne w każdej dobrze zaopatrzonej drogerii.</pl>
 			<title>
 				<de>Schniggo Schokokubus</de>
 				<en>Schniggo Choco Cube</en>
+				<pl>Kostka czekoladowa Schniggo</pl>
 			</title>
 			<description>
 				<de>Schokolade hoch drei. Alle Kanten gleich lang! Die Beste Idee aller Zeiten! Wir haben Kanten von 10cm, 20cm und 30cm!</de>
 				<en>Chocolate cubed. All edges equally long! The best idea ever! We have edges of 10cm, 20cm and 30cm!</en>
+				<pl>Czekolada do potęgi trzech. Wszystkie krawędzie tej samej długości! Najlepszy pomysł na świecie! Mamy krawędzie 10cm, 20cm i 30cm!</pl>
 			</description>
 			<conditions min_audience="3.1251" min_image="0" target_group="0"/>
 			<data infomercial="1" quality="15" repetitions="6" duration="3" profit="618" penalty="900" infomercial_profit="11" fix_infomercial_profit="1"/>
