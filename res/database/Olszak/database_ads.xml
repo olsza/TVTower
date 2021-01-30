@@ -2232,10 +2232,12 @@ Dostępne w każdej dobrze zaopatrzonej drogerii.</pl>
 			<title>
 				<de>Schniggo Lakritzkugel</de>
 				<en>Schniggo Licorice Ball</en>
+				<pl>Lukrecja Schniggo</pl>
 			</title>
 			<description>
 				<de>Lakritz hoch drei. Alle Durchmesser gleich lang! Die Beste Idee aller Zeiten! Wir haben Durchmesser von 10cm, 20cm und 30cm!</de>
 				<en>Licorice cubed. All diameters of the same length! The best idea ever! We offer in diameters of 10cm, 20cm and 30cm!</en>
+				<pl>Lukrecja do potęgi trzech. Wszystkie średnice mają tę samą długość! Najlepszy pomysł na świecie! Mamy średnice 10cm, 20cm i 30cm!</pl>
 			</description>
 			<conditions min_audience="39.07" min_image="30" target_group="0"/>
 			<data infomercial="1" quality="13" repetitions="3" duration="4" profit="121" penalty="190" infomercial_profit="12" fix_infomercial_profit="1"/>
@@ -2244,10 +2246,12 @@ Dostępne w każdej dobrze zaopatrzonej drogerii.</pl>
 			<title>
 				<de>Stefanjek Schädlingsbekämpfung</de>
 				<en>Stefanjek Pest Control</en>
+				<pl>Stefanjek Zwalczanie szkodników</pl>
 			</title>
 			<description>
 				<de>Die Kakerlake, die uns entkommt wurde noch nicht geboren. Vermutlich schlüpft sie gerade bei Ihnen unter dem Herd! Wir vernichten oder schlagen sie in die Flucht. Zurück bleibt jedenfalls keine.</de>
 				<en>The cockroach that escapes us was not born yet. Probably they just hatch under your stove! We destroy or but them to rout. There will be none left.</en>
+				<pl>Karaluch, który nam ucieka, jeszcze się nie urodził. Prawdopodobnie wślizguje się teraz pod twój piec! Niszczymy je lub zmuszamy do ucieczki. W każdym razie nikt nie został w tyle.</pl>
 			</description>
 			<conditions min_audience="0.62" min_image="0" target_group="0"/>
 			<data infomercial="1" quality="8" repetitions="4" duration="2" profit="1583" penalty="2020" infomercial_profit="158" fix_infomercial_profit="1"/>
@@ -2256,10 +2260,12 @@ Dostępne w każdej dobrze zaopatrzonej drogerii.</pl>
 			<title>
 				<de>Steiß Teddybären</de>
 				<en>Rump Teddy Bears</en>
+				<pl>Zad misia</pl>
 			</title>
 			<description>
 				<de>Stahlbeton und Messing sind die Materialien der Wahl. Kindersicher. Unkaputtbar. Steiß Teddybären.</de>
 				<en>Steel concrete and brass are the materials of choice. Childproof. Unbreakable. Teddy Bears by Rump.</en>
+				<pl>Preferowanymi materiałami są stalobeton i mosiądz. Zabezpieczenie przed dziećmi. Niezniszczalny. Zad misia.</pl>
 			</description>
 			<conditions min_audience="1.041" min_image="18" target_group="1"/>
 			<data infomercial="1" quality="11" repetitions="3" duration="4" profit="1340" penalty="2000" fix_infomercial_profit="1"/>
@@ -2267,10 +2273,12 @@ Dostępne w każdej dobrze zaopatrzonej drogerii.</pl>
 		<ad id="speedminister-ad-Stop-Hound" creator="8605" created_by="SpeedMinister">
 			<title>
 				<de>Stop Hound</de>
+				<pl>Stop Ogar</pl>
 			</title>
 			<description>
 				<de>Fox Enterprises präsentiert "Stop Hound". Das Spray auf den Körper auftragen. 20h Wirkung! Stoppt Hunde auch gegen den Wind. Das Anti-Biss-Spray "Stop Hound".</de>
 				<en>Fox Enterprises presents "Stop Hound". Apply the spray to the body. 20h effect! Also stops dogs against the wind. The anti-bite spray "Stop Hound".</en>
+				<pl>Fox Enterprises prezentuje "Stop Ogar". Nanieś spray na ciało. Efekt 20h! Zatrzymuje również psy przed wiatrem. Spray zapobiegający ukąszeniom "Stop Ogar".</pl>
 			</description>
 			<conditions min_audience="8.34" min_image="0" target_group="0"/>
 			<data infomercial="1" quality="24" repetitions="1" duration="2" profit="337" penalty="581" infomercial_profit="35" fix_infomercial_profit="1"/>
@@ -2279,10 +2287,12 @@ Dostępne w każdej dobrze zaopatrzonej drogerii.</pl>
 			<title>
 				<de>TVBunker PC-Spiel</de>
 				<en>TVBunker PC-Game</en>
+				<pl>Gra TVBunker na PC</pl>
 			</title>
 			<description>
 				<de>TVBunker ein Spass für die ganze Familie. Ein Sad TV Remake! Aus markenschutzrechtlichen Gründen dürfen keine Originalnamen verwendet werden.</de>
 				<en>TVBunker - fun for the whole family. A Sad TV remake! No original names may be used to avoid trademark infringement.</en>
+				<pl>TVBunker to zabawa dla całej rodziny. Smutna przeróbka TV! Ze względu na ochronę znaków towarowych nie wolno używać oryginalnych nazw.</pl>
 			</description>
 			<conditions min_audience="3.6461" min_image="0" target_group="0"/>
 			<data infomercial="1" quality="28" repetitions="7" duration="4" profit="621" penalty="845" infomercial_profit="95" fix_infomercial_profit="1"/>
@@ -2291,10 +2301,12 @@ Dostępne w każdej dobrze zaopatrzonej drogerii.</pl>
 			<title>
 				<de>TVTower PC-Spiel</de>
 				<en>TVTower PC-Spiel</en>
+				<pl>Gra TVTower na PC</pl>
 			</title>
 			<description>
 				<de>Brandneue Engine! Neue Filme! NEU: Trash TV und Call-In. TVTower, ein Mad TV-aeskes Computerspiel! Ein Riesenspaß. Honigkuchenpferde, der Papst und die Queen empfehlen: TVTower.</de>
 				<en>Brand new engine! New Movies! NEW: Trash TV and call-in. TVTower, a Mad TV-esque computer game! Endless fun. Cheshire Cat, the Pope and the Queen recommend: TVTower.</en>
+				<pl>Zupełnie nowy silnik! Nowe filmy! NOWOŚĆ: Telewizjwe śmieci i "na zaproszenie". TVTower, gra komputerowa w stylu Mad TV! Niekończąca się zabawa. Cheshire Cat, Papież i Królowa polecają: TVTower.</pl>
 			</description>
 			<conditions min_audience="41.6799" min_image="0" target_group="0"/>
 			<data infomercial="1" quality="30" repetitions="1" duration="8" profit="113" penalty="196" infomercial_profit="65" fix_infomercial_profit="1"/>
@@ -2303,10 +2315,12 @@ Dostępne w każdej dobrze zaopatrzonej drogerii.</pl>
 			<title>
 				<de>Tarnschiff Kreuzfahrten</de>
 				<en>Cloaked Cruises</en>
+				<pl>Rejsy statkiem Tarnschiff</pl>
 			</title>
 			<description>
 				<de>Erleben Sie die original U96 Replika auf Ihrer Traumroute. Die Malediven in 200m Tiefe. Hören Sie Traumstrände. Vorgewärmte Kojen gehören hier zur Grundausstattung.</de>
 				<en>Experience the original U96 Replica on your dream route. The Maldives in 200m depth. Listen to dream beaches. Preheated berths are included in every basic equipment.</en>
+				<pl>Przeżyj oryginalną replikę U96 na wymarzonej trasie. Malediwy na głębokości 200m. Usłysz wymarzone plaże. W każdym podstawowym wyposażeniu znajdują się podgrzewane koje.</pl>
 			</description>
 			<conditions min_audience="33.86" min_image="0" target_group="0"/>
 			<data infomercial="1" quality="25" repetitions="2" duration="4" profit="138" penalty="207" fix_infomercial_profit="1"/>
@@ -2315,10 +2329,12 @@ Dostępne w każdej dobrze zaopatrzonej drogerii.</pl>
 			<title>
 				<de>Tarnschiff Kreuzfahrten</de>
 				<en>Cloaked Cruises</en>
+				<pl>Rejsy statkiem Tarnschiff</pl>
 			</title>
 			<description>
 				<de>Erleben Sie die original U96 Replika auf Ihrer Traumroute. Der Marianengraben - legendär! Aber doch etwas zu tief. Oder etwa nicht? Finden Sie es heraus!</de>
 				<en>Experience the original U96 Replica on your dream route. The Mariana Trench - legendary! But a bit too deep. Or maybe not? Find it out!</en>
+				<pl>Przeżyj oryginalną replikę U96 na wymarzonej trasie. Rów Mariana - legendarny! Ale trochę za głęboko. Albo może nie? Dowiedz się!</pl>
 			</description>
 			<conditions min_audience="33.86" min_image="18" target_group="0"/>
 			<data infomercial="1" quality="22" repetitions="2" duration="4" profit="146" penalty="194" infomercial_profit="33" fix_infomercial_profit="1"/>
@@ -2327,10 +2343,12 @@ Dostępne w każdej dobrze zaopatrzonej drogerii.</pl>
 			<title>
 				<de>Tarnschiff Kreuzfahrten</de>
 				<en>Cloaked Cruises</en>
+				<pl>Rejsy statkiem Tarnschiff</pl>
 			</title>
 			<description>
 				<de>Erleben Sie die original U96 Replika auf Ihrer Traumroute. Durchbrechen Sie Blockaden. Landgang von 3 bis 5. Pünklich sein. Parole: „Tauch tiefer!“ Sonst kein Einlass.</de>
 				<en>Experience the original U96 Replica on your dream route. Break through blockades. Shore leave from 3 to 5. Be punctual. Parole: "dive deeper" Otherwise no admittance.</en>
+				<pl>Przeżyj oryginalną replikę U96 na wymarzonej trasie. Przebij się przez blokady. Urlop z brzegu od 3 do 5. Bądź punktualny. Slogan: "nurkuj głębiej" W przeciwnym razie nie ma wstępu.</pl>
 			</description>
 			<conditions min_audience="33.86" min_image="32" target_group="0"/>
 			<data infomercial="1" quality="23" repetitions="3" duration="2" profit="153" penalty="218" infomercial_profit="13" fix_infomercial_profit="1"/>
@@ -2339,10 +2357,12 @@ Dostępne w każdej dobrze zaopatrzonej drogerii.</pl>
 			<title>
 				<de>Ticketschalter</de>
 				<en>Ticket Counter</en>
+				<pl>Ticketomat</pl>
 			</title>
 			<description>
 				<de>Wir verkaufen Eintrittskarten zu allen Großveranstaltungen, Messen und Live-Konzerten. Auch Sonderkarten wie Back-Stage oder On-Stage sind erhältlich!</de>
 				<en>We sell tickets to all major events, trade fairs and live concerts. Also special tickets like Back-Stage or On-Stage are available!</en>
+				<pl>Sprzedajemy bilety na wszystkie najważniejsze wydarzenia, targi i koncerty na żywo. Dostępne są również specjalne karty, takie jak za kulisami lub na scenie!</pl>
 			</description>
 			<conditions min_audience="15.63" min_image="0" target_group="0"/>
 			<data infomercial="1" quality="20" repetitions="2" duration="3" profit="245" penalty="345" fix_infomercial_profit="1"/>
