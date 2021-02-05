@@ -2371,10 +2371,12 @@ Dostępne w każdej dobrze zaopatrzonej drogerii.</pl>
 			<title>
 				<de>Winzerei Weinstein</de>
 				<en>Winery Tartar</en>
+				<pl>Winnica Winiarski</pl>
 			</title>
 			<description>
 				<de>Lutschen Sie sich durch erlesene Jahrgänge der Weingeschichte. Weinsteinsortimente der gleichnamigen Winzerei ab sofort erhältlich!</de>
 				<en>Suck your way through exquisite vintages of wine history. Tartar of wine assortments from the winery of the same name now available!</en>
+				<pl>Ssij się przez wyśmienite roczniki w historii wina. Asortymenty tatarskie z winnicy o tej samej nazwie są już dostępne!</pl>
 			</description>
 			<conditions min_audience="3.13" min_image="0" target_group="0"/>
 			<data infomercial="1" quality="25" repetitions="1" duration="2" profit="616" penalty="970" infomercial_profit="67" fix_infomercial_profit="1"/>
@@ -2383,10 +2385,12 @@ Dostępne w każdej dobrze zaopatrzonej drogerii.</pl>
 			<title>
 				<de>Bundesdeutsche Anstalt für Meditation</de>
 				<en>Federal Institution for Meditation</en>
+				<pl>Polski Instytut Medytacji</pl>
 			</title>
 			<description>
 				<de>Leitfaden zur aufrichtigen inneren Reinigung, Tipps und Tricks, Best Practices und vieles mehr. Infos bei uns! LAM - VAM - RAM - YAM - HAM - KSHAM - OM.</de>
 				<en>Guide to sincere inner cleansing, tips and tricks, best practices and much more. Info from us! LAM - VAM - RAM - YAM - HAM - KSHAM - OM.</en>
+				<pl>Szczery przewodnik po wewnętrznym oczyszczaniu, porady i wskazówki, najlepsze praktyki i nie tylko. Informacje z nami! LAM - VAM - RAM - YAM - HAM - KSHAM - OM.</pl>
 			</description>
 			<conditions min_audience="26.05" min_image="0" target_group="0"/>
 			<data infomercial="1" quality="11" repetitions="2" duration="5" profit="158" penalty="301" infomercial_profit="69" fix_infomercial_profit="1"/>
@@ -2395,10 +2399,12 @@ Dostępne w każdej dobrze zaopatrzonej drogerii.</pl>
 			<title>
 				<de>Baumschule Bummbarts</de>
 				<en>Tree Nursery Bummbeards</en>
+				<pl>Przedszkole Sadzdrzew</pl>
 			</title>
 			<description>
 				<de>Bummbarts Bäume wissen Väter zu schätzen, wenn sie mit Ihrem Sohne einen setzen.</de>
 				<en>Father and son can safely plant as Bummbeard's trees do never slant.</en>
+				<pl>Ojciec i syn mogą bezpiecznie sadzić, ponieważ drzewa Sadzdrzew nigdy nie są pochylone.</pl>
 			</description>
 			<conditions min_audience="8.3352" min_image="0" target_group="0"/>
 			<data infomercial="1" quality="15" repetitions="4" duration="3" profit="377" penalty="544" infomercial_profit="90" fix_infomercial_profit="1"/>
@@ -2407,10 +2413,12 @@ Dostępne w każdej dobrze zaopatrzonej drogerii.</pl>
 			<title>
 				<de>Baumschule Bummbarts</de>
 				<en>Tree Nursery Bummbeards</en>
+				<pl>Przedszkole Sadzdrzew</pl>
 			</title>
 			<description>
 				<de>In Parks und Gärten genießt man die Räume, die Highlights aber sind Bummbarts Bäume.</de>
 				<en>In parks and gardens you feel free, but the highlight is a Bummbeard's tree.</en>
+				<pl>W parkach i ogrodach czujesz się wolny, ale główną atrakcją jest drzewo Sadzdrzew.</pl>
 			</description>
 			<conditions min_audience="1.82" min_image="45" target_group="256"/>
 			<data infomercial="1" quality="18" repetitions="6" duration="4" profit="848" penalty="999" infomercial_profit="90" fix_infomercial_profit="1"/>
@@ -2419,10 +2427,12 @@ Dostępne w każdej dobrze zaopatrzonej drogerii.</pl>
 			<title>
 				<de>Bildergalerie Silberfisch</de>
 				<en>Picture Gallery Silverfish</en>
+				<pl>Galeria zdjęć Silverfish</pl>
 			</title>
 			<description>
 				<de>Wir sind bodenständig! Keine einfarbigen Flächen zu Fantasiepreisen. Bei uns z.B. „Röhrender Hirsch auf Zweimastschoner in stürmischer See“ nur 500 Ocken.</de>
 				<en>We are down-to-earth! No monochrome surfaces at fantasy prices. With us e.g. "roaring stag on two-mast schooner in stormy sea" only 500 bucks.</en>
+				<pl>Jesteśmy na ziemi! Żadnych jednobarwnych powierzchni w fantazyjnych cenach. Na przykład "Ryczący jeleń na dwumasztowym szkunerze na wzburzonym morzu" tylko 500 zł.</pl>
 			</description>
 			<conditions min_audience="2.083" min_image="12" target_group="4"/>
 			<data infomercial="1" quality="19" repetitions="4" duration="2" profit="840" penalty="1400" fix_infomercial_profit="1"/>
@@ -2430,10 +2440,12 @@ Dostępne w każdej dobrze zaopatrzonej drogerii.</pl>
 		<ad id="speedminister-ad-chemicalair-01" creator="8605" created_by="SpeedMinister">
 			<title>
 				<de>Chemical Air</de>
+				<pl>Powietrzny Oprysk</pl>
 			</title>
 			<description>
 				<de>Pestizid, Fungizid, Herbizid. Unser Flieger steht bereit. Wir spritzen Ihr Feld, Ihre Obstplantage und Ihren Garten. Auch für privat! Einfach anrufen.</de>
 				<en>Pesticide, fungicide, herbicide. Our plane is ready. We spray your field, your orchard and your garden. Also available for private customers! Just give us a call.</en>
+				<pl>Pestycyd, fungicyd, herbicyd. Nasz samolot jest gotowy. Opryskujemy Twoje pole, Twój sad i Twój ogród. Dostępne również dla klientów prywatnych! Zadzwoń do nas.</pl>
 			</description>
 			<conditions min_audience="28.65" min_image="0" target_group="0"/>
 			<data infomercial="1" quality="12" repetitions="1" duration="4" profit="147" penalty="232" fix_infomercial_profit="1"/>
@@ -2442,10 +2454,12 @@ Dostępne w każdej dobrze zaopatrzonej drogerii.</pl>
 			<title>
 				<de>Esel24</de>
 				<en>Donkey24</en>
+				<pl>Osiol24</pl>
 			</title>
 			<description>
 				<de>Hochzeit? Firmenveranstaltung? Familienfeier? Autopanne! Umzug! Esel zum Mieten und zum Kaufen! Esel24!</de>
 				<en>Wedding? Company event? Family celebration? Car breakdown! Removal! Donkeys to rent and to buy! Donkey24!</en>
+				<pl>Ślub? Impreza firmowa? Święto rodzinne? Awaria samochodu! Usuwanie! Osły do wynajęcia i do kupienia! Osiol24!</pl>
 			</description>
 			<conditions min_audience="0.78" min_image="0"/>
 			<data infomercial="1" quality="18" repetitions="4" duration="3" profit="1400" penalty="1915" fix_infomercial_profit="1" year_range_to="1999" />
@@ -2454,10 +2468,12 @@ Dostępne w każdej dobrze zaopatrzonej drogerii.</pl>
 			<title>
 				<de>Esel24.komm</de>
 				<en>Donkey24.come</en>
+				<pl>Osiol24.kom</pl>
 			</title>
 			<description>
 				<de>Hochzeit? Firmenveranstaltung? Familienfeier? Autopanne! Umzug! Esel zum Mieten und zum Kaufen! Esel24.komm!</de>
 				<en>Wedding? Company event? Family celebration? Car breakdown! Removal! Donkeys to rent and to buy! Donkey24.come!</en>
+				<pl>Ślub? Impreza firmowa? Święto rodzinne? Awaria samochodu! Usuwanie! Osły do wynajęcia i do kupienia! Osiol24.kom!</pl>
 			</description>
 			<conditions min_audience="0.78" min_image="0"/>
 			<data infomercial="1" quality="15" repetitions="4" duration="3" profit="1400" penalty="1915" fix_infomercial_profit="1" year_range_from="2000"/>
@@ -2469,6 +2485,7 @@ Dostępne w każdej dobrze zaopatrzonej drogerii.</pl>
 			<description>
 				<de>Prickelnde Kohlensäure, zischende Dose, Kühlung für Rachen und Kehle, super geschmackvoll? Nicht mehr träumen! four4down bringt Sie auf den Boden zurück!</de>
 				<en>Sparkling carbonic acid, a hissing can, cooling for throat and throat, super tasty? No more dreaming! four4down gets you back on the ground!</en>
+				<pl>Musujący dwutlenek węgla, sycząca puszka, chłodzenie na gardło i gardło, super smaczne? Nie marz już więcej! four4down sprowadza cię z powrotem na ziemię!</pl>
 			</description>
 			<conditions min_audience="23.44" min_image="0"/>
 			<data infomercial="1" quality="16" repetitions="1" duration="4" profit="171" penalty="315" infomercial_profit="17" fix_infomercial_profit="1"/>
@@ -2476,10 +2493,12 @@ Dostępne w każdej dobrze zaopatrzonej drogerii.</pl>
 		<ad id="speedminister-ad-greekhaircut-01" creator="8605" created_by="SpeedMinister">
 			<title>
 				<de>Greek Haircut</de>
+				<pl>Grecka fryzura</pl>
 			</title>
 			<description>
 				<de>Wir geben eine Ouzo für jede Zentimeter abgeschnittene Haare! Wer brauchte schon Haare, wenne kann tragen Helm?</de>
 				<en>We give ayn Ouzo for everry inch of cut hair! Who needed hair, who can wear helmet?</en>
+				<pl>Dajemy Uzo za każdy metr strzyżenia włosów! Kto potrzebuje włosy, kiedy można nosić kask?</pl>
 			</description>
 			<conditions min_audience="1.3015" min_image="0" target_group="0"/>
 			<data infomercial="1" quality="9" repetitions="2" duration="2" profit="960" penalty="1200" infomercial_profit="40" fix_infomercial_profit="1"/>
@@ -2492,6 +2511,7 @@ Dostępne w każdej dobrze zaopatrzonej drogerii.</pl>
 			<description>
 				<de>Das Auto ist der Hammer! Höher als ein LKW und breiter als lang. Man kann aufrecht stehen oder sich auf der Rückbank ausstrecken. Warum noch Miete zahlen?</de>
 				<en>The car is a doozie! 100% Steel! Higher than a truck and wider than long. You can stand upright or stretch out on the back seat. Why pay rent?</en>
+				<pl>Samochód jest niesamowity! Wyższy niż ciężarówka i szerszy niż długi. Na tylnym siedzeniu możesz stać prosto lub wyciągnąć się. Dlaczego nadal płacić czynsz?</pl>
 			</description>
 			<conditions min_audience="26.05" min_image="4" target_group="256"/>
 			<data infomercial="1" quality="19" repetitions="1" duration="3" profit="168" penalty="307" infomercial_profit="36" fix_infomercial_profit="1"/>
@@ -2503,6 +2523,7 @@ Dostępne w każdej dobrze zaopatrzonej drogerii.</pl>
 			<description>
 				<de>Das Hundefutter mit Aspartam. Mästen Sie Ihren Liebling! Wie das Schwein, so auch der Hund, wird Ihr Tierchen kugelrund.</de>
 				<en>The dog food with aspartame. Feed your darling! Just like the pig, so does the dog, your little animal will be round as a ball.</en>
+				<pl>Karma dla psów z aspartamem. Dokarm swojego czworonoga! Podobnie jak świnia, tak i pies, twoje małe zwierzę będzie okrągły jak piłka.</pl>
 			</description>
 			<conditions min_audience="10.42" min_image="0" target_group="0"/>
 			<data infomercial="1" quality="15" repetitions="1" duration="2" profit="290" penalty="514" infomercial_profit="60" fix_infomercial_profit="1"/>
@@ -2514,6 +2535,7 @@ Dostępne w każdej dobrze zaopatrzonej drogerii.</pl>
 			<description>
 				<de>Kommst Du. - Kuckst Du. - Kaufst Du.</de>
 				<en>You come. - You look. - You buy.</en>
+				<pl>Idziesz. - Wyglądasz. - Kupujesz.</pl>
 			</description>
 			<conditions min_audience="0.0511" min_image="0" target_group="0"/>
 			<data infomercial="1" quality="7" repetitions="4" duration="3" profit="3200" penalty="3771" infomercial_profit="40" fix_infomercial_profit="1"/>
@@ -2522,10 +2544,12 @@ Dostępne w każdej dobrze zaopatrzonej drogerii.</pl>
 			<title>
 				<de>Hexler und Schorsch</de>
 				<en>Hexler and Schorsch</en>
+				<en>Hexler i Schorsch</en>
 			</title>
 			<description>
 				<de>Für unsere Bohnen wird kein Regenwald abgeholzt! Blaue Bohnen und mehr von Hexler und Schorsch!</de>
 				<en>No rainforest will be cleared for our bullets! Bullets and more from Hexler and Schorsch!</en>
+				<pl>Żaden las deszczowy nie zostanie wycięty dla naszych kul! Kule i nie tylko od firm Hexler i Schorsch!</pl>
 			</description>
 			<conditions min_audience="17.19" min_image="4" target_group="256"/>
 			<data infomercial="1" quality="19" repetitions="1" duration="3" profit="242" penalty="445" infomercial_profit="65" fix_infomercial_profit="1"/>
@@ -2533,12 +2557,15 @@ Dostępne w każdej dobrze zaopatrzonej drogerii.</pl>
 		<ad id="speedminister-ad-interouter-01" creator="8605" created_by="SpeedMinister">
 			<title>
 				<de>Inter Outer Under World Travel</de>
+				<pl>Podróż Inter Outer Under</pl>
 			</title>
 			<description>
 				<de>Stehplätze, Verpflegung* aus der Dose und Betäubungsgas machen den Flug angenehm. Auch die Piloten sind extrem ausgeruht. Schönen Urlaub!
 (*gegen Aufpreis)</de>
 				<en>Standing room, food* from the can and narcotic gas make the flight pleasant. The pilots are also extremely rested. Have a nice holiday!
 (*for an extra charge)</en>
+				<pl>Miejsca stojące, jedzenie* z puszki i gaz znieczulający sprawiają, że lot jest przyjemny. Piloci są też wyjątkowo wypoczęci. Miłych wakacji!
+(*dodatkowa opłata)</pl>
 			</description>
 			<conditions min_audience="23.44" min_image="7" target_group="8"/>
 			<data infomercial="1" quality="22" repetitions="1" duration="4" profit="193" penalty="268" infomercial_profit="17" fix_infomercial_profit="1"/>
@@ -2547,10 +2574,12 @@ Dostępne w każdej dobrze zaopatrzonej drogerii.</pl>
 			<title>
 				<de>Kaisers neue Kleider</de>
 				<en>Emperor's New Clothes</en>
+				<pl>Nowe szaty cesarza</pl>
 			</title>
 			<description>
 				<de>Neue Kollektion bei Kaisers: Extrem guter Tragekomfort, hauchdünner Stoff, fantasievolle Schnitte. Ein echter Hingucker! Kaisers neue Kleider!</de>
 				<en>New collection at Emperor's: Extremely good wearing comfort, wafer-thin fabric, imaginative cuts. A real eye-catcher! Emperor's New Clothes!</en>
+				<pl>Nowa kolekcja na Imperatora: wyjątkowo wygodny w noszeniu, ultracienki materiał, fantazyjne kroje. Prawdziwy przyciągający wzrok! Nowe szaty cesarza!</pl>
 			</description>
 			<conditions min_audience="36.47" min_image="0" target_group="0"/>
 			<data infomercial="1" quality="21" repetitions="1" duration="3" profit="124" penalty="226" infomercial_profit="22" fix_infomercial_profit="1"/>
@@ -2559,10 +2588,12 @@ Dostępne w każdej dobrze zaopatrzonej drogerii.</pl>
 			<title>
 				<de>Kakteenwunderland</de>
 				<en>Cactus Wonderland</en>
+				<pl>Kaktus Wonderland</pl>
 			</title>
 			<description>
 				<de>Unsere Kakteen stechen härter, länger und ausdauernder, als die der Konkurrenz. Wir haben Kakteen für Garten, Wintergarten, Treibhaus und fürs Bett.</de>
 				<en>Our cacti sting harder, are longer and more enduring than those of our competitors. We have cacti for garden, conservatory, greenhouse and bed.</en>
+				<pl>Nasze kaktusy kąsają mocniej, dłużej i bardziej wytrwale niż u konkurencji. Mamy kaktusy do ogrodu, ogrodu zimowego, szklarni i łóżka.</pl>
 			</description>
 			<conditions min_audience="6.25" min_image="0" target_group="0"/>
 			<data infomercial="1" quality="17" repetitions="3" duration="4" profit="450" penalty="650" infomercial_profit="42" fix_infomercial_profit="1"/>
@@ -2571,10 +2602,12 @@ Dostępne w każdej dobrze zaopatrzonej drogerii.</pl>
 			<title>
 				<de>Koizucht Koiner</de>
 				<en>Koi Breeding Koiner</en>
+				<pl>Hodowla Koi Koiner</pl>
 			</title>
 			<description>
 				<de>Satte Fische zu satten Preisen. Ein weiterer Beleg, was einmal ein Schwabe sagte: „Wenn's nix koscht'! Sonscht kommt koiner nai!“</de>
 				<en>Full fish at full prices. Another proof of what a Swabian once said: "No money no fish!"</en>
+				<pl>Pełne ryby w pełnych cenach. Kolejny dowód na to, co Szwabczyk powiedział kiedyś: "Jeśli nie ma nic do gotowania! Więc nie chodź!"</pl>
 			</description>
 			<conditions min_audience="33.86" min_image="0" target_group="0"/>
 			<data infomercial="1" quality="15" repetitions="1" duration="4" profit="130" penalty="228" infomercial_profit="11" fix_infomercial_profit="1"/>
@@ -2583,10 +2616,12 @@ Dostępne w każdej dobrze zaopatrzonej drogerii.</pl>
 			<title>
 				<de>Malerei Farbecht</de>
 				<en>Painter Colorfast</en>
+				<pl>Malarz - Szybki Kolor</pl>
 			</title>
 			<description>
 				<de>Unschlagbar im Preis. Fenster und Türen abkleben war gestern. Wir sind kosteneffizient, das werden Sie sehen. Zum Termin erscheinen wir! - oft! - manchmal.</de>
 				<en>Unbeatable in price. Taping windows and doors was yesterday. We are cost-efficient you will see. We appear at the appointment! - often! - now and then! - sometimes.</en>
+				<pl>Bezkonkurencyjna cena. Malowanie okien i drzwi były "na wczoraj". Zobaczysz, że jesteśmy punktualni. Pojawimy się na spotkanie! - często! - czasami.</pl>
 			</description>
 			<conditions min_audience="0.4679" min_image="0" target_group="0"/>
 			<data infomercial="1" quality="11" repetitions="6" duration="3" profit="2000" penalty="2750" infomercial_profit="100" fix_infomercial_profit="1"/>
